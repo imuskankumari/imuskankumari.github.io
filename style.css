@@ -788,7 +788,7 @@ img, video {
    SLIM MATCHING DARK FOOTER
    ========================================================================== */
 .footer {
-  background-color: #EEF2F6;
+  background: linear-gradient(135deg, #0BOF19 0%, #171E31 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px 0;
 }

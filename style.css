@@ -207,7 +207,7 @@ img, video {
 /* Headline Line 1: Longest, widest, massive white text */
 .hero-heading-white {
   font-size: clamp(2.3rem, 5.8vw, 3.8rem);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.18;
   margin-bottom: 6px;
   letter-spacing: -0.5px;
@@ -219,7 +219,7 @@ img, video {
 /* Headline Line 2: More compact horizontally than Line 1, vivid magenta */
 .hero-heading-magenta {
   font-size: clamp(1.8rem, 4.4vw, 2.9rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: 0.5px;

@@ -203,30 +203,32 @@ img, video {
   border: 1px solid rgba(233, 30, 99, 0.35);
   box-shadow: 0 2px 12px rgba(233, 30, 99, 0.2);
 }
-
-/* Headline Line 1: Longest, widest, massive white text */
+/* Headline Line 1: MK DESIGN STUDIO */
 .hero-heading-white {
-  font-size: clamp(2.3rem, 5.8vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.18;
-  margin-bottom: 6px;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  white-space: nowrap;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* Headline Line 2: More compact horizontally than Line 1, vivid magenta */
-.hero-heading-magenta {
-  font-size: clamp(1.8rem, 4.4vw, 2.9rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #E91E63;
-  white-space: nowrap;
-  max-width: 850px;
+/* Headline Line 2: MUSKAN KUMARI GRAPHIC DESIGNER */
+.hero-heading-magenta, .hero-subheading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #E91E63;
+    display: block;
+    text-shadow: 0 0 25px rgba(233, 30, 99, 0.4);
 }
 
 .hero-bio-wrap {

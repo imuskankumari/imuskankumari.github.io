@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muskan Kumari - Graphic Designer | MK Design Studio</title>
 
-    <!-- Google Fonts: Oswald (Tall Condensed) & Montserrat -->
+    <!-- Clean Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,17 +13,15 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ==========================================================
-         CINEMATIC HERO ZONE (Dark Base #0f131a + Soft Magenta Glow)
-         ========================================================== -->
+    <!-- Unified Master Hero Zone (#141b27 Base + Magenta Editorial Glow) -->
     <section class="master-hero-zone">
         
-        <!-- Top Navigation Bar -->
+        <!-- Header Nav -->
         <header class="hero-navbar">
             <div class="nav-inner-container">
                 <a href="#" class="brand-monogram">MK</a>
@@ -41,21 +39,31 @@
             </div>
         </header>
 
-        <!-- Main Hero Presentation -->
-        <div class="hero-main-stage">
+        <!-- True Editorial Hero Stage (Laptop Reference Style) -->
+        <div class="hero-stage-wrapper">
             
-            <!-- 3D Girl Avatar (Front & Center) -->
-            <div class="hero-avatar-wrap">
-                <div class="glow-backdrop-orb"></div>
-                <img src="hero-girl.png" alt="Muskan Kumari 3D Designer" class="floating-hero-avatar">
+            <!-- Left: Bold Stacked Title -->
+            <div class="stage-col stage-col-left">
+                <p class="tagline-intro">Hey, I'm Muskan Kumari</p>
+                <h1 class="bold-hero-title">
+                    <span>GRAPHIC</span>
+                    <span class="magenta-highlight">DESIGNER</span>
+                </h1>
+                <div class="tag-meta-bottom">
+                    <span class="meta-dot"></span> Visual Identity & AI Art
+                </div>
             </div>
 
-            <!-- Typography & Details -->
-            <div class="hero-details-wrap">
-                <p class="tagline-intro">Hey, I'm Muskan Kumari</p>
-                <h1 class="bold-hero-title">GRAPHIC <span class="magenta-highlight">DESIGNER</span></h1>
+            <!-- Center: 3D Aesthetic Girl (Large & Clear) -->
+            <div class="stage-col stage-col-center">
+                <div class="glow-backdrop-orb"></div>
+                <img src="hero-girl.png" class="floating-hero-avatar" id="hero-main-img">
+            </div>
+
+            <!-- Right: Studio Details & Actions -->
+            <div class="stage-col stage-col-right">
                 <h2 class="studio-subheading">MK DESIGN STUDIO</h2>
-                <p class="studio-mini-bio">Professionally craft high-impact brand collateral, vector art, surreal AI visuals, and cinematic 3D motion reels.</p>
+                <p class="studio-mini-bio">Professionally craft high-impact brand collateral, vector art, surreal AI visuals, and dynamic 3D motion reels.</p>
                 
                 <div class="stage-buttons-wrap">
                     <a href="#projects" class="btn-magenta-fill">Explore Projects ✨</a>
@@ -67,9 +75,7 @@
 
     </section>
 
-    <!-- ==========================================================
-         SERVICES: 3 Hanging Cards (Half-Dark / Half-White Body)
-         ========================================================== -->
+    <!-- Services Section: 3 Hanging Cards (Half-Dark / Half-White) -->
     <section class="services-hanging-section" id="services">
         <div class="site-container">
             <div class="services-hanging-grid">
@@ -102,9 +108,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================
-         MY PROJECTS: Behance 4:3 Aspect Ratio Grid
-         ========================================================== -->
+    <!-- Projects Section: Pure 4:3 Cover Behance Grid -->
     <section class="projects-portfolio-section" id="projects">
         <div class="site-container">
             
@@ -120,42 +124,42 @@
                 <button class="portfolio-tab-btn" data-filter="ai-animation">AI Animation Videos</button>
             </div>
 
-            <!-- Portfolio Cards Grid -->
+            <!-- Portfolio Cards Grid (20 Containers Per Tab) -->
             <div class="portfolio-cards-grid">
                 
-                <!-- ================= GRAPHIC DESIGN (20 Containers) ================= -->
-                <div class="portfolio-item-card" data-category="graphic"><img src="g1.png" alt="Project G1"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g2.jpg" alt="Project G2"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g3.jpg" alt="Project G3"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g4.jpg" alt="Project G4"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g5.jpg" alt="Project G5"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g6.jpg" alt="Project G6"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g7.jpg" alt="Project G7"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g8.jpg" alt="Project G8"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g9.jpg" alt="Project G9"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g10.jpg" alt="Project G10"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g11.jpg" alt="Project G11"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="g12.jpg" alt="Project G12"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="w1.jpg" alt="Project W1"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="w2.jpg" alt="Project W2"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="w3.jpg" alt="Project W3"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="w4.jpg" alt="Project W4"></div>
-                <div class="portfolio-item-card" data-category="graphic"><img src="w5.jpg" alt="Project W5"></div>
+                <!-- Graphic Design Items (20 Containers) -->
+                <div class="portfolio-item-card" data-category="graphic"><img src="g1.png" alt="G1"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g2.jpg" alt="G2"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g3.jpg" alt="G3"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g4.jpg" alt="G4"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g5.jpg" alt="G5"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g6.jpg" alt="G6"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g7.jpg" alt="G7"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g8.jpg" alt="G8"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g9.jpg" alt="G9"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g10.jpg" alt="G10"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g11.jpg" alt="G11"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g12.jpg" alt="G12"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w1.jpg" alt="W1"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w2.jpg" alt="W2"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w3.jpg" alt="W3"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w4.jpg" alt="W4"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w5.jpg" alt="W5"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="graphic"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="graphic"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="graphic"></div>
 
-                <!-- ================= AI VISUALS (20 Containers with b1-b10) ================= -->
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b1.png" alt="AI Visual B1"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b2.png" alt="AI Visual B2"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b3.png" alt="AI Visual B3"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b4.png" alt="AI Visual B4"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b5.png" alt="AI Visual B5"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b6.png" alt="AI Visual B6"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b7.png" alt="AI Visual B7"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b8.png" alt="AI Visual B8"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b9.png" alt="AI Visual B9"></div>
-                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b10.png" alt="AI Visual B10"></div>
+                <!-- AI Visuals Items (20 Containers with b1-b10) -->
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b1.png" alt="B1"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b2.png" alt="B2"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b3.png" alt="B3"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b4.png" alt="B4"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b5.png" alt="B5"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b6.png" alt="B6"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b7.png" alt="B7"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b8.png" alt="B8"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b9.png" alt="B9"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b10.png" alt="B10"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"></div>
@@ -167,19 +171,19 @@
                 <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"></div>
                 <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"></div>
 
-                <!-- ================= AI ANIMATION VIDEOS (All 12 Reels) ================= -->
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+                <!-- AI Animation Videos (12 Reels) -->
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-card" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
 
             </div>
         </div>
@@ -195,9 +199,7 @@
         <button class="lightbox-nav-arrow arrow-right" id="lightbox-next">&#10095;</button>
     </div>
 
-    <!-- ==========================================================
-         CONTACT SECTION ('GET IN' Black, 'TOUCH' Magenta)
-         ========================================================== -->
+    <!-- Contact Section -->
     <section class="contact-section-zone" id="contact">
         <div class="site-container">
             <div class="section-headline-box">
@@ -228,9 +230,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================
-         FOOTER (#141b27 Matching Services Tone)
-         ========================================================== -->
+    <!-- Footer (#141b27 Dark Charcoal Base) -->
     <footer class="site-footer">
         <div class="site-container footer-content-wrap">
             <p class="footer-small-label">FOLLOW US</p>
@@ -244,7 +244,7 @@
         </div>
     </footer>
 
-    <!-- Script File -->
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>

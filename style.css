@@ -173,7 +173,7 @@ img, video {
    HERO SECTION (Dark Charcoal & Deep Navy Harmony)
    ========================================================== */
 .hero-section {
-    background: radial-gradient(circle at 50% 20%, #151828 0%, #0c0e14 70%, #07080c 100%);
+    background: linear-gradient(180deg, #07090e 0%, #0d111a 60%, #121824 100%);
     color: #ffffff;
     padding: 105px 20px 120px;
     overflow: hidden;
@@ -203,36 +203,31 @@ img, video {
     border: 1px solid rgba(233, 30, 99, 0.45);
     box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
 }
-
-/* Headline Line 1: Ultra-Wide Massive Studio Title */
+/* Headline Line 1: Ultra Bold Italic Agency Studio Title */
 .hero-heading-white {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.4rem, 6.8vw, 4.8rem);
+    font-size: clamp(2.6rem, 7vw, 4.8rem);
     font-weight: 900;
-    line-height: 1.1;
+    font-style: italic;
+    line-height: 1.05;
     margin-bottom: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #FFFFFF;
     white-space: nowrap;
-    text-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* DESIGN STUDIO को Neon Magenta करने के लिए */
-.highlight-magenta {
-    color: #E91E63;
-    text-shadow: 0 0 30px rgba(233, 30, 99, 0.6);
-}
-
-/* Headline Line 2: Sub-Title Muskan Kumari */
+/* Headline Line 2: Stylish Serif Accent Title */
 .hero-heading-magenta, .hero-subheading {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.2rem, 3.4vw, 2.1rem);
-    font-weight: 800;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-weight: 700;
+    font-style: italic;
     line-height: 1.25;
     margin-bottom: 26px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
     color: #E91E63;
     display: block;
     white-space: nowrap;

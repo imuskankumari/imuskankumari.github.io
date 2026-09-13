@@ -1,19 +1,18 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Tab Filtering (Graphic Design, AI Visuals, AI Animation)
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const behanceCards = document.querySelectorAll('.behance-card');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
-            const categoryFilter = btn.getAttribute('data-filter');
+            const filter = button.getAttribute('data-filter');
 
-            behanceCards.forEach(card => {
-                const itemCategory = card.getAttribute('data-category');
-                if (itemCategory === categoryFilter) {
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
@@ -22,63 +21,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Set Graphic Design active on load
-    const initialActive = document.querySelector('.filter-btn.active');
-    if (initialActive) {
-        initialActive.click();
+    // Default trigger for Graphic Design on initial load
+    const activeTab = document.querySelector('.tab-btn.active');
+    if (activeTab) {
+        activeTab.click();
     }
 
     // 2. Fullscreen Lightbox with Next / Previous Image Navigation
-    const lightbox = document.getElementById('behance-lightbox');
-    const lightboxImg = document.getElementById('lightbox-active-img');
-    const closeBtn = document.getElementById('lightbox-close');
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.modal-close');
     const prevBtn = document.getElementById('lightbox-prev');
     const nextBtn = document.getElementById('lightbox-next');
 
-    let visibleImgList = [];
+    let currentImages = [];
     let currentIdx = 0;
 
-    function refreshVisibleImages() {
-        visibleImgList = [];
-        const activeCategory = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        document.querySelectorAll(`.behance-card[data-category="${activeCategory}"] img`).forEach(img => {
-            visibleImgList.push(img.src);
+    function updateImageList() {
+        currentImages = [];
+        const currentCategory = document.querySelector('.tab-btn.active').getAttribute('data-filter');
+        document.querySelectorAll(`.project-card[data-category="${currentCategory}"] img`).forEach(img => {
+            currentImages.push(img.src);
         });
     }
 
-    document.querySelectorAll('.behance-card img').forEach(img => {
+    document.querySelectorAll('.project-card img').forEach(img => {
         img.addEventListener('click', () => {
-            refreshVisibleImages();
-            currentIdx = visibleImgList.indexOf(img.src);
+            updateImageList();
+            currentIdx = currentImages.indexOf(img.src);
             if (currentIdx !== -1) {
-                lightboxImg.src = visibleImgList[currentIdx];
-                lightbox.style.display = 'flex';
+                modalImg.src = currentImages[currentIdx];
+                modal.style.display = 'flex';
             }
         });
     });
 
-    function showNext() {
-        if (visibleImgList.length === 0) return;
-        currentIdx = (currentIdx + 1) % visibleImgList.length;
-        lightboxImg.src = visibleImgList[currentIdx];
+    function nextImage() {
+        if (currentImages.length === 0) return;
+        currentIdx = (currentIdx + 1) % currentImages.length;
+        modalImg.src = currentImages[currentIdx];
     }
 
-    function showPrev() {
-        if (visibleImgList.length === 0) return;
-        currentIdx = (currentIdx - 1 + visibleImgList.length) % visibleImgList.length;
-        lightboxImg.src = visibleImgList[currentIdx];
+    function prevImage() {
+        if (currentImages.length === 0) return;
+        currentIdx = (currentIdx - 1 + currentImages.length) % currentImages.length;
+        modalImg.src = currentImages[currentIdx];
     }
 
-    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
 
-    if (closeBtn) closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
-    if (lightbox) lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) lightbox.style.display = 'none';
-    });
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
 
     // 3. Contact Form Submission
-    const contactForm = document.getElementById('portfolio-contact-form');
+    const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();

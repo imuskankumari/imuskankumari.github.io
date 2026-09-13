@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolioCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 if (category === filterValue) {
-                    card.style.display = 'flex';
+                    card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
                 }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize Graphic Design on page load
+    // Initialize Graphic Design tab on page load
     const activeTab = document.querySelector('.portfolio-tab-btn.active');
     if (activeTab) {
         activeTab.click();
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Keyboard support for Lightbox
+    // Keyboard Arrow Keys Support (Left/Right to slide, Esc to close)
     document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
             if (e.key === 'ArrowRight') showNextImage();
@@ -104,3 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

@@ -168,6 +168,7 @@ img, video {
   color: #0B0F19;
   cursor: pointer;
 }
+
 /* ==========================================================
    HERO SECTION (User Portfolio Spotlight Zone 1.0)
    ========================================================== */
@@ -289,6 +290,11 @@ img, video {
     background: rgba(255, 255, 255, 0.1);
     border-color: #ffffff;
 }
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}  
 
 /* Centered Floating 3D Sparkle Card */
 .floating-art-wrapper {

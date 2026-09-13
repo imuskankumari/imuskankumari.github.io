@@ -887,6 +887,51 @@ img, video {
   .services-3d-grid {
     grid-template-columns: 1fr;
   }
+   /* 3D Girl Floating Animation */
+.hero-character-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(233, 30, 99, 0.45));
+    animation: swayAndFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes swayAndFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(1.5deg);
+    }
+    100% {
+        transform: translateY(-22px) rotate(-1deg);
+    }
+}
+
+/* 3 Column Services Hanging Grid */
+.services-three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 868px) {
+    .hero-split-layout {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .hero-character-img {
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+    .services-three-col {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 
   .behance-grid {
     grid-template-columns: 1fr;

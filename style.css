@@ -170,19 +170,19 @@ img, video {
 }
 
 /* ==========================================================
-   HERO SECTION (User Portfolio Spotlight Zone 1.0)
+   HERO SECTION (Dark Charcoal & Deep Navy Harmony)
    ========================================================== */
 .hero-section {
-    background: linear-gradient(135deg, #0b0f13 0%, #171721 100%);
+    background: radial-gradient(circle at 50% 20%, #151828 0%, #0c0e14 70%, #07080c 100%);
     color: #ffffff;
-    padding: 85px 20px 110px;
+    padding: 105px 20px 120px;
     overflow: hidden;
     position: relative;
     text-align: center;
 }
 
 .hero-container {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -190,56 +190,59 @@ img, video {
 }
 
 .hero-badge {
-    background: rgba(233, 30, 99, 0.15);
-    color: #ff4081;
-    padding: 7px 22px;
+    background: rgba(233, 30, 99, 0.12);
+    color: #ff3377;
+    padding: 8px 24px;
     border-radius: 50px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-transform: uppercase;
     display: inline-block;
-    margin-bottom: 22px;
-    border: 1px solid rgba(233, 30, 99, 0.35);
-    box-shadow: 0 2px 12px rgba(233, 30, 99, 0.2);
+    margin-bottom: 24px;
+    border: 1px solid rgba(233, 30, 99, 0.45);
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
 }
 
-/* Headline Line 1: Longest, widest, massive white text */
+/* Headline Line 1: Ultra-Wide Massive Studio Title */
 .hero-heading-white {
-    font-size: clamp(2.3rem, 5.8vw, 3.8rem);
-    font-weight: 800;
-    line-height: 1.18;
-    margin-bottom: 6px;
-    letter-spacing: -0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-size: clamp(2.8rem, 7.5vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: #FFFFFF;
     white-space: nowrap;
+    text-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
 }
 
-/* Headline Line 2: More compact horizontally than Line 1, vibrant magenta */
-.hero-heading-magenta {
-    font-size: clamp(1.8rem, 4.4vw, 2.9rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 24px;
-    letter-spacing: 0.5px;
+/* Headline Line 2: Radiant Magenta Accent Title */
+.hero-heading-magenta, .hero-subheading {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-size: clamp(1.3rem, 3.8vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 26px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #E91E63;
+    display: block;
     white-space: nowrap;
-    max-width: 850px;
+    text-shadow: 0 0 30px rgba(233, 30, 99, 0.6);
 }
 
 .hero-bio-wrap {
-    max-width: 660px;
-    margin: 0 auto 28px;
+    max-width: 680px;
+    margin: 0 auto 32px;
 }
 
 .hero-subtext {
-    font-size: 0.96rem;
-    line-height: 1.75;
-    color: #a0aec0;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #9aa5b5;
+    text-align: center;
 }
 
 .hero-buttons {
@@ -247,36 +250,38 @@ img, video {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 38px;
+    gap: 18px;
+    margin-bottom: 40px;
 }
 
 .btn-primary {
-    background: #e91e63;
+    background: #E91E63;
     color: #ffffff;
-    padding: 14px 44px;
+    padding: 15px 46px;
     border-radius: 8px;
     font-weight: 700;
+    letter-spacing: 0.5px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 4px 22px rgba(233, 30, 99, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(233, 30, 99, 0.6);
+    box-shadow: 0 6px 28px rgba(233, 30, 99, 0.7);
 }
 
 .btn-secondary {
     background: transparent;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    padding: 13px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    padding: 14px 42px;
     border-radius: 8px;
     font-weight: 700;
+    letter-spacing: 0.5px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -284,7 +289,7 @@ img, video {
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border-color: #ffffff;
 }
 

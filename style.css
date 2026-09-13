@@ -173,7 +173,7 @@ img, video {
    HERO SECTION (User Portfolio Spotlight Zone 1.0)
    ========================================================== */
 .hero-section {
-    background: [var(--g-micro-tinted), #0b0f13 0%, #171721 100%];
+    background: linear-gradient(135deg, #0b0f13 0%, #171721 100%);
     color: #ffffff;
     padding: 85px 20px 110px; /* Hero action padding w/ topping calm backdrop harmony */
     overflow: hidden;

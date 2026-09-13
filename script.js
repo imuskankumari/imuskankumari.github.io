@@ -1,105 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Navigation Toggle
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const navMenu = document.getElementById('nav-menu');
+    // 1. Tab Filtering (Graphic Design, AI Visuals, AI Animation)
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      }
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
     });
 
-    // Close menu when clicking navigation links
-    const navLinks = navMenu.querySelectorAll('.nav-link');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-xmark');
+    // Default trigger for Graphic Design tab on page load
+    const activeTab = document.querySelector('.tab-btn.active');
+    if (activeTab) {
+        activeTab.click();
+    }
+
+    // 2. Click to open Image in Fullscreen Modal
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.modal-close');
+
+    projectCards.forEach(card => {
+        const img = card.querySelector('img');
+        if (img) {
+            card.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+            });
         }
-      });
     });
-  }
 
-  // Portfolio Tab Switching
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Deactivate active states
-      tabButtons.forEach((btn) => btn.classList.remove('active'));
-      tabContents.forEach((content) => content.classList.remove('active'));
-
-      // Activate clicked tab and corresponding target content
-      button.classList.add('active');
-      const targetId = button.getAttribute('data-target');
-      const targetContent = document.getElementById(targetId);
-      if (targetContent) {
-        targetContent.classList.add('active');
-      }
-    });
-  });
-
-  // Lightbox Modal for Project Images
-  const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const projectItems = document.querySelectorAll('.project-item');
-
-  projectItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('.behance-img');
-      if (img && lightboxModal && lightboxImg) {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || 'Project Preview';
-        lightboxModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  });
-
-  const closeLightbox = () => {
-    if (lightboxModal) {
-      lightboxModal.classList.remove('active');
-      document.body.style.overflow = '';
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
     }
-  };
 
-  if (lightboxClose) {
-    lightboxClose.addEventListener('click', closeLightbox);
-  }
-
-  if (lightboxModal) {
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) {
-        closeLightbox();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
-      closeLightbox();
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
     }
-  });
 
-  // Contact Form Submission
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nameInput = document.getElementById('name');
-      const senderName = nameInput ? nameInput.value.trim() : 'there';
-      
-      alert(`Thank you, ${senderName}! Your message has been received. Muskan will get back to you soon.`);
-      contactForm.reset();
-    });
-  }
+    // 3. Contact Form Submission Alert
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            contactForm.reset();
+        });
+    }
 });

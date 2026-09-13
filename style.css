@@ -1,8 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & THEME TOKENS
-   Base Charcoal: #141b27 (Matching Original Cards)
-   Accent: #e91e63
-   Body Background: #ffffff
+   GLOBAL RESET & SYNGRI PURPLE PALETTE
+   Hero Base: #0b0914 (Rich Dark Violet Charcoal)
+   Services Card Base: #141b27 (Original Dark Surface)
+   Accent Glow: #9333ea & #a855f7 (Electric Purple)
+   Body Canvas: #ffffff (Clean Pure White)
    ========================================================== */
 * {
     margin: 0;
@@ -18,7 +19,7 @@ html {
 body {
     background-color: #ffffff;
     color: #111111;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
 }
 
@@ -28,26 +29,26 @@ body {
     padding: 0 20px;
 }
 
-.magenta-highlight {
-    color: #e91e63 !important;
+.purple-highlight {
+    color: #a855f7 !important;
 }
 
 /* ==========================================================
-   MASTER HERO ZONE (True Charcoal #141b27 + Magenta Sunburst)
+   MASTER HERO ZONE (Syngri Dark Violet-Black + Radial Purple Glow)
    ========================================================== */
 .master-hero-zone {
-    background-color: #141b27;
-    background-image: radial-gradient(ellipse at 50% 45%, rgba(233, 30, 99, 0.35) 0%, rgba(20, 27, 39, 0.95) 60%, #141b27 100%);
+    background-color: #0b0914;
+    background-image: radial-gradient(circle at 50% 38%, rgba(147, 51, 234, 0.32) 0%, rgba(11, 9, 20, 0.95) 58%, #0b0914 100%);
     color: #ffffff;
     width: 100%;
-    padding: 24px 20px 115px; /* Ample height for true hanging overlap */
+    padding: 24px 20px 105px;
     position: relative;
-    overflow: hidden;
+    text-align: center;
 }
 
 .hero-navbar {
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .nav-inner-container {
@@ -59,11 +60,11 @@ body {
 }
 
 .brand-monogram {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
 }
 
@@ -82,15 +83,20 @@ body {
 }
 
 .nav-item:hover {
-    color: #e91e63;
+    color: #a855f7;
 }
 
 .nav-contact-btn {
-    background: #e91e63;
+    background: #9333ea;
     color: #ffffff !important;
     padding: 8px 22px;
     border-radius: 6px;
     font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.nav-contact-btn:hover {
+    transform: translateY(-2px);
 }
 
 .mobile-toggle {
@@ -102,91 +108,45 @@ body {
     cursor: pointer;
 }
 
-/* 3-Column Balanced Editorial Stage */
-.hero-stage-wrapper {
-    max-width: 1220px;
+/* Hero Center Stage */
+.hero-main-stage {
+    max-width: 850px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr 1fr;
-    align-items: center;
-    gap: 25px;
-}
-
-.stage-col-left {
-    text-align: left;
-}
-
-.tagline-intro {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #94a3b8;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.bold-hero-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(2.4rem, 4.4vw, 3.8rem);
-    font-weight: 700;
-    line-height: 1.05;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
-}
-
-.bold-hero-title span:first-child {
-    color: #ffffff;
-}
-
-.tag-meta-bottom {
-    display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
+    justify-content: center;
+    gap: 14px;
 }
 
-.meta-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #e91e63;
-    display: inline-block;
-}
-
-/* Center 3D Girl Avatar */
-.stage-col-center {
+/* 3D Girl Avatar with Purple Cinematic Glow */
+.hero-avatar-wrap {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    min-height: 320px;
+    width: 100%;
+    margin-bottom: 4px;
 }
 
 .glow-backdrop-orb {
     position: absolute;
     width: 290px;
     height: 290px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.45) 0%, rgba(233, 30, 99, 0) 70%);
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.48) 0%, rgba(147, 51, 234, 0) 70%);
     border-radius: 50%;
     z-index: 1;
-    filter: blur(22px);
+    filter: blur(24px);
 }
 
 .floating-hero-avatar {
-    width: 100%;
-    max-width: 380px;
-    min-width: 260px;
+    width: 320px;
+    max-width: 85vw;
     height: auto;
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.65));
+    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.7));
     animation: floatingSway 4.5s ease-in-out infinite alternate;
 }
 
@@ -195,53 +155,54 @@ body {
     100% { transform: translateY(-14px); }
 }
 
-/* Right Studio Column */
-.stage-col-right {
-    text-align: left;
+/* Clean Editorial Headings */
+.hero-details-wrap {
+    text-align: center;
 }
 
-.studio-subheading {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+.tagline-intro {
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
 }
 
-.studio-mini-bio {
-    font-size: 0.88rem;
-    line-height: 1.65;
-    color: #cbd5e1;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-bottom: 22px;
+.bold-hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .stage-buttons-wrap {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 14px;
 }
 
-.btn-magenta-fill {
-    background: #e91e63;
+.btn-purple-fill {
+    background: #9333ea;
     color: #ffffff;
-    padding: 11px 26px;
-    border-radius: 6px;
+    padding: 12px 30px;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     border: none;
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(147, 51, 234, 0.4);
     transition: transform 0.2s ease;
 }
 
-.btn-magenta-fill:hover {
+.btn-purple-fill:hover {
     transform: translateY(-2px);
 }
 
@@ -249,10 +210,10 @@ body {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 10px 24px;
-    border-radius: 6px;
+    padding: 11px 28px;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -264,11 +225,11 @@ body {
 }
 
 /* ==========================================================
-   SERVICES: 3 HANGING CARDS (Half-Dark / Half-White Body)
+   SERVICES: ORIGINAL HANGING OVERLAP (HALF-DARK / HALF-WHITE)
    ========================================================== */
 .services-hanging-section {
     position: relative;
-    margin-top: -65px; /* Overlaps precisely onto the bottom boundary */
+    margin-top: -65px; /* Perfect overlap on the hero boundary */
     z-index: 20;
     padding-bottom: 70px;
 }
@@ -280,7 +241,7 @@ body {
 }
 
 .service-orig-card {
-    background: #141b27; /* Exact matching card tone */
+    background: #141b27; /* Original dark container tone */
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
     padding: 26px 22px;
@@ -295,17 +256,16 @@ body {
 
 .service-card-icon {
     font-size: 1.6rem;
-    color: #e91e63;
+    color: #a855f7;
     margin-bottom: 12px;
 }
 
 .service-card-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
 }
 
 .service-card-desc {
@@ -317,9 +277,9 @@ body {
 
 .service-card-badge {
     display: inline-block;
-    background: rgba(233, 30, 99, 0.12);
-    color: #e91e63;
-    border: 1px solid rgba(233, 30, 99, 0.3);
+    background: rgba(168, 85, 247, 0.12);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
     padding: 4px 12px;
     border-radius: 50px;
     font-size: 0.72rem;
@@ -327,7 +287,7 @@ body {
 }
 
 /* ==========================================================
-   PROJECTS: BEHANCE 4:3 GRID (FULL COVER, NO GAPS)
+   MY PROJECTS: BEHANCE 4:3 GRID (FULL COVER)
    ========================================================== */
 .projects-portfolio-section {
     background-color: #ffffff;
@@ -340,17 +300,17 @@ body {
 }
 
 .section-title-large {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: #111111;
 }
 
 .section-accent-line {
     width: 50px;
     height: 4px;
-    background: #e91e63;
+    background: #9333ea;
     margin: 8px auto 0;
     border-radius: 2px;
 }
@@ -376,7 +336,8 @@ body {
 }
 
 .portfolio-tab-btn.active {
-    background: #e91e63;
+    background: #9333ea;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.35);
 }
 
 /* 2-Column Behance 4:3 Grid */
@@ -389,7 +350,7 @@ body {
 .portfolio-item-card {
     background: #141b27;
     border-radius: 12px;
-    aspect-ratio: 4 / 3; /* Exact Behance Ratio */
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
@@ -401,7 +362,7 @@ body {
     transform: translateY(-4px);
 }
 
-/* Image completely covers container without borders or gaps */
+/* Image fills entire 4:3 container without borders */
 .portfolio-item-card img {
     width: 100%;
     height: 100%;
@@ -411,7 +372,7 @@ body {
     border: none;
 }
 
-.portfolio-item-card.video-card {
+.portfolio-item-card.video-aspect-card {
     aspect-ratio: 9 / 16;
 }
 
@@ -422,7 +383,6 @@ body {
     display: block;
 }
 
-/* Clean Solid Dark Placeholders */
 .placeholder-card {
     background: #141b27 !important;
     border: none;
@@ -484,7 +444,7 @@ body {
 }
 
 .lightbox-nav-arrow:hover {
-    background: #e91e63;
+    background: #9333ea;
 }
 
 .arrow-left {
@@ -505,10 +465,10 @@ body {
 }
 
 .contact-title-two-tone {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .black-text {
@@ -551,7 +511,7 @@ body {
 }
 
 .form-field-group input:focus, .form-field-group textarea:focus {
-    border-color: #e91e63;
+    border-color: #9333ea;
     background: #ffffff;
 }
 
@@ -564,18 +524,18 @@ body {
 }
 
 /* ==========================================================
-   FOOTER (#141b27 Matching Dark Base)
+   FOOTER (Matching Dark Tone)
    ========================================================== */
 .site-footer {
-    background-color: #141b27;
+    background-color: #0b0914;
     padding: 45px 20px;
     text-align: center;
 }
 
 .footer-small-label {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
     color: #94a3b8;
     margin-bottom: 16px;
@@ -592,7 +552,7 @@ body {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: #e91e63;
+    background: #9333ea;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -614,7 +574,7 @@ body {
 /* ==========================================================
    MOBILE RESPONSIVENESS
    ========================================================== */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     .nav-links-menu {
         display: none;
     }
@@ -624,23 +584,8 @@ body {
     .master-hero-zone {
         padding-bottom: 75px;
     }
-    .hero-stage-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 25px;
-    }
-    .stage-col-left, .stage-col-right {
-        text-align: center;
-    }
-    .studio-mini-bio {
-        text-align: center;
-    }
-    .tag-meta-bottom, .stage-buttons-wrap {
-        justify-content: center;
-    }
     .floating-hero-avatar {
         max-width: 290px;
-        margin: 0 auto;
     }
     .services-hanging-section {
         margin-top: -45px;

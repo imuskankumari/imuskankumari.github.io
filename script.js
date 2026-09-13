@@ -1,19 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Image Error Fallback: Auto-fallback if filename case differs on server
-    const heroImg = document.getElementById('hero-main-img');
-    if (heroImg) {
-        heroImg.onerror = function() {
-            if (!this.getAttribute('data-tried-fallback')) {
-                this.setAttribute('data-tried-fallback', '1');
-                this.src = './hero-girl.png';
-            } else if (this.getAttribute('data-tried-fallback') === '1') {
-                this.setAttribute('data-tried-fallback', '2');
-                this.src = '9131.png';
-            }
-        };
-    }
-
-    // 2. Tab Switching Functionality
+    // 1. Tab Switching Functionality
     const tabButtons = document.querySelectorAll('.portfolio-tab-btn');
     const portfolioCards = document.querySelectorAll('.portfolio-item-card');
 
@@ -41,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeTab.click();
     }
 
-    // 3. Fullscreen Lightbox with Image Slide Support
+    // 2. Fullscreen Lightbox with Image Slide Support
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -108,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Contact Form Submission
+    // 3. Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -118,3 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

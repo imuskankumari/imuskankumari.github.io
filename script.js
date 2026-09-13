@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Image Error Fallback: If hero-girl.png path has issue, try loading 9131.png automatically
+    // 1. Image Error Fallback: Auto-fallback if filename case differs on server
     const heroImg = document.getElementById('hero-main-img');
     if (heroImg) {
         heroImg.onerror = function() {
             if (!this.getAttribute('data-tried-fallback')) {
-                this.setAttribute('data-tried-fallback', 'true');
-                this.src = '9131.png'; // Direct fallback to repository upload
+                this.setAttribute('data-tried-fallback', '1');
+                this.src = './hero-girl.png';
+            } else if (this.getAttribute('data-tried-fallback') === '1') {
+                this.setAttribute('data-tried-fallback', '2');
+                this.src = '9131.png';
             }
         };
     }
@@ -96,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Keyboard Arrow Keys Support (Left/Right to slide, Esc to close)
+    // Keyboard support for Lightbox
     document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
             if (e.key === 'ArrowRight') showNextImage();
@@ -115,4 +118,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-

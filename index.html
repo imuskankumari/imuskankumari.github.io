@@ -38,23 +38,39 @@
                 </nav>
             </div>
         </header>
-   <!-- Syngri Style 2-Column Hero Stage -->
-    <div class="hero-main-stage">
-      <div class="hero-content-left">
-        <div class="hero-badge">
-          <span class="badge-dot"></span> Available for Work
+    <!-- Desktop Side-by-Side Hero Section -->
+    <div class="hero-main-stage" style="display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 85vh; padding: 40px 8%; box-sizing: border-box; gap: 40px; position: relative;">
+      
+      <!-- Left Side: Content -->
+      <div style="flex: 1; max-width: 55%;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50px; font-size: 14px; color: #cfc6e6; margin-bottom: 20px;">
+          <span style="width: 8px; height: 8px; background-color: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88;"></span> Available for Work
         </div>
-        <h1 class="hero-main-title">
-          GRAPHIC <span class="purple-highlight">DESIGNER</span>
+        
+        <h1 style="font-size: 52px; font-weight: 800; line-height: 1.15; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase;">
+          GRAPHIC <span style="color: #c77dff; background: linear-gradient(135deg, #e0aaff, #9d4edd); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">DESIGNER</span>
         </h1>
-        <p class="hero-subtext">
+        
+        <p style="font-size: 18px; line-height: 1.6; color: #a0a0b2; margin: 0 0 32px 0; max-width: 480px;">
           High-impact brand collateral, vector illustrations, logo identity, and promotional graphics.
         </p>
-        <div class="stage-buttons-wrap">
-          <a href="#projects" class="btn-purple-fill">Explore Projects</a>
-          <a href="#contact" class="btn-outline-white">Contact Me</a>
+        
+        <div class="stage-buttons-wrap" style="display: flex; gap: 16px;">
+          <a href="#projects" class="btn-purple-fill" style="padding: 12px 28px; background: #7b2cbf; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block;">Explore Projects</a>
+          <a href="#contact" class="btn-outline-white" style="padding: 12px 28px; border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block;">Contact Me</a>
         </div>
       </div>
+
+      <!-- Right Side: 3D Model -->
+      <div style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative;">
+        <!-- Glowing background behind model -->
+        <div style="position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(157, 78, 221, 0.4) 0%, rgba(0, 0, 0, 0) 70%); filter: blur(50px); z-index: 1;"></div>
+        
+        <img src="model.png" alt="Muskan Kumari 3D Model" style="width: 100%; max-width: 480px; height: auto; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7)); display: block;">
+      </div>
+
+    </div>
+
 
       <div class="hero-content-right">
         <div class="glow-backdrop"></div>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muskan Kumari - MK Design Studio</title>
 
-    <!-- Google Fonts -->
+    <!-- Modern Typography: Syne (Tall/Condensed Modern) & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,700;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,189 +18,204 @@
 </head>
 <body>
 
-    <!-- Unified Transparent Navigation Header -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="#" class="brand-title">MK DESIGN STUDIO</a>
+    <!-- Unified Master Hero Zone (Header + Hero in One Single Flow) -->
+    <section class="master-hero-zone">
+        
+        <!-- Navigation Integrated Seamlessly -->
+        <header class="header-nav">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-title">MK DESIGN STUDIO</a>
 
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link nav-btn-cta">Contact</a>
-            </nav>
-        </div>
-    </header>
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link nav-btn-cta">Contact</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Compact Hero Section (Matching Service Card Background) -->
-    <section class="hero-section">
-        <div class="hero-container">
-            
-            <!-- Left Side: Text Column -->
-            <div class="hero-text-col">
-                <h1 class="hero-heading-white">MK <span class="highlight-magenta">DESIGN STUDIO</span></h1>
-                <h2 class="hero-heading-magenta">MUSKAN KUMARI GRAPHIC DESIGNER</h2>
+        <!-- Main Spotlight Area -->
+        <div class="hero-body-container">
+            <div class="hero-left-content">
+                <h1 class="hero-title">
+                    <span class="text-white">MK</span> 
+                    <span class="text-magenta">DESIGN</span> 
+                    <span class="text-white">STUDIO</span>
+                </h1>
+                <h2 class="hero-subtitle">MUSKAN KUMARI GRAPHIC DESIGNER</h2>
                 
-                <div class="hero-bio-wrap">
-                    <p class="hero-subtext">Professionally, I am a Graphic Designer. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw and Canva. I also generate AI visuals and AI animation videos using Generative AI tools.</p>
+                <div class="hero-desc-box">
+                    <p>Professionally, I am a Graphic Designer. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw and Canva. I also generate AI visuals and AI animation videos using Generative AI tools.</p>
                 </div>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">Explore Projects ✨</a>
-                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                <div class="hero-action-btns">
+                    <a href="#projects" class="btn-magenta">Explore Projects ✨</a>
+                    <a href="#contact" class="btn-outline">Contact Me</a>
                 </div>
             </div>
 
-            <!-- Right Side: 3D Girl Graphic -->
-            <div class="hero-visual-col">
-                <img src="hero-girl.png" alt="Creative 3D Designer" class="hero-character-img">
+            <div class="hero-right-visual">
+                <img src="hero-girl.png" alt="3D Designer" class="floating-hero-girl">
             </div>
-
         </div>
+
     </section>
 
-    <!-- Services Section: 3 Hanging Cards In-line -->
+    <!-- 3 Services: True Original Horizontal Hanging Cards -->
     <section class="services-hanging-section" id="services">
-        <div class="container">
-            <div class="services-3d-grid">
+        <div class="main-container">
+            <div class="services-row-grid">
                 
-                <!-- Card 1: Graphic Design -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h3 class="service-3d-title">Graphic Design</h3>
-                    <p class="service-3d-desc">High-impact brand collateral, vector illustrations, logo identity, and promotional graphics.</p>
-                    <span class="service-badge-tag">Creative Studio</span>
+                <!-- Service 1: Graphic Design -->
+                <div class="service-orig-card">
+                    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-info">High-impact brand collateral, vector illustrations, logo identity, and promotional graphics.</p>
+                    <span class="service-pill">Creative Studio</span>
                 </div>
 
-                <!-- Card 2: AI Visuals -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 class="service-3d-title">AI Visuals</h3>
-                    <p class="service-3d-desc">Generative digital artwork, 3D AI visual concepts, surreal imagery, and high-fidelity prompt craft.</p>
-                    <span class="service-badge-tag">Next-Gen AI</span>
+                <!-- Service 2: AI Visuals -->
+                <div class="service-orig-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="service-title">AI Visuals</h3>
+                    <p class="service-info">Generative digital artwork, 3D AI visual concepts, surreal imagery, and high-fidelity prompt craft.</p>
+                    <span class="service-pill">Next-Gen AI</span>
                 </div>
 
-                <!-- Card 3: AI Animation Videos -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-film"></i></div>
-                    <h3 class="service-3d-title">AI Animation Videos</h3>
-                    <p class="service-3d-desc">Transforming static artwork into liquid 3D motion, cinematic visual storytelling, and motion reels.</p>
-                    <span class="service-badge-tag">Dynamic Motion</span>
+                <!-- Service 3: AI Animation Videos -->
+                <div class="service-orig-card">
+                    <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3 class="service-title">AI Animation Videos</h3>
+                    <p class="service-info">Transforming static artwork into liquid 3D motion, cinematic visual storytelling, and motion reels.</p>
+                    <span class="service-pill">Dynamic Motion</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Behance Style Projects Section (Large Viewport Grid) -->
     <section class="projects-section" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">MY <span class="highlight-magenta">PROJECTS</span></h2>
-                <div class="section-title-bar"></div>
+        <div class="main-container">
+            
+            <div class="section-heading-box">
+                <h2 class="behance-section-title">MY <span class="text-magenta">PROJECTS</span></h2>
+                <div class="accent-line"></div>
             </div>
 
-            <!-- Filter Buttons -->
-            <div class="project-tabs">
-                <button class="tab-btn active" data-filter="graphic">Graphic Design</button>
-                <button class="tab-btn" data-filter="ai-visuals">AI Visuals</button>
-                <button class="tab-btn" data-filter="ai-animation">AI Animation Videos</button>
+            <!-- Tab Filters -->
+            <div class="tabs-control-bar">
+                <button class="filter-btn active" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="ai-visuals">AI Visuals</button>
+                <button class="filter-btn" data-filter="ai-animation">AI Animation Videos</button>
             </div>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid">
+            <!-- Behance Wide Grid Container -->
+            <div class="behance-grid">
                 
-                <!-- Graphic Design Items (g1 to g9 and w1 to w5 included) -->
-                <div class="project-card" data-category="graphic"><img src="g1.png" alt="Project G1"></div>
-                <div class="project-card" data-category="graphic"><img src="g2.jpg" alt="Project G2"></div>
-                <div class="project-card" data-category="graphic"><img src="g3.jpg" alt="Project G3"></div>
-                <div class="project-card" data-category="graphic"><img src="g4.jpg" alt="Project G4"></div>
-                <div class="project-card" data-category="graphic"><img src="g5.jpg" alt="Project G5"></div>
-                <div class="project-card" data-category="graphic"><img src="g6.jpg" alt="Project G6"></div>
-                <div class="project-card" data-category="graphic"><img src="g7.jpg" alt="Project G7"></div>
-                <div class="project-card" data-category="graphic"><img src="g8.jpg" alt="Project G8"></div>
-                <div class="project-card" data-category="graphic"><img src="g9.jpg" alt="Project G9"></div>
-                <div class="project-card" data-category="graphic"><img src="w1.jpg" alt="Project W1"></div>
-                <div class="project-card" data-category="graphic"><img src="w2.jpg" alt="Project W2"></div>
-                <div class="project-card" data-category="graphic"><img src="w3.jpg" alt="Project W3"></div>
-                <div class="project-card" data-category="graphic"><img src="w4.jpg" alt="Project W4"></div>
-                <div class="project-card" data-category="graphic"><img src="w5.jpg" alt="Project W5"></div>
+                <!-- Graphic Design Tab (g1-g9 & renamed w1-w5 items) -->
+                <div class="behance-card" data-category="graphic"><img src="g1.png" alt="Graphic Design G1"></div>
+                <div class="behance-card" data-category="graphic"><img src="g2.jpg" alt="Graphic Design G2"></div>
+                <div class="behance-card" data-category="graphic"><img src="g3.jpg" alt="Graphic Design G3"></div>
+                <div class="behance-card" data-category="graphic"><img src="g4.jpg" alt="Graphic Design G4"></div>
+                <div class="behance-card" data-category="graphic"><img src="g5.jpg" alt="Graphic Design G5"></div>
+                <div class="behance-card" data-category="graphic"><img src="g6.jpg" alt="Graphic Design G6"></div>
+                <div class="behance-card" data-category="graphic"><img src="g7.jpg" alt="Graphic Design G7"></div>
+                <div class="behance-card" data-category="graphic"><img src="g8.jpg" alt="Graphic Design G8"></div>
+                <div class="behance-card" data-category="graphic"><img src="g9.jpg" alt="Graphic Design G9"></div>
+                <div class="behance-card" data-category="graphic"><img src="g10.jpg" alt="Graphic Design G10"></div>
+                <div class="behance-card" data-category="graphic"><img src="g11.jpg" alt="Graphic Design G11"></div>
+                <div class="behance-card" data-category="graphic"><img src="g12.jpg" alt="Graphic Design G12"></div>
+                <div class="behance-card" data-category="graphic"><img src="w1.jpg" alt="Graphic Design W1"></div>
+                <div class="behance-card" data-category="graphic"><img src="w2.jpg" alt="Graphic Design W2"></div>
 
-                <!-- AI Visuals Placeholder Cards -->
-                <div class="project-card" data-category="ai-visuals"><img src="g1.png" alt="AI Visual 1"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="g2.jpg" alt="AI Visual 2"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="g3.jpg" alt="AI Visual 3"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="g4.jpg" alt="AI Visual 4"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="g5.jpg" alt="AI Visual 5"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="g6.jpg" alt="AI Visual 6"></div>
+                <!-- AI Visuals Tab (Mapped directly to Burger & Visual Renders b1-b10) -->
+                <div class="behance-card" data-category="ai-visuals"><img src="b1.png" alt="AI Visual B1"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b2.png" alt="AI Visual B2"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b3.png" alt="AI Visual B3"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b4.png" alt="AI Visual B4"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b5.png" alt="AI Visual B5"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b6.png" alt="AI Visual B6"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b7.png" alt="AI Visual B7"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b8.png" alt="AI Visual B8"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b9.png" alt="AI Visual B9"></div>
+                <div class="behance-card" data-category="ai-visuals"><img src="b10.png" alt="AI Visual B10"></div>
 
-                <!-- AI Animation Video Reels (r1 to r12) -->
-                <div class="project-card video-card" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+                <!-- AI Animation Videos Tab (All Reels r1-r12 in Behance Aspect) -->
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="behance-card video-format" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
 
             </div>
         </div>
     </section>
 
-    <!-- Modal Popup for Clicking on Images -->
-    <div id="image-modal" class="image-modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modal-img">
+    <!-- Fullscreen Behance Lightbox with Prev / Next Slide Controls -->
+    <div id="behance-lightbox" class="lightbox-overlay">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-nav-btn prev-btn" id="lightbox-prev">&#10094;</button>
+        <div class="lightbox-media-wrapper">
+            <img id="lightbox-active-img" src="" alt="Enlarged Project">
+        </div>
+        <button class="lightbox-nav-btn next-btn" id="lightbox-next">&#10095;</button>
     </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">GET IN <span class="highlight-magenta">TOUCH</span></h2>
-                <div class="section-title-bar"></div>
+    <!-- Contact Section: Solid Black 'GET IN' & Solid Magenta 'TOUCH' -->
+    <section class="contact-zone" id="contact">
+        <div class="main-container">
+            <div class="section-heading-box">
+                <h2 class="contact-main-heading">
+                    <span class="text-pure-black">GET IN</span> 
+                    <span class="text-pure-magenta">TOUCH</span>
+                </h2>
+                <div class="accent-line"></div>
             </div>
 
-            <div class="contact-card">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Enter your full name" required>
+            <div class="contact-box">
+                <form class="clean-form" id="portfolio-contact-form">
+                    <div class="field-wrap">
+                        <label for="usr-name">Full Name</label>
+                        <input type="text" id="usr-name" placeholder="Enter your full name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email address" required>
+                    <div class="field-wrap">
+                        <label for="usr-email">Email Address</label>
+                        <input type="email" id="usr-email" placeholder="Enter your email address" required>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    <div class="field-wrap">
+                        <label for="usr-msg">Your Message</label>
+                        <textarea id="usr-msg" rows="4" placeholder="Write your message here..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary form-submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="btn-magenta submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p class="footer-title">FOLLOW US</p>
-            <div class="social-icons">
-                <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-behance"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <!-- Footer: Identical Dark Theme Base -->
+    <footer class="footer-zone">
+        <div class="main-container footer-inner">
+            <p class="footer-label">FOLLOW US</p>
+            <div class="social-links-wrap">
+                <a href="#" class="social-circle"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-circle"><i class="fa-brands fa-behance"></i></a>
+                <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-            <p class="copyright-text">© 2026 MK Design Studio by Muskan Kumari.</p>
+            <p class="copyright-line">© 2026 MK Design Studio by Muskan Kumari.</p>
         </div>
     </footer>
 

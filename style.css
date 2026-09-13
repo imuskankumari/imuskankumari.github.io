@@ -1,9 +1,8 @@
 /* ==========================================================
    GLOBAL RESET & THEME TOKENS
-   True Dark Charcoal Base: #0f131a
-   Original Card Surface: #141b27
-   Vibrant Accent: #e91e63
-   Body Background: #ffffff (Clean pure white)
+   Base Charcoal: #141b27 (Matching Original Cards)
+   Accent: #e91e63
+   Body Background: #ffffff
    ========================================================== */
 * {
     margin: 0;
@@ -34,21 +33,21 @@ body {
 }
 
 /* ==========================================================
-   MASTER HERO ZONE (Dark Solid #0f131a + Soft Magenta Glow)
+   MASTER HERO ZONE (True Charcoal #141b27 + Magenta Sunburst)
    ========================================================== */
 .master-hero-zone {
-    background-color: #0f131a;
-    background-image: radial-gradient(circle at 50% 32%, rgba(233, 30, 99, 0.28) 0%, rgba(15, 19, 26, 0.95) 55%, #0f131a 100%);
+    background-color: #141b27;
+    background-image: radial-gradient(ellipse at 50% 45%, rgba(233, 30, 99, 0.35) 0%, rgba(20, 27, 39, 0.95) 60%, #141b27 100%);
     color: #ffffff;
     width: 100%;
-    padding: 24px 20px 105px;
+    padding: 24px 20px 115px; /* Ample height for true hanging overlap */
     position: relative;
-    text-align: center;
+    overflow: hidden;
 }
 
 .hero-navbar {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .nav-inner-container {
@@ -103,30 +102,76 @@ body {
     cursor: pointer;
 }
 
-/* Hero Stage: Centered Stack with Big 3D Girl First */
-.hero-main-stage {
-    max-width: 900px;
+/* 3-Column Balanced Editorial Stage */
+.hero-stage-wrapper {
+    max-width: 1220px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
+    gap: 25px;
 }
 
-.hero-avatar-wrap {
-    position: relative;
+.stage-col-left {
+    text-align: left;
+}
+
+.tagline-intro {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.bold-hero-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.bold-hero-title span:first-child {
+    color: #ffffff;
+}
+
+.tag-meta-bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.meta-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e91e63;
+    display: inline-block;
+}
+
+/* Center 3D Girl Avatar */
+.stage-col-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-bottom: 5px;
+    position: relative;
+    min-height: 320px;
 }
 
 .glow-backdrop-orb {
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 290px;
+    height: 290px;
     background: radial-gradient(circle, rgba(233, 30, 99, 0.45) 0%, rgba(233, 30, 99, 0) 70%);
     border-radius: 50%;
     z-index: 1;
@@ -134,8 +179,9 @@ body {
 }
 
 .floating-hero-avatar {
-    width: 330px;
-    max-width: 85vw;
+    width: 100%;
+    max-width: 380px;
+    min-width: 260px;
     height: auto;
     display: block !important;
     position: relative;
@@ -149,55 +195,40 @@ body {
     100% { transform: translateY(-14px); }
 }
 
-.hero-details-wrap {
-    text-align: center;
-}
-
-.tagline-intro {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #94a3b8;
-    margin-bottom: 6px;
-}
-
-.bold-hero-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(2.4rem, 6vw, 3.8rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    margin-bottom: 6px;
+/* Right Studio Column */
+.stage-col-right {
+    text-align: left;
 }
 
 .studio-subheading {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
     font-weight: 600;
-    color: #e2e8f0;
+    color: #ffffff;
     letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .studio-mini-bio {
-    max-width: 560px;
-    margin: 0 auto 22px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.65;
-    color: #94a3b8;
+    color: #cbd5e1;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 22px;
 }
 
 .stage-buttons-wrap {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .btn-magenta-fill {
     background: #e91e63;
     color: #ffffff;
-    padding: 12px 28px;
+    padding: 11px 26px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 0.88rem;
@@ -218,7 +249,7 @@ body {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 11px 26px;
+    padding: 10px 24px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 0.88rem;
@@ -233,11 +264,11 @@ body {
 }
 
 /* ==========================================================
-   SERVICES: ORIGINAL HANGING OVERLAP (HALF-DARK / HALF-WHITE)
+   SERVICES: 3 HANGING CARDS (Half-Dark / Half-White Body)
    ========================================================== */
 .services-hanging-section {
     position: relative;
-    margin-top: -65px; /* Overlaps bottom edge of hero */
+    margin-top: -65px; /* Overlaps precisely onto the bottom boundary */
     z-index: 20;
     padding-bottom: 70px;
 }
@@ -249,7 +280,7 @@ body {
 }
 
 .service-orig-card {
-    background: #141b27; /* Original dark container background */
+    background: #141b27; /* Exact matching card tone */
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
     padding: 26px 22px;
@@ -296,7 +327,7 @@ body {
 }
 
 /* ==========================================================
-   MY PROJECTS: BEHANCE 4:3 GRID (FULL COVER, NO GAPS)
+   PROJECTS: BEHANCE 4:3 GRID (FULL COVER, NO GAPS)
    ========================================================== */
 .projects-portfolio-section {
     background-color: #ffffff;
@@ -358,7 +389,7 @@ body {
 .portfolio-item-card {
     background: #141b27;
     border-radius: 12px;
-    aspect-ratio: 4 / 3; /* Exact Behance 4:3 Ratio */
+    aspect-ratio: 4 / 3; /* Exact Behance Ratio */
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
@@ -370,7 +401,7 @@ body {
     transform: translateY(-4px);
 }
 
-/* Image completely fills the container without padding or borders */
+/* Image completely covers container without borders or gaps */
 .portfolio-item-card img {
     width: 100%;
     height: 100%;
@@ -380,7 +411,7 @@ body {
     border: none;
 }
 
-.portfolio-item-card.video-aspect-card {
+.portfolio-item-card.video-card {
     aspect-ratio: 9 / 16;
 }
 
@@ -391,14 +422,14 @@ body {
     display: block;
 }
 
-/* Solid Minimal Dark Box (Empty Placeholder) */
+/* Clean Solid Dark Placeholders */
 .placeholder-card {
     background: #141b27 !important;
     border: none;
 }
 
 /* ==========================================================
-   FULLSCREEN LIGHTBOX MODAL WITH NAVIGATION ARROWS
+   FULLSCREEN LIGHTBOX MODAL
    ========================================================== */
 .fullscreen-lightbox-modal {
     display: none;
@@ -533,7 +564,7 @@ body {
 }
 
 /* ==========================================================
-   FOOTER (#141b27 Matching Dark Tone)
+   FOOTER (#141b27 Matching Dark Base)
    ========================================================== */
 .site-footer {
     background-color: #141b27;
@@ -581,9 +612,9 @@ body {
 }
 
 /* ==========================================================
-   MOBILE SCREEN ADJUSTMENTS
+   MOBILE RESPONSIVENESS
    ========================================================== */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .nav-links-menu {
         display: none;
     }
@@ -593,8 +624,23 @@ body {
     .master-hero-zone {
         padding-bottom: 75px;
     }
+    .hero-stage-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+    .stage-col-left, .stage-col-right {
+        text-align: center;
+    }
+    .studio-mini-bio {
+        text-align: center;
+    }
+    .tag-meta-bottom, .stage-buttons-wrap {
+        justify-content: center;
+    }
     .floating-hero-avatar {
         max-width: 290px;
+        margin: 0 auto;
     }
     .services-hanging-section {
         margin-top: -45px;

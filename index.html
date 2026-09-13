@@ -3,233 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muskan Kumari - MK Design Studio</title>
+    <title>Muskan Kumari - Graphic Designer | MK Design Studio</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Syne (Tall/Bold Editorial) & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Styles -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Unified Dark Charcoal Hero Zone (Header + Hero Combined) -->
-    <header class="master-hero-header">
+    <!-- ==========================================================
+         CINEMATIC EDITORIAL HERO (Unified Header + Hero Canvas)
+         ========================================================== -->
+    <section class="master-hero-zone">
         
-        <!-- Navbar integrated directly into Dark Zone -->
-        <div class="nav-container">
-            <a href="#" class="brand-title">MK DESIGN STUDIO</a>
+        <!-- Top Navigation -->
+        <header class="hero-navbar">
+            <div class="nav-inner-container">
+                <a href="#" class="brand-monogram">MK</a>
 
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link nav-btn-cta">Contact</a>
-            </nav>
-        </div>
-
-        <!-- Hero Content (Text on Left, 3D Girl on Right) -->
-        <div class="hero-split-wrapper">
-            <div class="hero-text-side">
-                <h1 class="hero-title">MK <span class="highlight-magenta">DESIGN STUDIO</span></h1>
-                <h2 class="hero-subtitle">MUSKAN KUMARI GRAPHIC DESIGNER</h2>
-                
-                <div class="hero-bio-wrap">
-                    <p class="hero-subtext">Professionally, I am a Graphic Designer. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw and Canva. I also generate AI visuals and AI animation videos using Generative AI tools.</p>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">Explore Projects ✨</a>
-                    <a href="#contact" class="btn-secondary">Contact Me</a>
-                </div>
+                <nav class="nav-links-menu" id="nav-menu">
+                    <a href="#" class="nav-item">Home</a>
+                    <a href="#services" class="nav-item">Services</a>
+                    <a href="#projects" class="nav-item">Projects</a>
+                    <a href="#contact" class="nav-item nav-contact-btn">Get In Touch</a>
+                </nav>
             </div>
+        </header>
 
-            <div class="hero-visual-side">
-                <img src="hero-girl.png" alt="Creative 3D Designer" class="hero-character-img">
-            </div>
-        </div>
-
-    </header>
-
-    <!-- 3 Services Cards: Hanging Half on Dark Hero / Half on White Body -->
-    <section class="services-hanging-section" id="services">
-        <div class="main-container">
-            <div class="services-3d-grid">
-                
-                <!-- Card 1: Graphic Design -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h3 class="service-3d-title">Graphic Design</h3>
-                    <p class="service-3d-desc">High-impact brand collateral, vector illustrations, logo identity, and promotional graphics.</p>
-                    <span class="service-badge-tag">Creative Studio</span>
-                </div>
-
-                <!-- Card 2: AI Visuals -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 class="service-3d-title">AI Visuals</h3>
-                    <p class="service-3d-desc">Generative digital artwork, 3D AI visual concepts, surreal imagery, and high-fidelity prompt craft.</p>
-                    <span class="service-badge-tag">Next-Gen AI</span>
-                </div>
-
-                <!-- Card 3: AI Animation Videos -->
-                <div class="service-3d-card">
-                    <div class="service-3d-icon"><i class="fa-solid fa-film"></i></div>
-                    <h3 class="service-3d-title">AI Animation Videos</h3>
-                    <p class="service-3d-desc">Transforming static artwork into liquid 3D motion, cinematic visual storytelling, and motion reels.</p>
-                    <span class="service-badge-tag">Dynamic Motion</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section (Pure Clean White Background) -->
-    <section class="projects-section" id="projects">
-        <div class="main-container">
+        <!-- 3-Column Balanced Editorial Stage -->
+        <div class="hero-stage-wrapper">
             
-            <div class="section-header">
-                <h2 class="section-title">MY <span class="highlight-magenta">PROJECTS</span></h2>
-                <div class="section-title-bar"></div>
+            <!-- Left Column: Primary Big Title -->
+            <div class="stage-col stage-col-left">
+                <p class="tagline-intro">Hey, I'm Muskan Kumari</p>
+                <h1 class="bold-hero-title">
+                    <span>GRAPHIC</span>
+                    <span class="magenta-highlight">DESIGNER</span>
+                </h1>
+                <div class="tag-meta-bottom">
+                    <span class="meta-dot"></span> Visual Identity & AI Motion
+                </div>
             </div>
 
-            <!-- Filter Buttons -->
-            <div class="project-tabs">
-                <button class="tab-btn active" data-filter="graphic">Graphic Design</button>
-                <button class="tab-btn" data-filter="ai-visuals">AI Visuals</button>
-                <button class="tab-btn" data-filter="ai-animation">AI Animation Videos</button>
+            <!-- Center Column: 3D Aesthetic Floating Character -->
+            <div class="stage-col stage-col-center">
+                <div class="glow-backdrop-orb"></div>
+                <img src="hero-girl.png" alt="Creative Graphic Designer" class="floating-hero-avatar">
             </div>
 
-            <!-- Projects Grid: 20 Containers Per Tab -->
-            <div class="projects-grid">
+            <!-- Right Column: Studio Title, Bio & Action Buttons -->
+            <div class="stage-col stage-col-right">
+                <h2 class="studio-subheading">MK DESIGN STUDIO</h2>
+                <p class="studio-mini-bio">Professionally craft high-impact brand collateral, vector art, surreal AI visuals, and cinematic liquid 3D animation videos using modern generative and industry tools.</p>
                 
-                <!-- Graphic Design Items (20 Containers) -->
-                <div class="project-card" data-category="graphic"><img src="g1.png" alt="Project G1"></div>
-                <div class="project-card" data-category="graphic"><img src="g2.jpg" alt="Project G2"></div>
-                <div class="project-card" data-category="graphic"><img src="g3.jpg" alt="Project G3"></div>
-                <div class="project-card" data-category="graphic"><img src="g4.jpg" alt="Project G4"></div>
-                <div class="project-card" data-category="graphic"><img src="g5.jpg" alt="Project G5"></div>
-                <div class="project-card" data-category="graphic"><img src="g6.jpg" alt="Project G6"></div>
-                <div class="project-card" data-category="graphic"><img src="g7.jpg" alt="Project G7"></div>
-                <div class="project-card" data-category="graphic"><img src="g8.jpg" alt="Project G8"></div>
-                <div class="project-card" data-category="graphic"><img src="g9.jpg" alt="Project G9"></div>
-                <div class="project-card" data-category="graphic"><img src="g10.jpg" alt="Project G10"></div>
-                <div class="project-card" data-category="graphic"><img src="g11.jpg" alt="Project G11"></div>
-                <div class="project-card" data-category="graphic"><img src="g12.jpg" alt="Project G12"></div>
-                <div class="project-card" data-category="graphic"><img src="w1.jpg" alt="Project W1"></div>
-                <div class="project-card" data-category="graphic"><img src="w2.jpg" alt="Project W2"></div>
-                <div class="project-card" data-category="graphic"><img src="w3.jpg" alt="Project W3"></div>
-                <div class="project-card" data-category="graphic"><img src="w4.jpg" alt="Project W4"></div>
-                <div class="project-card" data-category="graphic"><img src="w5.jpg" alt="Project W5"></div>
-                <div class="project-card" data-category="graphic"><img src="g1.png" alt="Project G1 Duplicate"></div>
-                <div class="project-card" data-category="graphic"><img src="g2.jpg" alt="Project G2 Duplicate"></div>
-                <div class="project-card" data-category="graphic"><img src="g3.jpg" alt="Project G3 Duplicate"></div>
+                <div class="stage-buttons-wrap">
+                    <a href="#projects" class="btn-magenta-fill">Explore Projects ✨</a>
+                    <a href="#contact" class="btn-outline-white">Contact Me</a>
+                </div>
+            </div>
 
-                <!-- AI Visuals Items (b1-b10 & 20 Containers) -->
-                <div class="project-card" data-category="ai-visuals"><img src="b1.png" alt="AI Visual B1"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b2.png" alt="AI Visual B2"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b3.png" alt="AI Visual B3"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b4.png" alt="AI Visual B4"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b5.png" alt="AI Visual B5"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b6.png" alt="AI Visual B6"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b7.png" alt="AI Visual B7"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b8.png" alt="AI Visual B8"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b9.png" alt="AI Visual B9"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b10.png" alt="AI Visual B10"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b1.png" alt="AI Visual B1 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b2.png" alt="AI Visual B2 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b3.png" alt="AI Visual B3 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b4.png" alt="AI Visual B4 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b5.png" alt="AI Visual B5 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b6.png" alt="AI Visual B6 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b7.png" alt="AI Visual B7 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b8.png" alt="AI Visual B8 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b9.png" alt="AI Visual B9 Extra"></div>
-                <div class="project-card" data-category="ai-visuals"><img src="b10.png" alt="AI Visual B10 Extra"></div>
+        </div>
 
-                <!-- AI Animation Videos (Exactly 12 Video Reels r1-r12) -->
-                <div class="project-card video-card" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-card video-card" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+    </section>
+
+    <!-- ==========================================================
+         SERVICES SECTION: 3 Hanging Cards (Half-Dark / Half-White)
+         ========================================================== -->
+    <section class="services-hanging-section" id="services">
+        <div class="site-container">
+            <div class="services-hanging-grid">
+                
+                <!-- Service 1: Graphic Design -->
+                <div class="service-orig-card">
+                    <div class="service-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3 class="service-card-title">Graphic Design</h3>
+                    <p class="service-card-desc">High-impact brand collateral, vector illustrations, logo identity, and promotional graphics.</p>
+                    <span class="service-card-badge">Creative Studio</span>
+                </div>
+
+                <!-- Service 2: AI Visuals -->
+                <div class="service-orig-card">
+                    <div class="service-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="service-card-title">AI Visuals</h3>
+                    <p class="service-card-desc">Generative digital artwork, 3D AI visual concepts, surreal imagery, and high-fidelity prompt craft.</p>
+                    <span class="service-card-badge">Next-Gen AI</span>
+                </div>
+
+                <!-- Service 3: AI Animation Videos -->
+                <div class="service-orig-card">
+                    <div class="service-card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3 class="service-card-title">AI Animation Videos</h3>
+                    <p class="service-card-desc">Transforming static artwork into liquid 3D motion, cinematic visual storytelling, and motion reels.</p>
+                    <span class="service-card-badge">Dynamic Motion</span>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Fullscreen Image Lightbox with Next / Previous Arrows -->
-    <div id="image-modal" class="image-modal">
-        <span class="modal-close">&times;</span>
-        <button class="lightbox-arrow prev-arrow" id="lightbox-prev">&#10094;</button>
-        <div class="modal-img-wrap">
-            <img class="modal-content" id="modal-img" src="" alt="Enlarged Project">
+    <!-- ==========================================================
+         MY PROJECTS SECTION (Clean White Background, 20 Containers)
+         ========================================================== -->
+    <section class="projects-portfolio-section" id="projects">
+        <div class="site-container">
+            
+            <div class="section-headline-box">
+                <h2 class="section-title-large">MY <span class="magenta-highlight">PROJECTS</span></h2>
+                <div class="section-accent-line"></div>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="tabs-navigation-bar">
+                <button class="portfolio-tab-btn active" data-filter="graphic">Graphic Design</button>
+                <button class="portfolio-tab-btn" data-filter="ai-visuals">AI Visuals</button>
+                <button class="portfolio-tab-btn" data-filter="ai-animation">AI Animation Videos</button>
+            </div>
+
+            <!-- Responsive Continuous Showcase Grid -->
+            <div class="portfolio-cards-grid">
+                
+                <!-- ================= GRAPHIC DESIGN (20 Unique Containers) ================= -->
+                <div class="portfolio-item-card" data-category="graphic"><img src="g1.png" alt="Project G1"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g2.jpg" alt="Project G2"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g3.jpg" alt="Project G3"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g4.jpg" alt="Project G4"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g5.jpg" alt="Project G5"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g6.jpg" alt="Project G6"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g7.jpg" alt="Project G7"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g8.jpg" alt="Project G8"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g9.jpg" alt="Project G9"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g10.jpg" alt="Project G10"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g11.jpg" alt="Project G11"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="g12.jpg" alt="Project G12"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w1.jpg" alt="Project W1"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w2.jpg" alt="Project W2"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w3.jpg" alt="Project W3"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w4.jpg" alt="Project W4"></div>
+                <div class="portfolio-item-card" data-category="graphic"><img src="w5.jpg" alt="Project W5"></div>
+                <!-- 3 Minimal Dark Showcase Holders to make exactly 20 without duplicates -->
+                <div class="portfolio-item-card placeholder-card" data-category="graphic">
+                    <div class="card-inner-placeholder"><i class="fa-solid fa-palette"></i><span>Studio Artwork</span></div>
+                </div>
+                <div class="portfolio-item-card placeholder-card" data-category="graphic">
+                    <div class="card-inner-placeholder"><i class="fa-solid fa-layer-group"></i><span>Brand Concept</span></div>
+                </div>
+                <div class="portfolio-item-card placeholder-card" data-category="graphic">
+                    <div class="card-inner-placeholder"><i class="fa-solid fa-pen-nib"></i><span>Vector Graphic</span></div>
+                </div>
+
+                <!-- ================= AI VISUALS (20 Containers with b1-b10) ================= -->
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b1.png" alt="AI Visual B1"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b2.png" alt="AI Visual B2"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b3.png" alt="AI Visual B3"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b4.png" alt="AI Visual B4"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b5.png" alt="AI Visual B5"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b6.png" alt="AI Visual B6"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b7.png" alt="AI Visual B7"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b8.png" alt="AI Visual B8"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b9.png" alt="AI Visual B9"></div>
+                <div class="portfolio-item-card" data-category="ai-visuals"><img src="b10.png" alt="AI Visual B10"></div>
+                <!-- 10 Minimal Dark Showcase Holders to complete 20 without repeating images -->
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+                <div class="portfolio-item-card placeholder-card" data-category="ai-visuals"><div class="card-inner-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Visual Concept</span></div></div>
+
+                <!-- ================= AI ANIMATION VIDEOS (Exactly 12 Reels) ================= -->
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="portfolio-item-card video-aspect-card" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+
+            </div>
         </div>
-        <button class="lightbox-arrow next-arrow" id="lightbox-next">&#10095;</button>
+    </section>
+
+    <!-- ==========================================================
+         BEHANCE STYLE FULLSCREEN LIGHTBOX WITH ARROWS
+         ========================================================== -->
+    <div id="image-modal" class="fullscreen-lightbox-modal">
+        <span class="lightbox-close-btn">&times;</span>
+        <button class="lightbox-nav-arrow arrow-left" id="lightbox-prev">&#10094;</button>
+        <div class="lightbox-center-holder">
+            <img class="lightbox-img-render" id="modal-img" src="" alt="Enlarged Project">
+        </div>
+        <button class="lightbox-nav-arrow arrow-right" id="lightbox-next">&#10095;</button>
     </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="main-container">
-            <div class="section-header">
-                <h2 class="contact-heading">
-                    <span class="title-black">GET IN</span> 
-                    <span class="highlight-magenta">TOUCH</span>
+    <!-- ==========================================================
+         CONTACT SECTION ('GET IN' in Black, 'TOUCH' in Magenta)
+         ========================================================== -->
+    <section class="contact-section-zone" id="contact">
+        <div class="site-container">
+            
+            <div class="section-headline-box">
+                <h2 class="contact-title-two-tone">
+                    <span class="black-text">GET IN</span> 
+                    <span class="magenta-highlight">TOUCH</span>
                 </h2>
-                <div class="section-title-bar"></div>
+                <div class="section-accent-line"></div>
             </div>
 
-            <div class="contact-card">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
+            <div class="contact-form-panel">
+                <form class="contact-form-wrapper" id="contact-form">
+                    <div class="form-field-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" placeholder="Enter your full name" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-field-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" placeholder="Enter your email address" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-field-group">
                         <label for="message">Your Message</label>
                         <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary form-submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="btn-magenta-fill submit-cta-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer (Dark Charcoal Matching Header) -->
-    <footer class="footer">
-        <div class="main-container footer-content">
-            <p class="footer-title">FOLLOW US</p>
-            <div class="social-icons">
-                <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-behance"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <!-- ==========================================================
+         FOOTER (Pure Dark Charcoal #0b0e14)
+         ========================================================== -->
+    <footer class="site-footer">
+        <div class="site-container footer-content-wrap">
+            <p class="footer-small-label">FOLLOW US</p>
+            <div class="footer-socials-row">
+                <a href="#" class="social-circle-btn"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-circle-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-circle-btn"><i class="fa-brands fa-behance"></i></a>
+                <a href="#" class="social-circle-btn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-            <p class="copyright-text">© 2026 MK Design Studio by Muskan Kumari.</p>
+            <p class="footer-copy-text">© 2026 MK Design Studio by Muskan Kumari.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Script File -->
     <script src="script.js"></script>
 </body>
 </html>

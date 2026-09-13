@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Tab Filtering Logic
   const tabButtons = document.querySelectorAll('.portfolio-tab-btn');
   const tabContainers = document.querySelectorAll('.tab-content-container');
 
-  // Tab Filtering
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // 1. Remove active status
       tabButtons.forEach(btn => btn.classList.remove('active'));
       tabContainers.forEach(container => container.classList.remove('active'));
 
-      // 2. Activate clicked tab
       button.classList.add('active');
       const targetId = `tab-${button.getAttribute('data-tab')}`;
       const targetElement = document.getElementById(targetId);
@@ -17,14 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
         targetElement.classList.add('active');
       }
 
-      // 3. Pause videos on other tabs
+      // Pause videos when not in animation tab
       if (button.getAttribute('data-tab') !== 'animation') {
         document.querySelectorAll('video').forEach(video => video.pause());
       }
     });
   });
 
-  // Smooth Scroll
+  // 2. Click to Zoom Lightbox (Photo Pop-up)
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close-modal');
+
+  document.querySelectorAll('.portfolio-item-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // 3. Smooth Navigation Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();

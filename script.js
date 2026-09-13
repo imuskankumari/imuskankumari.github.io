@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tab Filtering (Graphic Design, AI Visuals, AI Animation)
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    // 1. Tab Switcher Filter (Graphic Design, AI Visuals, AI Animation Videos)
+    const tabButtons = document.querySelectorAll('.portfolio-tab-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-item-card');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             tabButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            const filter = button.getAttribute('data-filter');
+            const filterValue = button.getAttribute('data-filter');
 
-            projectCards.forEach(card => {
+            portfolioCards.forEach(card => {
                 const category = card.getAttribute('data-category');
-                if (filter === 'all' || category === filter) {
+                if (category === filterValue) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
@@ -21,55 +21,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Default trigger for Graphic Design on initial load
-    const activeTab = document.querySelector('.tab-btn.active');
-    if (activeTab) {
-        activeTab.click();
+    // Default: Open Graphic Design on initial load
+    const activeInitialTab = document.querySelector('.portfolio-tab-btn.active');
+    if (activeInitialTab) {
+        activeInitialTab.click();
     }
 
-    // 2. Fullscreen Lightbox with Next / Previous Image Navigation
+    // 2. Behance Fullscreen Lightbox with Next / Previous Image Slide
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
-    const closeModal = document.querySelector('.modal-close');
-    const prevBtn = document.getElementById('lightbox-prev');
-    const nextBtn = document.getElementById('lightbox-next');
+    const closeModal = document.querySelector('.lightbox-close-btn');
+    const prevArrow = document.getElementById('lightbox-prev');
+    const nextArrow = document.getElementById('lightbox-next');
 
-    let currentImages = [];
-    let currentIdx = 0;
+    let activeImageList = [];
+    let currentActiveIndex = 0;
 
-    function updateImageList() {
-        currentImages = [];
-        const currentCategory = document.querySelector('.tab-btn.active').getAttribute('data-filter');
-        document.querySelectorAll(`.project-card[data-category="${currentCategory}"] img`).forEach(img => {
-            currentImages.push(img.src);
+    function refreshActiveImageList() {
+        activeImageList = [];
+        const currentCategory = document.querySelector('.portfolio-tab-btn.active').getAttribute('data-filter');
+        document.querySelectorAll(`.portfolio-item-card[data-category="${currentCategory}"] img`).forEach(img => {
+            activeImageList.push(img.src);
         });
     }
 
-    document.querySelectorAll('.project-card img').forEach(img => {
+    // Attach click event to all project images
+    document.querySelectorAll('.portfolio-item-card img').forEach(img => {
         img.addEventListener('click', () => {
-            updateImageList();
-            currentIdx = currentImages.indexOf(img.src);
-            if (currentIdx !== -1) {
-                modalImg.src = currentImages[currentIdx];
+            refreshActiveImageList();
+            currentActiveIndex = activeImageList.indexOf(img.src);
+            if (currentActiveIndex !== -1) {
+                modalImg.src = activeImageList[currentActiveIndex];
                 modal.style.display = 'flex';
             }
         });
     });
 
-    function nextImage() {
-        if (currentImages.length === 0) return;
-        currentIdx = (currentIdx + 1) % currentImages.length;
-        modalImg.src = currentImages[currentIdx];
+    function showNextImage() {
+        if (activeImageList.length === 0) return;
+        currentActiveIndex = (currentActiveIndex + 1) % activeImageList.length;
+        modalImg.src = activeImageList[currentActiveIndex];
     }
 
-    function prevImage() {
-        if (currentImages.length === 0) return;
-        currentIdx = (currentIdx - 1 + currentImages.length) % currentImages.length;
-        modalImg.src = currentImages[currentIdx];
+    function showPrevImage() {
+        if (activeImageList.length === 0) return;
+        currentActiveIndex = (currentActiveIndex - 1 + activeImageList.length) % activeImageList.length;
+        modalImg.src = activeImageList[currentActiveIndex];
     }
 
-    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
-    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+    if (nextArrow) nextArrow.addEventListener('click', (e) => { e.stopPropagation(); showNextImage(); });
+    if (prevArrow) prevArrow.addEventListener('click', (e) => { e.stopPropagation(); showPrevImage(); });
 
     if (closeModal) {
         closeModal.addEventListener('click', () => {
@@ -84,6 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Keyboard Arrow Keys Support (Left/Right to slide, Esc to close)
+    document.addEventListener('keydown', (e) => {
+        if (modal.style.display === 'flex') {
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'Escape') modal.style.display = 'none';
+        }
+    });
 
     // 3. Contact Form Submission
     const contactForm = document.getElementById('contact-form');

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tab Switcher Filter (Graphic Design, AI Visuals, AI Animation Videos)
+    // 1. Tab Switching Functionality
     const tabButtons = document.querySelectorAll('.portfolio-tab-btn');
     const portfolioCards = document.querySelectorAll('.portfolio-item-card');
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolioCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 if (category === filterValue) {
-                    card.style.display = 'block';
+                    card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Default: Open Graphic Design on initial load
-    const activeInitialTab = document.querySelector('.portfolio-tab-btn.active');
-    if (activeInitialTab) {
-        activeInitialTab.click();
+    // Initialize Graphic Design on page load
+    const activeTab = document.querySelector('.portfolio-tab-btn.active');
+    if (activeTab) {
+        activeTab.click();
     }
 
-    // 2. Behance Fullscreen Lightbox with Next / Previous Image Slide
+    // 2. Fullscreen Lightbox with Image Slide Support
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Attach click event to all project images
     document.querySelectorAll('.portfolio-item-card img').forEach(img => {
         img.addEventListener('click', () => {
             refreshActiveImageList();
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Keyboard Arrow Keys Support (Left/Right to slide, Esc to close)
+    // Keyboard support for Lightbox
     document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
             if (e.key === 'ArrowRight') showNextImage();

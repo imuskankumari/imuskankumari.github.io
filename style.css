@@ -1,11 +1,12 @@
 /* ==========================================================
-   GLOBAL RESET & THEME TOKENS
-   Base tone matches the exact service card charcoal-navy (#0e131d)
+   DESIGN ENGINE RESET & TALL AGENCY TYPOGRAPHY
    ========================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    outline: none;
 }
 
 html {
@@ -13,33 +14,53 @@ html {
 }
 
 body {
-    background-color: #0e131d;
+    background-color: #0c1017;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1180px;
+.main-container {
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
+}
+
+/* Color Tokens */
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-magenta {
+    color: #E91E63 !important;
+}
+
+.text-pure-black {
+    color: #111111 !important;
+}
+
+.text-pure-magenta {
+    color: #E91E63 !important;
 }
 
 /* ==========================================================
-   HEADER & NAVBAR (Transparent & Integrated into Hero)
+   UNIFIED MASTER HERO ZONE (Navbar + Hero merged as one)
    ========================================================== */
-.header {
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
+.master-hero-zone {
+    background-color: #0c1017;
     width: 100%;
-    z-index: 100;
-    padding: 20px 0;
+    padding-bottom: 70px;
+    position: relative;
 }
 
-.nav-container {
-    max-width: 1180px;
+.header-nav {
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
+}
+
+.nav-wrapper {
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -48,24 +69,24 @@ body {
 }
 
 .brand-title {
-    color: #ffffff;
-    font-size: 1.15rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    color: #ffffff;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 30px;
 }
 
 .nav-link {
     color: #e2e8f0;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
     transition: color 0.2s ease;
 }
@@ -77,119 +98,99 @@ body {
 .nav-btn-cta {
     background: #E91E63;
     color: #ffffff !important;
-    padding: 8px 22px;
+    padding: 9px 24px;
     border-radius: 6px;
-    box-shadow: 0 3px 12px rgba(233, 30, 99, 0.4);
+    font-weight: 700;
 }
 
 .mobile-toggle {
     display: none;
     background: transparent;
-    border: none;
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* ==========================================================
-   HERO SECTION (Compact, Split Layout, Matching Card Dark Base)
-   ========================================================== */
-.hero-section {
-    background-color: #0e131d;
-    padding: 100px 20px 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-container {
-    max-width: 1180px;
+/* Hero Content Area */
+.hero-body-container {
+    max-width: 1240px;
     margin: 0 auto;
+    padding: 30px 24px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
 
-.hero-text-col {
+.hero-left-content {
     flex: 1.2;
     text-align: left;
 }
 
-.hero-heading-white {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.3rem, 5.5vw, 4.2rem);
+/* Tall, Condensed, Powerful Agency Headline */
+.hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.6rem, 6.5vw, 4.6rem);
     font-weight: 900;
-    font-style: italic;
-    line-height: 1.08;
-    margin-bottom: 8px;
-    letter-spacing: 1.5px;
+    line-height: 1.05;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    margin-bottom: 10px;
     white-space: nowrap;
 }
 
-.highlight-magenta {
+.hero-subtitle {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.15rem, 3.2vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: #E91E63;
-    text-shadow: 0 0 25px rgba(233, 30, 99, 0.55);
-}
-
-.hero-heading-magenta {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.2rem, 3.2vw, 1.9rem);
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.25;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    color: #E91E63;
-    display: block;
+    margin-bottom: 24px;
     white-space: nowrap;
-    text-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
 }
 
-.hero-bio-wrap {
+.hero-desc-box {
     max-width: 580px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 }
 
-.hero-subtext {
-    font-size: 0.95rem;
-    line-height: 1.7;
+.hero-desc-box p {
+    font-size: 0.96rem;
+    line-height: 1.75;
     color: #94a3b8;
 }
 
-.hero-buttons {
+.hero-action-btns {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.btn-primary {
+.btn-magenta {
     background: #E91E63;
     color: #ffffff;
-    padding: 13px 36px;
+    padding: 14px 38px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    border: none;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.4);
     transition: transform 0.2s ease;
 }
 
-.btn-primary:hover {
+.btn-magenta:hover {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
+.btn-outline {
     background: transparent;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 12px 34px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 13px 36px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
@@ -198,117 +199,114 @@ body {
     transition: background 0.2s ease;
 }
 
-.btn-secondary:hover {
+.btn-outline:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Character Illustration Column */
-.hero-visual-col {
+/* 3D Girl Illustration Scaling */
+.hero-right-visual {
     flex: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero-character-img {
+.floating-hero-girl {
     width: 100%;
     max-width: 440px;
     height: auto;
     display: block;
-    filter: drop-shadow(0 15px 35px rgba(233, 30, 99, 0.4));
-    animation: floatingGirl 4s ease-in-out infinite alternate;
+    animation: gentleFloat 4s ease-in-out infinite alternate;
 }
 
-@keyframes floatingGirl {
+@keyframes gentleFloat {
     0% {
-        transform: translateY(0px) rotate(0deg);
+        transform: translateY(0px);
     }
     100% {
-        transform: translateY(-16px) rotate(-1deg);
+        transform: translateY(-16px);
     }
 }
 
 /* ==========================================================
-   SERVICES (3 Hanging In-Line Cards)
+   SERVICES: ORIGINAL HORIZONTAL HANGING CARDS (Awebco Style)
    ========================================================== */
 .services-hanging-section {
-    background-color: #0e131d;
-    padding: 40px 0 70px;
+    background-color: #0c1017;
+    padding: 0 0 65px;
 }
 
-.services-3d-grid {
+.services-row-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 24px;
 }
 
-.service-3d-card {
-    background: #141b27;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 30px 24px;
+.service-orig-card {
+    background: #131924;
+    border-radius: 14px;
+    padding: 28px 24px;
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
-.service-3d-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(233, 30, 99, 0.5);
+.service-orig-card:hover {
+    transform: translateY(-5px);
 }
 
-.service-3d-icon {
+.service-icon {
     font-size: 1.8rem;
     color: #E91E63;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
-.service-3d-title {
+.service-title {
+    font-family: 'Syne', sans-serif;
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #ffffff;
     margin-bottom: 10px;
 }
 
-.service-3d-desc {
+.service-info {
     font-size: 0.88rem;
     line-height: 1.6;
-    color: #94a3b8;
+    color: #8b9bb0;
     margin-bottom: 18px;
 }
 
-.service-badge-tag {
+.service-pill {
     display: inline-block;
     background: rgba(233, 30, 99, 0.12);
     color: #E91E63;
-    border: 1px solid rgba(233, 30, 99, 0.3);
     padding: 5px 14px;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 0.76rem;
     font-weight: 700;
 }
 
 /* ==========================================================
-   PROJECTS SECTION
+   BEHANCE STYLE PROJECTS (Wide Clean Viewport Grid)
    ========================================================== */
 .projects-section {
     background-color: #ffffff;
-    color: #000000;
-    padding: 80px 0;
+    color: #111111;
+    padding: 85px 0 100px;
     text-align: center;
 }
 
-.section-header {
+.section-heading-box {
     margin-bottom: 35px;
 }
 
-.section-title {
-    font-size: 2.2rem;
+.behance-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-.section-title-bar {
+.accent-line {
     width: 60px;
     height: 4px;
     background: #E91E63;
@@ -316,19 +314,19 @@ body {
     border-radius: 2px;
 }
 
-.project-tabs {
+.tabs-control-bar {
     display: flex;
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
-.tab-btn {
-    background: #141b27;
+.filter-btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #131924;
     color: #ffffff;
-    border: none;
-    padding: 10px 24px;
+    padding: 10px 26px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 0.88rem;
@@ -336,43 +334,43 @@ body {
     transition: all 0.2s ease;
 }
 
-.tab-btn.active {
+.filter-btn.active {
     background: #E91E63;
-    box-shadow: 0 4px 14px rgba(233, 30, 99, 0.4);
 }
 
-.projects-grid {
+/* Behance 2-Column Wide Grid */
+.behance-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
 }
 
-.project-card {
-    background: #141b27;
+.behance-card {
+    background: #131924;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
 }
 
-.project-card:hover {
+.behance-card:hover {
     transform: translateY(-4px);
 }
 
-.project-card img {
+.behance-card img {
     width: 100%;
     height: 100%;
-    min-height: 240px;
+    min-height: 320px;
+    max-height: 480px;
     object-fit: cover;
     display: block;
 }
 
-.project-card.video-card {
+.behance-card.video-format {
     aspect-ratio: 9/16;
 }
 
-.project-card video {
+.behance-card video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -380,86 +378,128 @@ body {
 }
 
 /* ==========================================================
-   IMAGE MODAL POPUP
+   FULLSCREEN LIGHTBOX SLIDER
    ========================================================== */
-.image-modal {
+.lightbox-overlay {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.88);
+    background: rgba(0, 0, 0, 0.92);
     align-items: center;
     justify-content: center;
 }
 
-.modal-content {
-    max-width: 90%;
+.lightbox-media-wrapper {
+    max-width: 85%;
     max-height: 85vh;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-close {
+.lightbox-media-wrapper img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.lightbox-close {
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 35px;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     cursor: pointer;
 }
 
+.lightbox-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 28px;
+    padding: 16px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lightbox-nav-btn:hover {
+    background: #E91E63;
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
 /* ==========================================================
-   CONTACT SECTION
+   CONTACT ZONE
    ========================================================== */
-.contact-section {
+.contact-zone {
     background-color: #ffffff;
-    padding: 40px 0 90px;
+    padding: 30px 0 90px;
     text-align: center;
 }
 
-.contact-card {
+.contact-main-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.contact-box {
     max-width: 580px;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 16px;
-    padding: 40px 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    padding: 40px 32px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
 }
 
-.contact-form {
+.clean-form {
     display: flex;
     flex-direction: column;
     gap: 18px;
     text-align: left;
 }
 
-.form-group label {
+.field-wrap label {
     display: block;
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 6px;
-    color: #475569;
+    color: #334155;
 }
 
-.form-group input, .form-group textarea {
+.field-wrap input, .field-wrap textarea {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.95rem;
-    outline: none;
+    background: #f8fafc;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.field-wrap input:focus, .field-wrap textarea:focus {
     border-color: #E91E63;
+    background: #ffffff;
 }
 
-.form-submit-btn {
+.submit-btn {
     width: 100%;
     justify-content: center;
     padding: 14px;
@@ -468,31 +508,31 @@ body {
 }
 
 /* ==========================================================
-   FOOTER (Matching Same Dark Base)
+   FOOTER (Identical #0c1017 Base)
    ========================================================== */
-.footer {
-    background-color: #0e131d;
+.footer-zone {
+    background-color: #0c1017;
     padding: 50px 20px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-title {
-    font-size: 0.85rem;
+.footer-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: #94a3b8;
     margin-bottom: 18px;
 }
 
-.social-icons {
+.social-links-wrap {
     display: flex;
     justify-content: center;
     gap: 14px;
     margin-bottom: 22px;
 }
 
-.social-btn {
+.social-circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -506,17 +546,17 @@ body {
     transition: transform 0.2s ease;
 }
 
-.social-btn:hover {
+.social-circle:hover {
     transform: scale(1.1);
 }
 
-.copyright-text {
+.copyright-line {
     font-size: 0.82rem;
     color: #64748b;
 }
 
 /* ==========================================================
-   RESPONSIVE (Mobile Screen Adjustments)
+   MOBILE VIEWPORT
    ========================================================== */
 @media (max-width: 868px) {
     .nav-menu {
@@ -525,21 +565,24 @@ body {
     .mobile-toggle {
         display: block;
     }
-    .hero-container {
+    .hero-body-container {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 20px;
+        gap: 25px;
     }
-    .hero-text-col {
+    .hero-left-content {
         text-align: center;
     }
-    .hero-buttons {
+    .hero-action-btns {
         justify-content: center;
     }
-    .hero-character-img {
-        max-width: 290px;
+    .floating-hero-girl {
+        max-width: 300px;
     }
-    .services-3d-grid {
+    .services-row-grid {
+        grid-template-columns: 1fr;
+    }
+    .behance-grid {
         grid-template-columns: 1fr;
     }
 }

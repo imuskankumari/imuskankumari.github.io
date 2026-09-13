@@ -1,17 +1,17 @@
 /* =========================================================
-   PORTFOLIO STYLESHEET - MAGENTA DARK THEME (SYNGRI LAYOUT)
+   PORTFOLIO STYLESHEET - JET BLACK & MAGENTA THEME
    ========================================================= */
 
 :root {
-  --bg-color: #08070b;
-  --card-bg: #110f17;
+  --bg-color: #09080d;
+  --card-bg: #121018;
   --card-border: rgba(255, 42, 133, 0.15);
   --accent-magenta: #ff2a85;
   --accent-magenta-deep: #e91e63;
-  --accent-gradient: linear-gradient(135deg, #ff2a85, #d81b60);
+  --accent-gradient: linear-gradient(135deg, #ff2a85 0%, #d81b60 100%);
   --text-white: #ffffff;
-  --text-dim: #9e9cb0;
-  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --text-dim: #a5a3b8;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
 * {
@@ -32,15 +32,15 @@ body {
   line-height: 1.6;
 }
 
-/* ---------------- HEADER / NAVBAR ---------------- */
+/* ---------------- NAVBAR ---------------- */
 .hero-header {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(8, 7, 11, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(9, 8, 13, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-inner-container {
@@ -53,9 +53,9 @@ body {
 }
 
 .brand-monogram {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--text-white);
   text-decoration: none;
   text-transform: uppercase;
@@ -64,7 +64,7 @@ body {
 .nav-links-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 26px;
 }
 
 .nav-item {
@@ -82,44 +82,34 @@ body {
 .nav-contact-btn {
   background: var(--accent-gradient);
   color: var(--text-white) !important;
-  padding: 8px 20px;
+  padding: 8px 22px;
   border-radius: 50px;
-  box-shadow: 0 0 15px rgba(255, 42, 133, 0.4);
+  box-shadow: 0 0 16px rgba(255, 42, 133, 0.4);
   font-weight: 600;
 }
 
-.mobile-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* ---------------- HERO SECTION (SIDE-BY-SIDE) ---------------- */
-.syngri-hero,
+/* ---------------- HERO SECTION (SIDE BY SIDE 100VH) ---------------- */
 .hero-main-stage {
   max-width: 1300px;
   margin: 0 auto;
-  min-height: calc(90vh - 80px);
-  padding: 20px 24px 40px;
+  height: calc(100vh - 75px);
+  min-height: 580px;
+  max-height: 750px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   position: relative;
   box-sizing: border-box;
 }
 
-.syngri-hero-left,
 .hero-content-left {
-  flex: 1.1;
+  flex: 1.2;
   max-width: 580px;
   z-index: 5;
 }
 
-.status-badge,
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -129,11 +119,10 @@ body {
   border: 1px solid rgba(255, 42, 133, 0.25);
   border-radius: 50px;
   font-size: 0.85rem;
-  color: #f1b0cd;
+  color: #ff9ec5;
   margin-bottom: 20px;
 }
 
-.status-dot,
 .badge-dot {
   width: 8px;
   height: 8px;
@@ -142,25 +131,21 @@ body {
   box-shadow: 0 0 10px #00ff88;
 }
 
-.syngri-title,
 .hero-main-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--text-white);
   margin-bottom: 18px;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
 }
 
-.purple-text,
-.purple-highlight {
-  color: var(--accent-magenta);
+.magenta-highlight {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.syngri-desc,
 .hero-subtext {
   font-size: 1.05rem;
   line-height: 1.6;
@@ -169,95 +154,88 @@ body {
   max-width: 480px;
 }
 
-.syngri-btns,
 .stage-buttons-wrap {
   display: flex;
   gap: 16px;
-  align-items: center;
 }
 
-.btn-fill,
-.btn-purple-fill {
+.btn-magenta-fill {
   padding: 12px 28px;
   background: var(--accent-gradient);
   color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 20px rgba(255, 42, 133, 0.35);
+  box-shadow: 0 4px 18px rgba(255, 42, 133, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: inline-block;
 }
 
-.btn-fill:hover,
-.btn-purple-fill:hover {
+.btn-magenta-fill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 42, 133, 0.5);
+  box-shadow: 0 6px 24px rgba(255, 42, 133, 0.55);
 }
 
-.btn-outline,
 .btn-outline-white {
   padding: 12px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.95rem;
   transition: background 0.3s ease, border-color 0.3s ease;
   display: inline-block;
 }
 
-.btn-outline:hover,
 .btn-outline-white:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* ---------------- 3D MODEL CONTAINER ---------------- */
-.syngri-hero-right,
+/* ---------------- 3D MODEL ANIMATION ---------------- */
 .hero-content-right {
-  flex: 0.9;
+  flex: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100%;
 }
 
-.glow-orb,
 .glow-backdrop {
   position: absolute;
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(circle, rgba(255, 42, 133, 0.35) 0%, rgba(8, 7, 11, 0) 70%);
-  filter: blur(50px);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 42, 133, 0.38) 0%, rgba(9, 8, 13, 0) 70%);
+  filter: blur(55px);
   z-index: 1;
 }
 
-.syngri-model-img,
 .floating-3d-model {
   max-height: 480px;
-  max-width: 100%;
   width: auto;
-  height: auto;
+  max-width: 100%;
   object-fit: contain;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.8));
-  animation: floatAnim 4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+  animation: modelFloat 4.5s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-@keyframes floatAnim {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-14px); }
+@keyframes modelFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(1.5deg); }
+  100% { transform: translateY(-4px) rotate(-1deg); }
 }
 
-/* ---------------- 3 SERVICES CARDS ---------------- */
+/* ---------------- 3 HANGING SERVICES CARDS ---------------- */
 .services-hanging-section {
   max-width: 1300px;
-  margin: 10px auto 60px;
+  margin: -30px auto 70px;
   padding: 0 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .services-hanging-grid {
@@ -269,16 +247,17 @@ body {
 .service-card-box {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  padding: 24px;
+  padding: 26px;
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .service-card-box:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--accent-magenta);
 }
 
@@ -298,14 +277,13 @@ body {
 .service-card-title {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--text-white);
+  margin-bottom: 8px;
 }
 
 .service-card-desc {
   font-size: 0.9rem;
   color: var(--text-dim);
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 20px;
 }
 
@@ -320,20 +298,20 @@ body {
   align-self: flex-start;
 }
 
-/* ---------------- PROJECTS GALLERY ---------------- */
+/* ---------------- PROJECTS & TABS ---------------- */
 .projects-portfolio-section {
   max-width: 1300px;
-  margin: 60px auto;
+  margin: 60px auto 90px;
   padding: 0 24px;
 }
 
 .section-headline-group {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .section-title-large {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -342,20 +320,21 @@ body {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
   flex-wrap: wrap;
 }
 
 .portfolio-tab-btn {
-  background: #15131c;
+  background: #14121a;
   color: var(--text-dim);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: inherit;
 }
 
 .portfolio-tab-btn.active,
@@ -363,40 +342,84 @@ body {
   background: var(--accent-gradient);
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 2px 12px rgba(255, 42, 133, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 42, 133, 0.35);
 }
 
-.portfolio-cards-grid {
+/* Tab Panes Visibility */
+.tab-content-container {
+  display: none;
+}
+
+.tab-content-container.active {
+  display: block;
+}
+
+/* ---------------- GRIDS & CONTAINERS ---------------- */
+.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
+/* 1. Graphic Design: Clean Behance/Portfolio Grid (auto columns) */
+.grid-graphic {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.grid-graphic .portfolio-item-card {
+  aspect-ratio: 4 / 3;
+}
+
+/* 2. AI Visuals: Behance 4:3 Ratio */
+.grid-visuals {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.behance-card {
+  aspect-ratio: 4 / 3;
+}
+
+/* 3. AI Animation Reels: Exactly 2 Columns on Desktop with 9:16 Video Ratio */
+.grid-reels {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 750px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.reel-card {
+  aspect-ratio: 9 / 16;
+  max-height: 580px;
+  background: #000;
+}
+
+/* Card Styling & Image Fit Rules */
 .portfolio-item-card {
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .portfolio-item-card:hover {
   transform: translateY(-4px);
+  border-color: var(--accent-magenta);
 }
 
-.portfolio-item-card img {
+.portfolio-item-card img,
+.portfolio-item-card video {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* इमेज कभी स्ट्रेच या ब्लर नहीं होगी */
   display: block;
 }
 
-/* ---------------- CONTACT & FORM ---------------- */
+/* ---------------- CONTACT & FOOTER ---------------- */
 .contact-section {
-  max-width: 600px;
+  max-width: 580px;
   margin: 80px auto;
   padding: 0 24px;
-  text-align: center;
 }
 
 .contact-form {
@@ -411,7 +434,7 @@ body {
   width: 100%;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 8px;
   color: #fff;
   font-family: inherit;
@@ -428,40 +451,54 @@ body {
   background: var(--accent-gradient);
   color: #fff;
   border: none;
-  padding: 12px;
+  padding: 13px;
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(255, 42, 133, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 42, 133, 0.4);
+  transition: opacity 0.2s ease;
 }
 
-/* ---------------- RESPONSIVE (MOBILE / TABLET) ---------------- */
+.form-submit-btn:hover {
+  opacity: 0.92;
+}
+
+.footer-wrap {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* ---------------- RESPONSIVE (MOBILE) ---------------- */
 @media (max-width: 900px) {
-  .syngri-hero,
   .hero-main-stage {
     flex-direction: column-reverse;
-    text-align: center;
+    height: auto;
+    max-height: none;
     min-height: auto;
-    padding-top: 30px;
+    padding: 40px 20px;
+    text-align: center;
   }
 
-  .syngri-hero-left,
-  .hero-content-left {
-    max-width: 100%;
-  }
-
-  .syngri-btns,
   .stage-buttons-wrap {
     justify-content: center;
   }
 
-  .syngri-model-img,
   .floating-3d-model {
     max-height: 320px;
+  }
+
+  .services-hanging-section {
+    margin-top: 20px;
   }
 
   .services-hanging-grid {
     grid-template-columns: 1fr;
   }
-}
 
+  .grid-reels {
+    grid-template-columns: 1fr;
+  }
+}

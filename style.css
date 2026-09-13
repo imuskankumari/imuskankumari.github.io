@@ -1,16 +1,17 @@
 /* =========================================================
-   PORTFOLIO STYLESHEET - JET BLACK & VIVID MAGENTA
+   PORTFOLIO STYLESHEET - ELEGANT DARK HERO & CLEAN SHOWCASE
    ========================================================= */
 
 :root {
-  --bg-color: #0b0a10;
-  --card-bg: #14121a;
-  --card-border: rgba(233, 30, 99, 0.16);
+  --hero-bg: #0d0c13;
+  --hero-card-bg: #15131e;
   --accent-magenta: #e91e63;
   --accent-magenta-bright: #ff2a85;
   --accent-gradient: linear-gradient(135deg, #ff2a85 0%, #d81b60 100%);
   --text-white: #ffffff;
-  --text-dim: #9e9cb0;
+  --text-dim: #a19fb5;
+  --body-light: #ffffff;
+  --body-text-dark: #1a1a24;
   --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -25,20 +26,20 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--hero-bg);
   color: var(--text-white);
   font-family: var(--font-main);
   overflow-x: hidden;
   line-height: 1.5;
 }
 
-/* ---------------- HEADER / NAVBAR ---------------- */
+/* ---------------- NAVBAR ---------------- */
 .hero-header {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(11, 10, 16, 0.88);
+  background: rgba(13, 12, 19, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -46,14 +47,14 @@ body {
 .nav-inner-container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .brand-monogram {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text-white);
   text-decoration: none;
@@ -63,7 +64,7 @@ body {
 .nav-links-menu {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 26px;
 }
 
 .nav-item {
@@ -81,54 +82,33 @@ body {
 .nav-contact-btn {
   background: var(--accent-gradient);
   color: #fff !important;
-  padding: 6px 18px;
+  padding: 7px 22px;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 0 14px rgba(233, 30, 99, 0.4);
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.4);
 }
 
-/* ---------------- COMPACT HERO STAGE (NO UNWANTED HEIGHT) ---------------- */
+/* ---------------- HERO SECTION (COMPACT & SIDE BY SIDE) ---------------- */
 .hero-main-stage {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 40px 20px 20px;
+  padding: 30px 24px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  min-height: 460px;
   position: relative;
-  min-height: 480px;
 }
 
 .hero-content-left {
-  flex: 1.15;
-  max-width: 560px;
+  flex: 1.2;
+  max-width: 580px;
   z-index: 5;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 14px;
-  background: rgba(233, 30, 99, 0.08);
-  border: 1px solid rgba(233, 30, 99, 0.25);
-  border-radius: 50px;
-  font-size: 0.8rem;
-  color: #ff8cb6;
-  margin-bottom: 16px;
-}
-
-.badge-dot {
-  width: 7px;
-  height: 7px;
-  background-color: #00ff88;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #00ff88;
-}
-
 .hero-main-title {
-  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
   font-weight: 800;
   line-height: 1.15;
   color: var(--text-white);
@@ -147,6 +127,7 @@ body {
   line-height: 1.6;
   color: var(--text-dim);
   margin-bottom: 24px;
+  max-width: 520px;
 }
 
 .stage-buttons-wrap {
@@ -155,7 +136,7 @@ body {
 }
 
 .btn-magenta-fill {
-  padding: 11px 26px;
+  padding: 11px 28px;
   background: var(--accent-gradient);
   color: #fff;
   text-decoration: none;
@@ -173,8 +154,8 @@ body {
 }
 
 .btn-outline-white {
-  padding: 11px 26px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 11px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
@@ -185,65 +166,84 @@ body {
 }
 
 .btn-outline-white:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------------- 3D FLOATING MODEL ---------------- */
+/* ---------------- 3D FLOATING MODEL (AUTOMATIC 3D MAGIC) ---------------- */
 .hero-content-right {
   flex: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  perspective: 1000px; /* Real 3D depth */
 }
 
 .glow-backdrop {
   position: absolute;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(233, 30, 99, 0.35) 0%, rgba(11, 10, 16, 0) 70%);
-  filter: blur(45px);
+  width: 290px;
+  height: 290px;
+  background: radial-gradient(circle, rgba(255, 42, 133, 0.4) 0%, rgba(13, 12, 19, 0) 70%);
+  filter: blur(48px);
   z-index: 1;
+  animation: auraPulse 4s ease-in-out infinite alternate;
 }
 
 .floating-3d-model {
-  max-height: 400px;
-  max-width: 100%;
+  max-height: 410px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.75));
-  animation: floatMotion 4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.8));
+  animation: magic3DFloat 5s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
 }
 
-@keyframes floatMotion {
-  0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-14px) rotate(1.5deg); }
+/* The Automatic 3D Float + Tilt Magic */
+@keyframes magic3DFloat {
+  0% {
+    transform: translateY(0px) rotateY(0deg) rotateX(0deg);
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.8));
+  }
+  50% {
+    transform: translateY(-16px) rotateY(-8deg) rotateX(3deg);
+    filter: drop-shadow(0 28px 30px rgba(255, 42, 133, 0.25));
+  }
+  100% {
+    transform: translateY(-4px) rotateY(6deg) rotateX(-2deg);
+    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.8));
+  }
 }
 
-/* ---------------- 3 SERVICES CARDS ---------------- */
+@keyframes auraPulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+/* ---------------- 4 ELEGANT LANDSCAPE SERVICES CARDS (2x2) ---------------- */
 .services-hanging-section {
   max-width: 1240px;
-  margin: 30px auto 60px;
-  padding: 0 20px;
+  margin: 20px auto 50px;
+  padding: 0 24px;
 }
 
 .services-hanging-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Clean 2 Columns */
   gap: 20px;
 }
 
 .service-card-box {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 22px;
-  border-radius: 14px;
+  background: var(--hero-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 24px 28px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -253,26 +253,27 @@ body {
 }
 
 .service-card-icon {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: rgba(233, 30, 99, 0.1);
+  background: rgba(233, 30, 99, 0.12);
   color: var(--accent-magenta-bright);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  margin-bottom: 14px;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
 }
 
 .service-card-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 .service-card-desc {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-dim);
   line-height: 1.5;
   margin-bottom: 16px;
@@ -284,16 +285,23 @@ body {
   font-weight: 600;
   color: var(--accent-magenta-bright);
   background: rgba(233, 30, 99, 0.08);
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 4px 12px;
+  border-radius: 50px;
   align-self: flex-start;
 }
 
-/* ---------------- PROJECTS & TABS ---------------- */
+/* ---------------- WHITE GALLERY SHOWCASE WRAPPER ---------------- */
+.white-gallery-wrapper {
+  background-color: var(--body-light);
+  color: var(--body-text-dark);
+  padding: 60px 0 70px;
+  width: 100%;
+}
+
 .projects-portfolio-section {
   max-width: 1240px;
-  margin: 50px auto 80px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .section-headline-group {
@@ -302,25 +310,32 @@ body {
 }
 
 .section-title-large {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 800;
+  color: #111116;
+  letter-spacing: 0.5px;
 }
 
+.magenta-highlight-dark {
+  color: var(--accent-magenta);
+}
+
+/* Filter Tabs (Pill Buttons) */
 .portfolio-tab-navigation {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   flex-wrap: wrap;
 }
 
 .portfolio-tab-btn {
-  background: #171520;
-  color: var(--text-dim);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 8px 20px;
+  background: #f1f0f5;
+  color: #555364;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 9px 24px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -332,10 +347,10 @@ body {
   background: var(--accent-gradient);
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.4);
+  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
 }
 
-/* Tab panes switching */
+/* Tab Panes */
 .tab-content-container {
   display: none;
 }
@@ -344,19 +359,33 @@ body {
   display: block;
 }
 
-/* 1. Graphic Design: Behance Grid */
+/* 1. Graphic Design: Behance 4:3 Ratio */
 .portfolio-grid-graphic {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+/* 2. AI Visuals: Behance 4:3 Ratio */
+.portfolio-grid-visuals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
 }
 
 .portfolio-item-card {
-  background: var(--card-bg);
+  background: #eae9f0;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   aspect-ratio: 4 / 3;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-item-card img {
@@ -366,31 +395,21 @@ body {
   display: block;
 }
 
-/* 2. AI Visuals: 4:3 Grid */
-.portfolio-grid-visuals {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-.behance-box {
-  aspect-ratio: 4 / 3;
-}
-
-/* 3. AI Animation: 3 Columns like your original layout */
+/* 3. AI Animation Reels: Clean 3-Column Box */
 .portfolio-grid-reels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  gap: 22px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .reel-card-box {
-  background: #16141e;
-  border: 1px solid var(--card-border);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
 }
@@ -398,7 +417,7 @@ body {
 .reel-video-wrap {
   width: 100%;
   aspect-ratio: 9 / 16;
-  max-height: 420px;
+  max-height: 440px;
   background: #000;
 }
 
@@ -410,66 +429,131 @@ body {
 }
 
 .reel-caption {
-  padding: 10px 12px;
-  font-size: 0.8rem;
-  color: var(--text-dim);
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #444252;
   text-align: center;
   font-weight: 600;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #fdfdfd;
 }
 
-/* ---------------- CONTACT & FOOTER ---------------- */
+/* ---------------- BEAUTIFUL ELEVATED CONTACT CARD ---------------- */
 .contact-section {
-  max-width: 520px;
-  margin: 60px auto;
-  padding: 0 20px;
+  max-width: 580px;
+  margin: 70px auto 10px;
+  padding: 0 24px;
+}
+
+.contact-card-wrap {
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444252;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: #f8f8fc;
+  border: 1px solid #e1e0eb;
   padding: 12px 16px;
   border-radius: 8px;
-  color: #fff;
+  color: #111;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  transition: border-color 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-magenta);
+  background: #fff;
 }
 
 .form-submit-btn {
   background: var(--accent-gradient);
   color: #fff;
   border: none;
-  padding: 12px;
+  padding: 13px;
   border-radius: 50px;
   font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.4);
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.35);
+  margin-top: 6px;
 }
 
+/* ---------------- FULLSCREEN LIGHTBOX POPUP ---------------- */
+.image-modal-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content-img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------------- FOOTER ---------------- */
 .footer-wrap {
   text-align: center;
   padding: 24px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--hero-bg);
   color: var(--text-dim);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ---------------- MOBILE RESPONSIVE ---------------- */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 900px) {
   .hero-main-stage {
     flex-direction: column-reverse;
@@ -495,7 +579,7 @@ body {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 520px) {
   .portfolio-grid-reels {
     grid-template-columns: 1fr;
   }

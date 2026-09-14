@@ -640,197 +640,214 @@ body {
         grid-template-columns: 1fr;
     }
 }
-/* ================= ABOUT ME STYLES ================= */
-.about-section {
-  padding: 80px 20px;
-  background-color: #0b0c10; /* मौजूदा डार्क बैकग्राउंड */
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
 
-.about-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-/* Left: 3D Model Image */
-.about-image-col {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.model-frame {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  justify-content: center;
-  filter: drop-shadow(0 15px 30px rgba(233, 30, 99, 0.25)); /* Magenta Glow */
-}
-
-.about-model-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  animation: floatSlow 4s ease-in-out infinite alternate;
-}
-
-@keyframes floatSlow {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
-}
-
-/* Right: Content */
-.about-content-col {
-  flex: 1.2;
-}
-
-.about-badge {
-  display: inline-block;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  color: #e91e63;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.about-heading {
-  font-size: 2.3rem;
-  font-weight: 800;
-  margin: 0 0 5px 0;
-  color: #ffffff;
-}
-
-.highlight-text {
-  color: #e91e63;
-}
-
-.about-subheading {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #b0b3b8;
-  margin-bottom: 18px;
-}
-
-.about-bio {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: #cfd4dc;
-  margin-bottom: 24px;
-}
-
-/* Software Tool Icons Row */
-.software-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-
-.tool-icon {
-  width: 46px;
-  height: 46px;
-  background: #16181f;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tool-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.tool-icon:hover {
-  transform: translateY(-4px);
-  border-color: #e91e63;
-  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.3);
-}
-
-/* Cards Grid */
-.about-cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.about-card {
-  background: #16181f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 3px solid #e91e63;
-  border-radius: 10px;
-  padding: 16px 18px;
-}
-
-.card-title {
-  font-size: 1rem;
-  color: #ffffff;
-  margin: 0 0 10px 0;
-  font-weight: 700;
-}
-
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-list li {
-  font-size: 0.85rem;
-  color: #a6abb4;
-  margin-bottom: 6px;
-  position: relative;
-  padding-left: 14px;
-  line-height: 1.4;
-}
-
-.about-list li::before {
-  content: "•";
-  color: #e91e63;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* Mobile Responsive */
-@media (max-width: 868px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .about-content-col {
+<!-- ================= ABOUT ME SECTION (SELF-CONTAINED) ================= -->
+<style>
+  #about-custom-section {
+    width: 100%;
+    padding: 70px 20px;
+    background-color: #0d0f17;
+    color: #ffffff;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .software-tools {
     justify-content: center;
   }
-
-  .about-cards-grid {
-    grid-template-columns: 1fr;
+  .mk-about-wrap {
+    max-width: 1150px;
     width: 100%;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .mk-image-box {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mk-model-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(233, 30, 99, 0.35));
+  }
+  .mk-content-box {
+    flex: 1 1 500px;
+  }
+  .mk-tag {
+    color: #e91e63;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .mk-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+    color: #ffffff;
+  }
+  .mk-title span {
+    color: #e91e63;
+  }
+  .mk-sub {
+    font-size: 17px;
+    color: #a0a5b5;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+  }
+  .mk-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c5cad6;
+    margin-bottom: 22px;
+  }
+  /* Icons Container */
+  .mk-icons-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+  .mk-icon-item {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    background: #181b26;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    box-sizing: border-box;
+  }
+  .mk-icon-item img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    object-fit: contain;
+    display: block;
+  }
+  /* Details Cards */
+  .mk-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .mk-single-card {
+    background: #141722;
+    border-left: 3px solid #e91e63;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .mk-single-card h5 {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+  }
+  .mk-single-card ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style-type: square;
+  }
+  .mk-single-card li {
+    font-size: 13px;
+    color: #9ea5b3;
+    margin-bottom: 5px;
+    line-height: 1.4;
   }
 
-  .model-frame {
-    max-width: 280px;
+  @media (max-width: 768px) {
+    #about-custom-section {
+      padding: 45px 15px;
+    }
+    .mk-wrap {
+      text-align: center;
+    }
+    .mk-model-img {
+      max-width: 250px;
+    }
+    .mk-icons-row {
+      justify-content: center;
+    }
+    .mk-single-card {
+      text-align: left;
+    }
   }
-}
+</style>
 
+<section id="about-custom-section">
+  <div class="mk-about-wrap">
+    
+    <!-- Left: 3D Model Image -->
+    <div class="mk-image-box">
+      <!-- आपकी GitHub फाइल का नाम 'mode 2.png' है -->
+      <img src="mode%202.png" alt="Muskan Kumari Model" class="mk-model-img">
+    </div>
 
+    <!-- Right: Content -->
+    <div class="mk-content-box">
+      <span class="mk-tag">ABOUT ME</span>
+      <h2 class="mk-title">I'm <span>Muskan Kumari</span></h2>
+      <h4 class="mk-sub">Graphic Designer & AI Visual Artist</h4>
+      
+      <p class="mk-desc">
+        Professionally, I am a Graphic Designer based in New Delhi. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw, and Canva. I also generate AI visuals and animation videos using Generative AI tools.
+      </p>
+
+      <!-- Fixed Size Software Icons -->
+      <div class="mk-icons-row">
+        <div class="mk-icon-item" title="Photoshop">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+        </div>
+        <div class="mk-icon-item" title="Illustrator">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator">
+        </div>
+        <div class="mk-icon-item" title="InDesign">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" alt="InDesign">
+        </div>
+        <div class="mk-icon-item" title="CorelDraw">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/CorelDRAW_2020_Logo.svg" alt="CorelDraw">
+        </div>
+        <div class="mk-icon-item" title="Canva">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+        </div>
+      </div>
+
+      <!-- Skills & Qualifications Grid -->
+      <div class="mk-cards-grid">
+        <div class="mk-single-card">
+          <h5>Technical Skills</h5>
+          <ul>
+            <li>Graphic Design & Brand Identity</li>
+            <li>Vector Illustration Tracing & Logo</li>
+            <li>Social Media Creatives & Posters</li>
+            <li>AI Visuals & AI Video Animations</li>
+          </ul>
+        </div>
+
+        <div class="mk-single-card">
+          <h5>Qualifications</h5>
+          <ul>
+            <li>Diploma in Computer Applications (DCA)</li>
+            <li>Course on Computer Concepts (CCC)</li>
+            <li>Basic Computer Course (BCC)</li>
+            <li>Senior Secondary (CBSE)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ================= END ABOUT ME SECTION ================= -->

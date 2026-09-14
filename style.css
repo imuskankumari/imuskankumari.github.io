@@ -1,9 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & STUDIO PALETTE
-   Hero Base: #141b27 (Deep Charcoal)
+   GLOBAL RESET & STUDIO THEME
+   Base Dark Charcoal: #141b27
    Accent: #e91e63 (Vivid Electric Magenta)
-   Body: #ffffff (Clean Pure White)
-   Headings: Space Grotesk | Body: Plus Jakarta Sans
+   Body Canvas: #ffffff (Pure White)
+   Font: Plus Jakarta Sans (Balanced, Tall & Elegant Sans-Serif)
    ========================================================== */
 * {
     margin: 0;
@@ -24,7 +24,7 @@ body {
 }
 
 .site-container {
-    max-width: 1220px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -34,19 +34,19 @@ body {
 }
 
 /* ==========================================================
-   HERO SECTION (Compact, Balanced, Seamless Dark)
+   HERO ZONE (Clean, Dynamic, Balanced Viewport)
    ========================================================== */
 .master-hero-zone {
     background-color: #141b27;
     color: #ffffff;
     width: 100%;
-    padding: 24px 24px 65px;
+    padding: 24px 24px 70px;
     position: relative;
     overflow: hidden;
 }
 
 .nav-container {
-    max-width: 1220px;
+    max-width: 1200px;
     margin: 0 auto 35px;
     display: flex;
     justify-content: space-between;
@@ -54,12 +54,20 @@ body {
 }
 
 .brand-monogram {
-    font-family: 'Space Grotesk', sans-serif;
-    color: #ffffff;
     font-size: 1.35rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-decoration: none;
+    display: inline-flex;
+    gap: 6px;
+}
+
+.brand-white {
+    color: #ffffff;
+}
+
+.brand-magenta {
+    color: #e91e63;
 }
 
 .nav-links-menu {
@@ -102,9 +110,9 @@ body {
     cursor: pointer;
 }
 
-/* Hero Stage Layout */
+/* Side-by-Side Hero Stage */
 .hero-stage-wrapper {
-    max-width: 1220px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -120,33 +128,34 @@ body {
 }
 
 .hero-main-title {
-    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 6px;
     margin-bottom: 16px;
 }
 
-.title-white {
-    font-size: clamp(2rem, 4.2vw, 3.4rem);
-    font-weight: 800;
+.title-row-one, .title-row-two {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+    font-weight: 900;
     line-height: 1.05;
+    letter-spacing: 0.5px;
+}
+
+.color-white {
     color: #ffffff;
-    letter-spacing: 0.5px;
 }
 
-.title-magenta {
-    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
-    font-weight: 800;
-    line-height: 1.05;
+.color-magenta {
     color: #e91e63;
-    letter-spacing: 0.5px;
 }
 
-.hero-desc {
+.hero-subline-grey {
     font-size: 0.96rem;
     line-height: 1.65;
-    color: #cbd5e1;
+    color: #94a3b8; /* Pure balanced grey */
     max-width: 520px;
     margin-bottom: 26px;
 }
@@ -196,7 +205,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Model with True Ambient Glow Behind */
+/* 3D Model with Realistic Levitation Effect */
 .hero-avatar-side {
     flex: 0.85;
     display: flex;
@@ -207,36 +216,44 @@ body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.15) 50%, rgba(20, 27, 39, 0) 70%);
+    width: 290px;
+    height: 290px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.55) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(20, 27, 39, 0) 70%);
     border-radius: 50%;
-    filter: blur(25px);
+    filter: blur(26px);
     pointer-events: none;
 }
 
 .hero-3d-model {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
     height: auto;
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.75));
-    animation: gentleFloat 4s ease-in-out infinite alternate;
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));
+    /* Smooth 3D Levitation Animation */
+    animation: modelLevitate 5s ease-in-out infinite alternate;
 }
 
-@keyframes gentleFloat {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-14px); }
+@keyframes modelLevitate {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-16px) rotate(1deg);
+    }
+    100% {
+        transform: translateY(-6px) rotate(-1deg);
+    }
 }
 
 /* ==========================================================
-   SECTION 1: CREATIVE SERVICES (Compact Original Dark Cards)
+   SECTION 1: CREATIVE SERVICES (Compact Original Proportions)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
-    padding: 60px 0 70px;
+    padding: 60px 0 75px;
     text-align: center;
 }
 
@@ -245,9 +262,8 @@ body {
 }
 
 .section-heading {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 0.5px;
     color: #111111;
 }
@@ -260,27 +276,24 @@ body {
     border-radius: 2px;
 }
 
-/* 2-Column Compact Grid (Matching Original Ratio) */
-.services-compact-grid {
+/* 2-Column Balanced Block Grid (Exactly like f55b512e..._3.jpg) */
+.services-original-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
-.service-compact-card {
+.service-orig-box {
     background: #141b27;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 22px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
+    padding: 26px 24px;
+    text-align: left;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
 }
 
-.service-compact-card:hover {
+.service-orig-box:hover {
     transform: translateY(-4px);
 }
 
@@ -294,27 +307,22 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    flex-shrink: 0;
-}
-
-.service-details {
-    text-align: left;
+    margin-bottom: 14px;
 }
 
 .service-name {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: #ffffff;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     line-height: 1.25;
 }
 
 .service-summary {
-    font-size: 0.86rem;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    line-height: 1.55;
     color: #94a3b8;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .service-tag {
@@ -322,14 +330,14 @@ body {
     background: rgba(233, 30, 99, 0.12);
     color: #e91e63;
     border: 1px solid rgba(233, 30, 99, 0.3);
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: 50px;
     font-size: 0.72rem;
     font-weight: 700;
 }
 
 /* ==========================================================
-   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Full Cover)
+   SECTION 2: CREATIVE PROJECTS (Rounded Square Tabs & 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -345,14 +353,15 @@ body {
     margin-bottom: 35px;
 }
 
+/* Rounded Square Buttons (NOT Circles) */
 .filter-tab-btn {
     background: #141b27;
     color: #ffffff;
     border: none;
-    padding: 10px 24px;
-    border-radius: 50px;
+    padding: 10px 22px;
+    border-radius: 8px; /* Rounded Square */
     font-weight: 700;
-    font-size: 0.86rem;
+    font-size: 0.88rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -384,7 +393,6 @@ body {
     transform: translateY(-4px);
 }
 
-/* Image completely fills container in solid 4:3 */
 .project-box img {
     width: 100%;
     height: 100%;
@@ -478,7 +486,7 @@ body {
 }
 
 /* ==========================================================
-   SECTION 3: GET IN TOUCH (High-Contrast Clean Labels)
+   SECTION 3: GET IN TOUCH (Black & Magenta Form)
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -487,9 +495,8 @@ body {
 }
 
 .contact-title-two-tone {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .text-black {
@@ -513,13 +520,12 @@ body {
     text-align: left;
 }
 
-/* High contrast bold black labels (No dull grey!) */
 .form-input-group label {
     display: block;
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 6px;
-    color: #111111;
+    color: #111111; /* Solid high-contrast black label */
 }
 
 .form-input-group input, .form-input-group textarea {
@@ -539,7 +545,6 @@ body {
     background: #ffffff;
 }
 
-.form-input-group input:focus + label,
 .form-input-group:focus-within label {
     color: #e91e63;
 }
@@ -552,7 +557,7 @@ body {
 }
 
 /* ==========================================================
-   FOOTER (#141b27 Matching Hero Tone)
+   FOOTER (#141b27 Base)
    ========================================================== */
 .site-footer {
     background-color: #141b27;
@@ -561,7 +566,6 @@ body {
 }
 
 .footer-title {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -620,13 +624,16 @@ body {
     .hero-text-side {
         text-align: center;
     }
+    .title-row-one, .title-row-two {
+        justify-content: center;
+    }
     .hero-cta-buttons {
         justify-content: center;
     }
     .hero-3d-model {
         max-width: 270px;
     }
-    .services-compact-grid {
+    .services-original-grid {
         grid-template-columns: 1fr;
     }
     .projects-display-grid {

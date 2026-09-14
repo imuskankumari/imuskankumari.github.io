@@ -1,9 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & STUDIO THEME
-   Base Dark Charcoal: #141b27
-   Accent: #e91e63 (Vivid Magenta)
-   Body Background: #ffffff (Pure Clean White)
-   Typography: Plus Jakarta Sans
+   GLOBAL RESET & STUDIO PALETTE
+   Hero Base: #141b27 (Deep Charcoal)
+   Accent: #e91e63 (Vivid Electric Magenta)
+   Body: #ffffff (Clean Pure White)
+   Headings: Space Grotesk | Body: Plus Jakarta Sans
    ========================================================== */
 * {
     margin: 0;
@@ -34,30 +34,31 @@ body {
 }
 
 /* ==========================================================
-   HERO SECTION (Header + Hero Combined, Natural Proportions)
+   HERO SECTION (Compact, Balanced, Seamless Dark)
    ========================================================== */
 .master-hero-zone {
     background-color: #141b27;
     color: #ffffff;
     width: 100%;
-    padding: 24px 24px 60px; /* Perfectly balanced padding */
+    padding: 24px 24px 65px;
     position: relative;
     overflow: hidden;
 }
 
 .nav-container {
     max-width: 1220px;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .brand-monogram {
+    font-family: 'Space Grotesk', sans-serif;
     color: #ffffff;
     font-size: 1.35rem;
     font-weight: 800;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-decoration: none;
 }
 
@@ -101,7 +102,7 @@ body {
     cursor: pointer;
 }
 
-/* Side-by-Side Hero Stage */
+/* Hero Stage Layout */
 .hero-stage-wrapper {
     max-width: 1220px;
     margin: 0 auto;
@@ -109,7 +110,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 35px;
     width: 100%;
 }
 
@@ -119,34 +120,35 @@ body {
 }
 
 .hero-main-title {
+    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-bottom: 14px;
+    gap: 6px;
+    margin-bottom: 16px;
 }
 
 .title-white {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 900;
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    font-weight: 800;
     line-height: 1.05;
     color: #ffffff;
     letter-spacing: 0.5px;
 }
 
 .title-magenta {
-    font-size: clamp(2.2rem, 4.4vw, 3.5rem);
-    font-weight: 900;
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    font-weight: 800;
     line-height: 1.05;
     color: #e91e63;
     letter-spacing: 0.5px;
 }
 
 .hero-desc {
-    font-size: 0.94rem;
+    font-size: 0.96rem;
     line-height: 1.65;
     color: #cbd5e1;
     max-width: 520px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
 .hero-cta-buttons {
@@ -159,7 +161,7 @@ body {
     background: #e91e63;
     color: #ffffff;
     padding: 12px 30px;
-    border-radius: 50px; /* Pill style */
+    border-radius: 50px;
     font-weight: 700;
     font-size: 0.92rem;
     text-decoration: none;
@@ -181,7 +183,7 @@ body {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 11px 28px;
-    border-radius: 50px; /* Pill style */
+    border-radius: 50px;
     font-weight: 700;
     font-size: 0.92rem;
     text-decoration: none;
@@ -194,7 +196,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Model with Concentrated Glow Behind It */
+/* 3D Model with True Ambient Glow Behind */
 .hero-avatar-side {
     flex: 0.85;
     display: flex;
@@ -205,11 +207,11 @@ body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 270px;
-    height: 270px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.55) 0%, rgba(233, 30, 99, 0.15) 50%, rgba(20, 27, 39, 0) 70%);
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.15) 50%, rgba(20, 27, 39, 0) 70%);
     border-radius: 50%;
-    filter: blur(24px);
+    filter: blur(25px);
     pointer-events: none;
 }
 
@@ -220,17 +222,17 @@ body {
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.7));
-    animation: gentleFloat 4.5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.75));
+    animation: gentleFloat 4s ease-in-out infinite alternate;
 }
 
 @keyframes gentleFloat {
     0% { transform: translateY(0px); }
-    100% { transform: translateY(-12px); }
+    100% { transform: translateY(-14px); }
 }
 
 /* ==========================================================
-   SECTION 1: CREATIVE SERVICES (Compact Standalone Section)
+   SECTION 1: CREATIVE SERVICES (Compact Original Dark Cards)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
@@ -243,8 +245,9 @@ body {
 }
 
 .section-heading {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 0.5px;
     color: #111111;
 }
@@ -257,7 +260,7 @@ body {
     border-radius: 2px;
 }
 
-/* Compact 2-Column Grid (Exactly matching f55b512e..._2.jpg) */
+/* 2-Column Compact Grid (Matching Original Ratio) */
 .services-compact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -265,7 +268,7 @@ body {
 }
 
 .service-compact-card {
-    background: #141b27; /* Original dark container background */
+    background: #141b27;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 22px 20px;
@@ -299,8 +302,9 @@ body {
 }
 
 .service-name {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.15rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 6px;
     line-height: 1.25;
@@ -325,7 +329,7 @@ body {
 }
 
 /* ==========================================================
-   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Full-Cover Grid)
+   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Full Cover)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -380,7 +384,7 @@ body {
     transform: translateY(-4px);
 }
 
-/* Images completely fill container in solid 4:3 */
+/* Image completely fills container in solid 4:3 */
 .project-box img {
     width: 100%;
     height: 100%;
@@ -474,7 +478,7 @@ body {
 }
 
 /* ==========================================================
-   SECTION 3: GET IN TOUCH (Original Clean White Form)
+   SECTION 3: GET IN TOUCH (High-Contrast Clean Labels)
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -483,8 +487,9 @@ body {
 }
 
 .contact-title-two-tone {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .text-black {
@@ -504,31 +509,39 @@ body {
 .contact-form-inner {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
     text-align: left;
 }
 
+/* High contrast bold black labels (No dull grey!) */
 .form-input-group label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 6px;
-    color: #475569;
+    color: #111111;
 }
 
 .form-input-group input, .form-input-group textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #cbd5e1;
+    border: 1.5px solid #cbd5e1;
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.95rem;
     background: #f8fafc;
+    color: #111111;
+    transition: border-color 0.2s ease;
 }
 
 .form-input-group input:focus, .form-input-group textarea:focus {
     border-color: #e91e63;
     background: #ffffff;
+}
+
+.form-input-group input:focus + label,
+.form-input-group:focus-within label {
+    color: #e91e63;
 }
 
 .btn-full {
@@ -548,6 +561,7 @@ body {
 }
 
 .footer-title {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 2px;

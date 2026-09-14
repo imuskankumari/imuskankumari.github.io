@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Default trigger Graphic Design on initial load
+    // Default trigger Graphic Design tab on initial load
     const activeTab = document.querySelector('.filter-tab-btn.active');
     if (activeTab) {
         activeTab.click();
@@ -104,3 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

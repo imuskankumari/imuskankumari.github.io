@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tab Switching Functionality
+    // 1. Tab Switching Functionality (Graphic Design, AI Visuals, AI Animation)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize Graphic Design on initial load
+    // Default trigger Graphic Design tab on initial load
     const activeTab = document.querySelector('.filter-tab-btn.active');
     if (activeTab) {
         activeTab.click();

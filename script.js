@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tab Switching Functionality (Graphic Design, AI Visuals, AI Animation)
+    // 1. Tab Switching Functionality (Rounded Squares)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 

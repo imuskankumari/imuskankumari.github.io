@@ -1,56 +1,106 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Tabs Switcher
-  const tabButtons = document.querySelectorAll('.portfolio-tab-btn');
-  const tabContainers = document.querySelectorAll('.tab-content-container');
+    // 1. Tab Switching Functionality
+    const tabButtons = document.querySelectorAll('.filter-tab-btn');
+    const projectBoxes = document.querySelectorAll('.project-box');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContainers.forEach(container => container.classList.remove('active'));
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
-      button.classList.add('active');
-      const targetId = `tab-${button.getAttribute('data-tab')}`;
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.classList.add('active');
-      }
+            const filterValue = button.getAttribute('data-filter');
 
-      if (button.getAttribute('data-tab') !== 'animation') {
-        document.querySelectorAll('video').forEach(video => video.pause());
-      }
+            projectBoxes.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (category === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
     });
-  });
 
-  // Lightbox Photo Popup
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImg');
-  const closeBtn = document.querySelector('.close-modal');
-
-  document.querySelectorAll('.behance-card-container img').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
+    // Default trigger Graphic Design on initial load
+    const activeTab = document.querySelector('.filter-tab-btn.active');
+    if (activeTab) {
+        activeTab.click();
     }
-  });
 
-  // Smooth Scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    // 2. Fullscreen Lightbox with Image Slide Support
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.lightbox-close-btn');
+    const prevArrow = document.getElementById('lightbox-prev');
+    const nextArrow = document.getElementById('lightbox-next');
+
+    let activeImageList = [];
+    let currentActiveIndex = 0;
+
+    function refreshActiveImageList() {
+        activeImageList = [];
+        const currentCategory = document.querySelector('.filter-tab-btn.active').getAttribute('data-filter');
+        document.querySelectorAll(`.project-box[data-category="${currentCategory}"] img`).forEach(img => {
+            activeImageList.push(img.src);
+        });
+    }
+
+    document.querySelectorAll('.project-box img').forEach(img => {
+        img.addEventListener('click', () => {
+            refreshActiveImageList();
+            currentActiveIndex = activeImageList.indexOf(img.src);
+            if (currentActiveIndex !== -1) {
+                modalImg.src = activeImageList[currentActiveIndex];
+                modal.style.display = 'flex';
+            }
+        });
     });
-  });
+
+    function showNextImage() {
+        if (activeImageList.length === 0) return;
+        currentActiveIndex = (currentActiveIndex + 1) % activeImageList.length;
+        modalImg.src = activeImageList[currentActiveIndex];
+    }
+
+    function showPrevImage() {
+        if (activeImageList.length === 0) return;
+        currentActiveIndex = (currentActiveIndex - 1 + activeImageList.length) % activeImageList.length;
+        modalImg.src = activeImageList[currentActiveIndex];
+    }
+
+    if (nextArrow) nextArrow.addEventListener('click', (e) => { e.stopPropagation(); showNextImage(); });
+    if (prevArrow) prevArrow.addEventListener('click', (e) => { e.stopPropagation(); showPrevImage(); });
+
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Keyboard support for Lightbox
+    document.addEventListener('keydown', (e) => {
+        if (modal.style.display === 'flex') {
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'Escape') modal.style.display = 'none';
+        }
+    });
+
+    // 3. Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            contactForm.reset();
+        });
+    }
 });

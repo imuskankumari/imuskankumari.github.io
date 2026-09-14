@@ -1,9 +1,9 @@
 /* ==========================================================
    GLOBAL RESET & STUDIO THEME
    Base Dark Charcoal: #141b27
-   Accent: #e91e63
-   Body Background: #ffffff (Pure White)
-   Typography: Plus Jakarta Sans (Tall, Modern, Crisp)
+   Accent: #e91e63 (Vivid Magenta)
+   Body Background: #ffffff (Pure Clean White)
+   Typography: Plus Jakarta Sans
    ========================================================== */
 * {
     margin: 0;
@@ -34,26 +34,20 @@ body {
 }
 
 /* ==========================================================
-   COMPACT BALANCED HERO (NO MILES-LONG EMPTY SPACE)
+   HERO SECTION (Header + Hero Combined, Natural Proportions)
    ========================================================== */
 .master-hero-zone {
     background-color: #141b27;
     color: #ffffff;
     width: 100%;
-    /* Controlled, balanced height */
-    padding: 24px 24px 85px;
+    padding: 24px 24px 60px; /* Perfectly balanced padding */
     position: relative;
     overflow: hidden;
 }
 
-.hero-navbar {
-    width: 100%;
-    margin-bottom: 25px;
-}
-
 .nav-container {
     max-width: 1220px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,8 +82,8 @@ body {
 .nav-contact-btn {
     background: #e91e63;
     color: #ffffff !important;
-    padding: 8px 22px;
-    border-radius: 6px;
+    padding: 8px 24px;
+    border-radius: 50px;
     font-weight: 700;
     transition: transform 0.2s ease;
 }
@@ -124,20 +118,27 @@ body {
     text-align: left;
 }
 
-.hero-tagline {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #94a3b8;
-    margin-bottom: 6px;
+.hero-main-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
 }
 
-.hero-main-title {
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
+.title-white {
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 900;
     line-height: 1.05;
-    letter-spacing: 0.5px;
     color: #ffffff;
-    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.title-magenta {
+    font-size: clamp(2.2rem, 4.4vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: #e91e63;
+    letter-spacing: 0.5px;
 }
 
 .hero-desc {
@@ -154,11 +155,11 @@ body {
     gap: 14px;
 }
 
-.btn-magenta {
+.btn-pill-magenta {
     background: #e91e63;
     color: #ffffff;
     padding: 12px 30px;
-    border-radius: 8px;
+    border-radius: 50px; /* Pill style */
     font-weight: 700;
     font-size: 0.92rem;
     text-decoration: none;
@@ -171,16 +172,16 @@ body {
     transition: transform 0.2s ease;
 }
 
-.btn-magenta:hover {
+.btn-pill-magenta:hover {
     transform: translateY(-2px);
 }
 
-.btn-outline {
+.btn-pill-outline {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 11px 28px;
-    border-radius: 8px;
+    border-radius: 50px; /* Pill style */
     font-weight: 700;
     font-size: 0.92rem;
     text-decoration: none;
@@ -189,7 +190,7 @@ body {
     transition: background 0.2s ease;
 }
 
-.btn-outline:hover {
+.btn-pill-outline:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -204,43 +205,41 @@ body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 270px;
+    height: 270px;
     background: radial-gradient(circle, rgba(233, 30, 99, 0.55) 0%, rgba(233, 30, 99, 0.15) 50%, rgba(20, 27, 39, 0) 70%);
     border-radius: 50%;
-    filter: blur(25px);
+    filter: blur(24px);
     pointer-events: none;
 }
 
 .hero-3d-model {
     width: 100%;
-    max-width: 360px;
+    max-width: 350px;
     height: auto;
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.7));
     animation: gentleFloat 4.5s ease-in-out infinite alternate;
 }
 
 @keyframes gentleFloat {
     0% { transform: translateY(0px); }
-    100% { transform: translateY(-14px); }
+    100% { transform: translateY(-12px); }
 }
 
 /* ==========================================================
-   SERVICES: ORIGINAL LANDSCAPE CARDS (OVERLAPPING HERO)
+   SECTION 1: CREATIVE SERVICES (Compact Standalone Section)
    ========================================================== */
-.services-overlap-section {
-    position: relative;
-    margin-top: -55px; /* Overlaps onto bottom edge of dark hero */
-    z-index: 20;
-    padding-bottom: 75px;
+.services-standalone-section {
+    background-color: #ffffff;
+    padding: 60px 0 70px;
     text-align: center;
 }
 
 .section-title-wrap {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .section-heading {
@@ -258,26 +257,27 @@ body {
     border-radius: 2px;
 }
 
-.services-landscape-grid {
+/* Compact 2-Column Grid (Exactly matching f55b512e..._2.jpg) */
+.services-compact-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2-Column Wide Landscape as in screenshot f55b */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.service-landscape-card {
+.service-compact-card {
     background: #141b27; /* Original dark container background */
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 22px 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
 }
 
-.service-landscape-card:hover {
+.service-compact-card:hover {
     transform: translateY(-4px);
 }
 
@@ -299,17 +299,18 @@ body {
 }
 
 .service-name {
-    font-size: 1.12rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    line-height: 1.25;
 }
 
 .service-summary {
     font-size: 0.86rem;
     line-height: 1.5;
     color: #94a3b8;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .service-tag {
@@ -324,7 +325,7 @@ body {
 }
 
 /* ==========================================================
-   PROJECTS: BEHANCE 4:3 GRID (FULL COVER, NO GAPS)
+   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Full-Cover Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -345,7 +346,7 @@ body {
     color: #ffffff;
     border: none;
     padding: 10px 24px;
-    border-radius: 6px;
+    border-radius: 50px;
     font-weight: 700;
     font-size: 0.86rem;
     cursor: pointer;
@@ -473,11 +474,11 @@ body {
 }
 
 /* ==========================================================
-   CONTACT SECTION (White Background)
+   SECTION 3: GET IN TOUCH (Original Clean White Form)
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
-    padding: 20px 0 90px;
+    padding: 30px 0 90px;
     text-align: center;
 }
 
@@ -494,9 +495,9 @@ body {
     max-width: 580px;
     margin: 0 auto;
     background: #ffffff;
-    border-radius: 14px;
-    padding: 35px 28px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 38px 30px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
     border: 1px solid #e2e8f0;
 }
 
@@ -519,7 +520,7 @@ body {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid #cbd5e1;
-    border-radius: 6px;
+    border-radius: 8px;
     font-family: inherit;
     font-size: 0.95rem;
     background: #f8fafc;
@@ -533,7 +534,7 @@ body {
 .btn-full {
     width: 100%;
     justify-content: center;
-    padding: 13px;
+    padding: 14px;
     font-size: 0.96rem;
 }
 
@@ -595,7 +596,7 @@ body {
         display: block;
     }
     .master-hero-zone {
-        padding-bottom: 75px;
+        padding-bottom: 50px;
     }
     .hero-stage-wrapper {
         flex-direction: column-reverse;
@@ -609,12 +610,9 @@ body {
         justify-content: center;
     }
     .hero-3d-model {
-        max-width: 280px;
+        max-width: 270px;
     }
-    .services-overlap-section {
-        margin-top: -45px;
-    }
-    .services-landscape-grid {
+    .services-compact-grid {
         grid-template-columns: 1fr;
     }
     .projects-display-grid {

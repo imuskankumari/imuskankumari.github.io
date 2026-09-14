@@ -1,8 +1,9 @@
 /* ==========================================================
    GLOBAL RESET & STUDIO THEME
-   Hero & Cards Base: #141b27 (Deep Charcoal)
-   Accent: #e91e63 (Vibrant Magenta)
-   Body Canvas: #ffffff (Pure White)
+   Base Dark Charcoal: #141b27
+   Accent: #e91e63
+   Body Background: #ffffff (Pure White)
+   Typography: Plus Jakarta Sans (Tall, Modern, Crisp)
    ========================================================== */
 * {
     margin: 0;
@@ -16,9 +17,9 @@ html {
 }
 
 body {
-    background-color: #ffffff; /* Clean white website body */
-    color: #1a1a1a;
-    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
 }
 
@@ -33,25 +34,21 @@ body {
 }
 
 /* ==========================================================
-   HERO ZONE (Deep Charcoal #141b27 + Soft Magenta Spotlight)
+   COMPACT BALANCED HERO (NO MILES-LONG EMPTY SPACE)
    ========================================================== */
 .master-hero-zone {
     background-color: #141b27;
-    background-image: radial-gradient(circle at 70% 45%, rgba(233, 30, 99, 0.32) 0%, rgba(20, 27, 39, 0.95) 55%, #141b27 100%);
     color: #ffffff;
     width: 100%;
-    min-height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 24px 24px 115px; /* Ample space for hanging cards */
+    /* Controlled, balanced height */
+    padding: 24px 24px 85px;
     position: relative;
     overflow: hidden;
 }
 
 .hero-navbar {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .nav-container {
@@ -63,11 +60,10 @@ body {
 }
 
 .brand-monogram {
-    font-family: 'Syne', sans-serif;
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-decoration: none;
 }
 
@@ -92,7 +88,7 @@ body {
 .nav-contact-btn {
     background: #e91e63;
     color: #ffffff !important;
-    padding: 9px 24px;
+    padding: 8px 22px;
     border-radius: 6px;
     font-weight: 700;
     transition: transform 0.2s ease;
@@ -111,60 +107,57 @@ body {
     cursor: pointer;
 }
 
-/* Split Hero Stage */
-.hero-content-wrapper {
+/* Side-by-Side Hero Stage */
+.hero-stage-wrapper {
     max-width: 1220px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
     width: 100%;
 }
 
 .hero-text-side {
-    flex: 1.1;
+    flex: 1.15;
     text-align: left;
 }
 
 .hero-tagline {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #94a3b8;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
+    margin-bottom: 6px;
 }
 
 .hero-main-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 900;
     line-height: 1.05;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 .hero-desc {
-    font-size: 0.96rem;
-    line-height: 1.7;
+    font-size: 0.94rem;
+    line-height: 1.65;
     color: #cbd5e1;
-    max-width: 540px;
-    margin-bottom: 28px;
+    max-width: 520px;
+    margin-bottom: 24px;
 }
 
 .hero-cta-buttons {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .btn-magenta {
     background: #e91e63;
     color: #ffffff;
-    padding: 13px 32px;
+    padding: 12px 30px;
     border-radius: 8px;
     font-weight: 700;
     font-size: 0.92rem;
@@ -186,7 +179,7 @@ body {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 12px 30px;
+    padding: 11px 28px;
     border-radius: 8px;
     font-weight: 700;
     font-size: 0.92rem;
@@ -200,9 +193,9 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Girl Avatar */
+/* 3D Model with Concentrated Glow Behind It */
 .hero-avatar-side {
-    flex: 0.9;
+    flex: 0.85;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,27 +204,28 @@ body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.5) 0%, rgba(233, 30, 99, 0) 70%);
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.55) 0%, rgba(233, 30, 99, 0.15) 50%, rgba(20, 27, 39, 0) 70%);
     border-radius: 50%;
-    filter: blur(26px);
+    filter: blur(25px);
+    pointer-events: none;
 }
 
 .hero-3d-model {
     width: 100%;
-    max-width: 420px;
+    max-width: 360px;
     height: auto;
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.7));
     animation: gentleFloat 4.5s ease-in-out infinite alternate;
 }
 
 @keyframes gentleFloat {
     0% { transform: translateY(0px); }
-    100% { transform: translateY(-15px); }
+    100% { transform: translateY(-14px); }
 }
 
 /* ==========================================================
@@ -239,95 +233,20 @@ body {
    ========================================================== */
 .services-overlap-section {
     position: relative;
-    margin-top: -65px; /* Overlaps onto bottom edge of dark hero */
+    margin-top: -55px; /* Overlaps onto bottom edge of dark hero */
     z-index: 20;
-    padding-bottom: 80px;
-}
-
-.services-landscape-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2-Column Wide Landscape as in screenshot f55b */
-    gap: 22px;
-}
-
-.service-landscape-card {
-    background: #141b27; /* Original dark container background */
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px 22px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 18px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    transition: transform 0.25s ease;
-}
-
-.service-landscape-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon-box {
-    background: rgba(233, 30, 99, 0.14);
-    color: #e91e63;
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-}
-
-.service-details {
-    text-align: left;
-}
-
-.service-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 6px;
-}
-
-.service-summary {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: #94a3b8;
-    margin-bottom: 12px;
-}
-
-.service-tag {
-    display: inline-block;
-    background: rgba(233, 30, 99, 0.12);
-    color: #e91e63;
-    border: 1px solid rgba(233, 30, 99, 0.3);
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 0.74rem;
-    font-weight: 700;
-}
-
-/* ==========================================================
-   PROJECTS SECTION (Clean White Background)
-   ========================================================== */
-.projects-showcase-section {
-    background-color: #ffffff;
-    padding: 20px 0 90px;
+    padding-bottom: 75px;
     text-align: center;
 }
 
 .section-title-wrap {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .section-heading {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: #111111;
 }
 
@@ -339,12 +258,86 @@ body {
     border-radius: 2px;
 }
 
+.services-landscape-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2-Column Wide Landscape as in screenshot f55b */
+    gap: 20px;
+}
+
+.service-landscape-card {
+    background: #141b27; /* Original dark container background */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease;
+}
+
+.service-landscape-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-icon-box {
+    background: rgba(233, 30, 99, 0.14);
+    color: #e91e63;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.service-details {
+    text-align: left;
+}
+
+.service-name {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.service-summary {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.service-tag {
+    display: inline-block;
+    background: rgba(233, 30, 99, 0.12);
+    color: #e91e63;
+    border: 1px solid rgba(233, 30, 99, 0.3);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   PROJECTS: BEHANCE 4:3 GRID (FULL COVER, NO GAPS)
+   ========================================================== */
+.projects-showcase-section {
+    background-color: #ffffff;
+    padding: 20px 0 90px;
+    text-align: center;
+}
+
 .tabs-filter-bar {
     display: flex;
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .filter-tab-btn {
@@ -354,7 +347,7 @@ body {
     padding: 10px 24px;
     border-radius: 6px;
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -368,7 +361,7 @@ body {
 .projects-display-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
 .project-box {
@@ -377,7 +370,7 @@ body {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
     border: none;
 }
@@ -386,6 +379,7 @@ body {
     transform: translateY(-4px);
 }
 
+/* Images completely fill container in solid 4:3 */
 .project-box img {
     width: 100%;
     height: 100%;
@@ -488,10 +482,8 @@ body {
 }
 
 .contact-title-two-tone {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 900;
-    letter-spacing: 1px;
 }
 
 .text-black {
@@ -503,7 +495,7 @@ body {
     margin: 0 auto;
     background: #ffffff;
     border-radius: 14px;
-    padding: 38px 30px;
+    padding: 35px 28px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     border: 1px solid #e2e8f0;
 }
@@ -541,8 +533,8 @@ body {
 .btn-full {
     width: 100%;
     justify-content: center;
-    padding: 14px;
-    font-size: 1rem;
+    padding: 13px;
+    font-size: 0.96rem;
 }
 
 /* ==========================================================
@@ -550,24 +542,23 @@ body {
    ========================================================== */
 .site-footer {
     background-color: #141b27;
-    padding: 45px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .footer-title {
-    font-family: 'Syne', sans-serif;
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: #94a3b8;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 .footer-social-links {
     display: flex;
     justify-content: center;
     gap: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .social-circle {
@@ -594,19 +585,22 @@ body {
 }
 
 /* ==========================================================
-   MOBILE RESPONSIVENESS
+   MOBILE SCREEN RESPONSIVENESS
    ========================================================== */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     .nav-links-menu {
         display: none;
     }
     .mobile-toggle {
         display: block;
     }
-    .hero-content-wrapper {
+    .master-hero-zone {
+        padding-bottom: 75px;
+    }
+    .hero-stage-wrapper {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 25px;
+        gap: 20px;
     }
     .hero-text-side {
         text-align: center;
@@ -615,7 +609,10 @@ body {
         justify-content: center;
     }
     .hero-3d-model {
-        max-width: 290px;
+        max-width: 280px;
+    }
+    .services-overlap-section {
+        margin-top: -45px;
     }
     .services-landscape-grid {
         grid-template-columns: 1fr;

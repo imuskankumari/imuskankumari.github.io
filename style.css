@@ -1,10 +1,10 @@
 /* ==========================================================
    GLOBAL RESET & THEME TOKENS
-   Deep Navy Blue Base: #080c16
+   Deep Navy Blue Base: #0c101a
    Accent Electric Magenta: #e91e63
    Canvas White: #ffffff
    Outer Dark: #111111
-   Typography: Space Grotesk (Titles) & Plus Jakarta Sans (Body)
+   Single Font Family: 'Plus Jakarta Sans' (Clean, Crisp & Bold)
    ========================================================== */
 * {
     margin: 0;
@@ -30,52 +30,67 @@ html, body {
     padding: 0 24px;
 }
 
+.relative-z {
+    position: relative;
+    z-index: 5;
+}
+
 .highlight-magenta {
     color: #e91e63 !important;
 }
 
 /* ==========================================================
-   1. STICKY TOP NAVIGATION BAR (Always Visible Everywhere)
+   1. FIXED TOP NAVBAR (Never Disappears On Scroll)
    ========================================================== */
-.sticky-master-nav {
-    position: sticky;
+.master-fixed-navbar {
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: rgba(8, 12, 22, 0.92);
+    height: 75px;
+    z-index: 99999 !important;
+    background-color: rgba(12, 16, 26, 0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 18px 0;
+    display: flex;
+    align-items: center;
 }
 
-.nav-inner-container {
+.nav-content-box {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-.brand-monogram {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.35rem;
+/* Brand Identity Logo Badge */
+.brand-identity-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-badge {
+    background: #e91e63;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    padding: 6px 12px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(233, 30, 99, 0.5);
+}
+
+.logo-name {
+    color: #ffffff;
+    font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    text-decoration: none;
-    display: inline-flex;
-    gap: 6px;
-}
-
-.brand-white {
-    color: #ffffff;
-}
-
-.brand-magenta {
-    color: #e91e63;
 }
 
 .nav-links-menu {
@@ -88,7 +103,7 @@ html, body {
     color: #e2e8f0;
     text-decoration: none;
     font-size: 0.92rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.2s ease;
 }
 
@@ -119,23 +134,19 @@ html, body {
 }
 
 /* ==========================================================
-   2. UNIFIED MASTER DARK STAGE (Hero + About Combined)
+   2. HERO STAGE (Screen 1 Focus: Deep Navy Base)
    ========================================================== */
-.unified-dark-stage {
-    background-color: #080c16;
+.hero-stage-section {
+    background-color: #0c101a;
     color: #ffffff;
     width: 100%;
-    padding: 40px 0 95px;
+    margin-top: 75px; /* Compacting for fixed navbar */
+    padding: 50px 0 85px;
     position: relative;
     overflow: hidden;
 }
 
-/* Hero Presentation */
-.hero-stage-section {
-    padding: 20px 0 85px;
-}
-
-.hero-flex-wrapper {
+.hero-inner-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -150,14 +161,13 @@ html, body {
 }
 
 .mega-hero-title {
-    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 22px;
 }
 
-.title-line {
+.title-row {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -176,11 +186,11 @@ html, body {
 }
 
 .hero-subline-grey {
-    font-size: 1rem;
+    font-size: 1.02rem;
     line-height: 1.65;
     color: #94a3b8;
     max-width: 520px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 }
 
 .hero-cta-buttons {
@@ -241,7 +251,7 @@ html, body {
     position: absolute;
     width: 340px;
     height: 340px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.65) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(8, 12, 22, 0) 70%);
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.65) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(12, 16, 26, 0) 70%);
     border-radius: 50%;
     filter: blur(30px);
     pointer-events: none;
@@ -258,37 +268,42 @@ html, body {
 }
 
 /* ==========================================================
-   3. DUAL 3D MODEL MAGIC ANIMATIONS (Both Models Animate)
+   3. ABOUT SECTION (Deep Navy Base + Rain Backdrop)
    ========================================================== */
-.float-anim-1 {
-    animation: magicFloating1 5.5s ease-in-out infinite alternate;
-}
-
-@keyframes magicFloating1 {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-16px) rotate(1deg); }
-    100% { transform: translateY(-6px) rotate(-1deg); }
-}
-
-.float-anim-2 {
-    animation: magicFloating2 6s ease-in-out infinite alternate;
-}
-
-@keyframes magicFloating2 {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-18px) rotate(-1.2deg); }
-    100% { transform: translateY(-8px) rotate(0.8deg); }
-}
-
-/* ==========================================================
-   4. INTEGRATED ABOUT SECTION (Deep Navy Base)
-   ========================================================== */
-.about-integrated-section {
-    padding: 40px 0 20px;
+.about-stage-section {
+    background-color: #0c101a;
+    color: #ffffff;
+    width: 100%;
+    padding: 70px 0 95px;
+    position: relative;
+    overflow: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.about-flex-wrapper {
+/* Rain Effect Canvas Overlay */
+.rain-canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(1.5px 18px at 20% 30%, rgba(233, 30, 99, 0.45) 50%, transparent),
+        radial-gradient(1px 22px at 45% 60%, rgba(255, 255, 255, 0.3) 50%, transparent),
+        radial-gradient(1.5px 20px at 75% 25%, rgba(233, 30, 99, 0.4) 50%, transparent),
+        radial-gradient(1.2px 24px at 85% 70%, rgba(255, 255, 255, 0.35) 50%, transparent);
+    background-size: 180px 180px;
+    animation: rainAnimation 0.8s linear infinite;
+    opacity: 0.75;
+}
+
+@keyframes rainAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 15px 180px; }
+}
+
+.about-inner-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -330,7 +345,6 @@ html, body {
 }
 
 .about-intro-title {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 900;
     line-height: 1.1;
@@ -352,13 +366,8 @@ html, body {
     margin-bottom: 28px;
 }
 
-/* Genuine Creative App Badges (Kartik Gulati Style) */
-.software-tools-container {
-    margin-top: 10px;
-}
-
+/* Genuine App Brand Badges */
 .tools-heading-label {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.88rem;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -374,84 +383,61 @@ html, body {
 }
 
 .app-brand-icon {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
     border-radius: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Space Grotesk', sans-serif;
     font-weight: 900;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s ease;
     cursor: pointer;
 }
 
 .app-brand-icon:hover {
-    transform: translateY(-4px) scale(1.05);
+    transform: translateY(-4px) scale(1.06);
 }
 
-.ps-box {
-    background: #001e36;
-    color: #31a8ff;
-    border: 1px solid #31a8ff;
+.ps-box { background: #001e36; color: #31a8ff; border: 1.5px solid #31a8ff; }
+.ai-box { background: #330000; color: #ff9a00; border: 1.5px solid #ff9a00; }
+.id-box { background: #49021f; color: #ff3366; border: 1.5px solid #ff3366; }
+.cd-box { background: #0d2f14; color: #2ed573; border: 1.5px solid #2ed573; }
+.canva-box { background: linear-gradient(135deg, #00c4cc, #7d2ae8); color: #ffffff; border: 1.5px solid rgba(255, 255, 255, 0.4); }
+.genai-box { background: #e91e63; color: #ffffff; font-size: 1.3rem; border: 1.5px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 18px rgba(233, 30, 99, 0.5); }
+
+/* Dual Floating Animations */
+.float-anim-1 { animation: magicFloating1 5.5s ease-in-out infinite alternate; }
+@keyframes magicFloating1 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(1deg); }
+    100% { transform: translateY(-6px) rotate(-1deg); }
 }
 
-.ai-box {
-    background: #330000;
-    color: #ff9a00;
-    border: 1px solid #ff9a00;
-}
-
-.id-box {
-    background: #49021f;
-    color: #ff3366;
-    border: 1px solid #ff3366;
-}
-
-.cd-box {
-    background: #0d2f14;
-    color: #2ed573;
-    border: 1px solid #2ed573;
-}
-
-.canva-box {
-    background: linear-gradient(135deg, #00c4cc, #7d2ae8);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.genai-box {
-    background: #e91e63;
-    color: #ffffff;
-    font-size: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 18px rgba(233, 30, 99, 0.5);
+.float-anim-2 { animation: magicFloating2 6s ease-in-out infinite alternate; }
+@keyframes magicFloating2 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(-1.2deg); }
+    100% { transform: translateY(-8px) rotate(0.8deg); }
 }
 
 /* ==========================================================
-   5. CLEAN SECTION HEADINGS (NO UGLY BLACK STRIPS)
+   4. CLEAN HEADINGS (No Dark Box Containers)
    ========================================================== */
 .clean-section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .clean-section-header h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-size: clamp(2.2rem, 4.2vw, 3rem);
     font-weight: 900;
     letter-spacing: 0.5px;
 }
 
-.light-text-header h2 {
-    color: #ffffff;
-}
-
-.dark-text-header h2 {
-    color: #111111;
-}
+.light-text-header h2 { color: #ffffff; }
+.dark-text-header h2 { color: #111111; }
 
 .accent-bar-magenta {
     width: 50px;
@@ -462,7 +448,7 @@ html, body {
 }
 
 /* ==========================================================
-   6. SECTION 1: 4 SERVICES CARDS (Exact Match to f55b512e_5)
+   5. SECTION 2: 4 SERVICES CARDS (Deep Navy on White Canvas)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
@@ -479,12 +465,12 @@ html, body {
 }
 
 .service-original-card {
-    background: #080c16;
+    background: #0c101a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 32px 28px;
     text-align: left;
-    box-shadow: 0 12px 28px rgba(8, 12, 22, 0.12);
+    box-shadow: 0 12px 28px rgba(12, 16, 26, 0.12);
     transition: transform 0.25s ease;
 }
 
@@ -506,7 +492,6 @@ html, body {
 }
 
 .service-name {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
     color: #ffffff;
@@ -532,7 +517,7 @@ html, body {
 }
 
 /* ==========================================================
-   7. SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
+   6. SECTION 3: CREATIVE PROJECTS (Behance 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -617,7 +602,7 @@ html, body {
 .fullscreen-lightbox-modal {
     display: none;
     position: fixed;
-    z-index: 99999;
+    z-index: 999999;
     top: 0;
     left: 0;
     width: 100%;
@@ -670,16 +655,11 @@ html, body {
     background: #e91e63;
 }
 
-.arrow-left {
-    left: 25px;
-}
-
-.arrow-right {
-    right: 25px;
-}
+.arrow-left { left: 25px; }
+.arrow-right { right: 25px; }
 
 /* ==========================================================
-   8. SECTION 3: GET IN TOUCH
+   7. SECTION 4: GET IN TOUCH
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -693,7 +673,7 @@ html, body {
     background: #ffffff;
     border-radius: 16px;
     padding: 38px 30px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 35px rgba(12, 16, 26, 0.08);
     border: 1px solid #e2e8f0;
 }
 
@@ -741,62 +721,62 @@ html, body {
 }
 
 /* ==========================================================
-   9. FOOTER: DIRECT BIG SOCIAL ICONS (NO CIRCLES!)
+   8. FOOTER: ALL-WHITE + MAGENTA (ON DEEP NAVY #0c101a)
    ========================================================== */
 .site-footer {
-    background-color: #080c16;
+    background-color: #0c101a;
     padding: 45px 20px;
     text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #94a3b8;
-    margin-bottom: 20px;
+    color: #ffffff;
+    margin-bottom: 22px;
 }
 
 .footer-direct-socials {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 28px;
-    margin-bottom: 22px;
+    gap: 30px;
+    margin-bottom: 24px;
 }
 
 .social-direct-link {
-    color: #cbd5e1;
-    font-size: 1.85rem; /* Big, direct icon */
+    color: #ffffff; /* All-White Icons */
+    font-size: 1.95rem;
     text-decoration: none;
     transition: all 0.25s ease;
     display: inline-block;
 }
 
 .social-direct-link:hover {
-    color: #e91e63;
+    color: #e91e63; /* Turns Magenta on Hover */
     transform: translateY(-4px) scale(1.15);
-    filter: drop-shadow(0 4px 12px rgba(233, 30, 99, 0.6));
+    filter: drop-shadow(0 4px 14px rgba(233, 30, 99, 0.7));
 }
 
 .copyright-tag {
     font-size: 0.82rem;
-    color: #64748b;
+    color: #cbd5e1; /* Clean White-Grey */
 }
 
 /* ==========================================================
-   10. MOBILE SCREEN RESPONSIVENESS
+   9. MOBILE SCREEN RESPONSIVENESS
    ========================================================== */
 @media (max-width: 850px) {
     .nav-links-menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 75px;
         left: 0;
         width: 100%;
-        background: rgba(8, 12, 22, 0.98);
+        background: rgba(12, 16, 26, 0.98);
         padding: 20px;
         gap: 16px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -807,7 +787,7 @@ html, body {
     .mobile-toggle {
         display: block;
     }
-    .hero-flex-wrapper {
+    .hero-inner-flex {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
@@ -815,7 +795,7 @@ html, body {
     .hero-text-side {
         text-align: center;
     }
-    .title-line {
+    .title-row {
         justify-content: center;
         font-size: clamp(2rem, 6vw, 2.6rem);
     }
@@ -825,7 +805,7 @@ html, body {
     .hero-3d-model {
         max-width: 290px;
     }
-    .about-flex-wrapper {
+    .about-inner-flex {
         flex-direction: column;
         text-align: center;
         gap: 30px;

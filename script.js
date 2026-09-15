@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tab Switching Functionality (Rounded Squares)
+    // 1. Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
+
+    // 2. Tab Switching Functionality (Rounded Squares)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -27,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeTab.click();
     }
 
-    // 2. Fullscreen Lightbox with Image Slide Support
+    // 3. Fullscreen Lightbox with Image Slide Support
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -94,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Contact Form Submission
+    // 4. Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {

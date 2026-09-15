@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
+    // 1. Mobile Menu Toggle & Navigation Auto-Close
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu on link click
         document.querySelectorAll('.nav-item').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -120,3 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

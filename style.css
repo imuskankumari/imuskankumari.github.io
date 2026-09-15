@@ -1,9 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & THEME TOKENS
-   Deep Navy Blue: #0c101a
-   Accent Magenta: #e91e63
+   GLOBAL RESET & THEME
+   Deep Dark Navy Blue: #080c16
+   Accent Electric Magenta: #e91e63
    Canvas White: #ffffff
-   Fonts: Space Grotesk (Titles) & Plus Jakarta Sans (Body)
+   Typography: Space Grotesk (Titles) & Plus Jakarta Sans (Body)
    ========================================================== */
 * {
     margin: 0;
@@ -15,7 +15,7 @@
 html, body {
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden !important; /* Prevents website shifting horizontally */
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
     background-color: #ffffff;
     color: #111111;
@@ -34,20 +34,26 @@ html, body {
 }
 
 /* ==========================================================
-   HERO ZONE (Locked Centered Stage)
+   UNIFIED MASTER DARK ZONE (Hero + About Combined into One)
    ========================================================== */
-.master-hero-zone {
-    background-color: #0c101a;
+.unified-dark-zone {
+    background-color: #080c16;
     color: #ffffff;
     width: 100%;
-    padding: 24px 24px 65px;
+    padding: 24px 0 90px;
     position: relative;
     overflow: hidden;
 }
 
+.hero-navbar {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
 .nav-container {
     max-width: 1200px;
-    margin: 0 auto 35px;
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,15 +118,17 @@ html, body {
     cursor: pointer;
 }
 
-/* Side-by-Side Hero Presentation */
-.hero-stage-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Main Hero Stage */
+.hero-stage-section {
+    padding: 20px 0 80px;
+}
+
+.hero-flex-layout {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 35px;
+    gap: 40px;
     width: 100%;
 }
 
@@ -129,22 +137,22 @@ html, body {
     text-align: left;
 }
 
-/* Mega Alternating Hero Title */
+/* Mega Editorial Alternating Title */
 .mega-hero-title {
     font-family: 'Space Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.title-row {
+.title-line {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
     font-weight: 900;
-    line-height: 1.05;
+    line-height: 1.02;
     letter-spacing: -0.5px;
 }
 
@@ -157,11 +165,11 @@ html, body {
 }
 
 .hero-subline-grey {
-    font-size: 0.98rem;
+    font-size: 1rem;
     line-height: 1.65;
     color: #94a3b8;
     max-width: 520px;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 }
 
 .hero-cta-buttons {
@@ -220,9 +228,9 @@ html, body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(12, 16, 26, 0) 70%);
+    width: 330px;
+    height: 330px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(8, 12, 22, 0) 70%);
     border-radius: 50%;
     filter: blur(28px);
     pointer-events: none;
@@ -230,7 +238,7 @@ html, body {
 
 .hero-3d-model {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
     display: block !important;
     position: relative;
@@ -246,59 +254,34 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION BADGE HEADERS (Dark Navy Container)
+   INTEGRATED ABOUT SECTION (Deep Dark Navy Base)
    ========================================================== */
-.section-badge-wrap {
+.about-integrated-section {
+    padding: 40px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-flex-layout {
     display: flex;
-    justify-content: center;
-    margin-bottom: 45px;
-}
-
-.section-title-badge {
-    background-color: #0c101a;
-    color: #ffffff;
-    padding: 12px 36px;
-    border-radius: 12px;
-    display: inline-block;
-    box-shadow: 0 8px 24px rgba(12, 16, 26, 0.15);
-}
-
-.section-title-badge h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin: 0;
-}
-
-/* ==========================================================
-   SECTION 1: ABOUT ME (Deep Navy Blue Integration)
-   ========================================================== */
-.about-editorial-section {
-    background-color: #ffffff;
-    padding: 60px 0 75px;
-}
-
-.about-grid-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 45px;
+    width: 100%;
 }
 
-.about-avatar-col {
+.about-avatar-side {
+    flex: 0.85;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.about-model-glow {
+.about-glow-disc {
     position: absolute;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.25) 0%, rgba(233, 30, 99, 0) 70%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.4) 0%, rgba(233, 30, 99, 0) 70%);
     border-radius: 50%;
     filter: blur(30px);
 }
@@ -310,74 +293,104 @@ html, body {
     display: block;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.7));
 }
 
-.about-content-col {
+.about-details-side {
+    flex: 1.15;
     text-align: left;
 }
 
-.about-intro-title {
+.about-intro-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.2rem, 4.2vw, 3rem);
+    font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 900;
     line-height: 1.1;
-    color: #111111;
+    color: #ffffff;
     margin-bottom: 6px;
 }
 
-.about-role-tag {
-    font-size: 1.1rem;
+.about-role-sub {
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #64748b;
+    color: #94a3b8;
     margin-bottom: 18px;
 }
 
-.about-bio-paragraph {
+.about-bio-text {
     font-size: 1rem;
     line-height: 1.7;
-    color: #334155;
-    margin-bottom: 30px;
+    color: #cbd5e1;
+    margin-bottom: 28px;
 }
 
-.skills-heading-label {
+.tools-header-label {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.88rem;
     font-weight: 800;
     letter-spacing: 1.5px;
-    color: #111111;
+    color: #ffffff;
     margin-bottom: 14px;
 }
 
-.software-badges-row {
+.tools-badges-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.tool-badge {
-    background: #0c101a;
+.app-chip {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: #ffffff;
-    padding: 9px 18px;
+    padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.88rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 12px rgba(12, 16, 26, 0.1);
 }
 
-.tool-badge.highlight-tool {
+.app-chip.chip-magenta {
     background: #e91e63;
+    border-color: #e91e63;
 }
 
 /* ==========================================================
-   SECTION 2: 4 SERVICES CARDS (Unstretched 2x2 Grid)
+   CLEAN HEADINGS (No Dark Boxes!)
+   ========================================================== */
+.section-title-clean {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title-clean h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: #111111;
+}
+
+.about-integrated-section .section-title-clean h2 {
+    color: #ffffff;
+}
+
+.accent-bar-magenta {
+    width: 50px;
+    height: 4px;
+    background: #e91e63;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* ==========================================================
+   SECTION 1: 4 SERVICES CARDS (Unstretched 2x2 Grid)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
-    padding: 40px 0 80px;
+    padding: 70px 0 80px;
     text-align: center;
 }
 
@@ -390,12 +403,12 @@ html, body {
 }
 
 .service-original-card {
-    background: #0c101a;
+    background: #080c16;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 32px 28px;
     text-align: left;
-    box-shadow: 0 12px 28px rgba(12, 16, 26, 0.14);
+    box-shadow: 0 12px 28px rgba(8, 12, 22, 0.12);
     transition: transform 0.25s ease;
 }
 
@@ -443,7 +456,7 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION 3: CREATIVE PROJECTS (Behance 4:3 Grid)
+   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -460,7 +473,7 @@ html, body {
 }
 
 .filter-tab-btn {
-    background: #0c101a;
+    background: #080c16;
     color: #ffffff;
     border: none;
     padding: 11px 24px;
@@ -483,7 +496,7 @@ html, body {
 }
 
 .project-box {
-    background: #0c101a;
+    background: #080c16;
     border-radius: 12px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
@@ -518,7 +531,7 @@ html, body {
 }
 
 .empty-holder {
-    background: #0c101a !important;
+    background: #080c16 !important;
     border: none;
 }
 
@@ -590,7 +603,7 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION 4: GET IN TOUCH
+   SECTION 3: GET IN TOUCH
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -604,7 +617,7 @@ html, body {
     background: #ffffff;
     border-radius: 16px;
     padding: 38px 30px;
-    box-shadow: 0 10px 35px rgba(12, 16, 26, 0.08);
+    box-shadow: 0 10px 35px rgba(8, 12, 22, 0.08);
     border: 1px solid #e2e8f0;
 }
 
@@ -652,10 +665,10 @@ html, body {
 }
 
 /* ==========================================================
-   FOOTER (#0c101a Base)
+   FOOTER (#080c16 Base)
    ========================================================== */
 .site-footer {
-    background-color: #0c101a;
+    background-color: #080c16;
     padding: 40px 20px;
     text-align: center;
 }
@@ -700,7 +713,7 @@ html, body {
 }
 
 /* ==========================================================
-   MOBILE RESPONSIVENESS (Fixes Side Shift completely)
+   MOBILE SCREEN RESPONSIVENESS
    ========================================================== */
 @media (max-width: 850px) {
     .nav-links-menu {
@@ -709,10 +722,7 @@ html, body {
     .mobile-toggle {
         display: block;
     }
-    .master-hero-zone {
-        padding-bottom: 45px;
-    }
-    .hero-stage-wrapper {
+    .hero-flex-layout {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
@@ -720,7 +730,7 @@ html, body {
     .hero-text-side {
         text-align: center;
     }
-    .title-row {
+    .title-line {
         justify-content: center;
         font-size: clamp(2rem, 6vw, 2.6rem);
     }
@@ -730,18 +740,22 @@ html, body {
     .hero-3d-model {
         max-width: 290px;
     }
+    .about-flex-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .about-details-side {
+        text-align: center;
+    }
+    .tools-badges-grid {
+        justify-content: center;
+    }
+    .about-3d-model {
+        max-width: 280px;
+    }
     .services-original-four-grid {
         grid-template-columns: 1fr;
-    }
-    .about-grid-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .about-content-col {
-        text-align: center;
-    }
-    .software-badges-row {
-        justify-content: center;
     }
     .projects-display-grid {
         grid-template-columns: 1fr;

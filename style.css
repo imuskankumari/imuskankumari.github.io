@@ -1,10 +1,11 @@
 /* ==========================================================
    GLOBAL RESET & THEME TOKENS
-   Deep Navy Blue Base: #0c101a
-   Accent Electric Magenta: #e91e63
-   Canvas White: #ffffff
+   True Ultra-Deep Navy Blue: #070d1a (Rich, Midnight Navy)
+   Secondary Dark Card Base: #0c1426
+   Accent Vivid Magenta: #e91e63
+   Canvas Pure White: #ffffff
    Outer Dark: #111111
-   Single Font Family: 'Plus Jakarta Sans' (Clean, Crisp & Bold)
+   Single Font Family: 'Plus Jakarta Sans'
    ========================================================== */
 * {
     margin: 0;
@@ -30,17 +31,12 @@ html, body {
     padding: 0 24px;
 }
 
-.relative-z {
-    position: relative;
-    z-index: 5;
-}
-
 .highlight-magenta {
     color: #e91e63 !important;
 }
 
 /* ==========================================================
-   1. FIXED TOP NAVBAR (Never Disappears On Scroll)
+   1. FIXED MASTER NAVIGATION BAR
    ========================================================== */
 .master-fixed-navbar {
     position: fixed !important;
@@ -49,7 +45,7 @@ html, body {
     width: 100%;
     height: 75px;
     z-index: 99999 !important;
-    background-color: rgba(12, 16, 26, 0.94);
+    background-color: rgba(7, 13, 26, 0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -57,7 +53,7 @@ html, body {
     align-items: center;
 }
 
-.nav-content-box {
+.nav-inner-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -67,30 +63,28 @@ html, body {
     align-items: center;
 }
 
-/* Brand Identity Logo Badge */
-.brand-identity-logo {
+/* W-style Spread 'MK' Monogram Logo */
+.brand-monogram-badge {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    text-decoration: none;
+    line-height: 1;
 }
 
-.logo-badge {
-    background: #e91e63;
+.logo-m {
     color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 900;
-    padding: 6px 12px;
-    border-radius: 6px;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 10px rgba(233, 30, 99, 0.5);
+    transform: scaleX(1.35); /* Wide spread W-like M */
+    display: inline-block;
+    margin-right: 3px;
 }
 
-.logo-name {
-    color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+.logo-k {
+    color: #e91e63;
+    display: inline-block;
 }
 
 .nav-links-menu {
@@ -134,16 +128,21 @@ html, body {
 }
 
 /* ==========================================================
-   2. HERO STAGE (Screen 1 Focus: Deep Navy Base)
+   2. UNIFIED DEEP NAVY STAGE (Hero + About with ZERO Lines)
    ========================================================== */
-.hero-stage-section {
-    background-color: #0c101a;
+.unified-deep-navy-stage {
+    background-color: #070d1a; /* True Deep Navy Blue Base */
     color: #ffffff;
     width: 100%;
-    margin-top: 75px; /* Compacting for fixed navbar */
-    padding: 50px 0 85px;
+    margin-top: 75px; /* Offset for fixed navbar */
+    padding: 50px 0 90px;
     position: relative;
     overflow: hidden;
+}
+
+/* Hero Section */
+.hero-stage-section {
+    padding: 20px 0 70px;
 }
 
 .hero-inner-flex {
@@ -160,6 +159,7 @@ html, body {
     text-align: left;
 }
 
+/* Styled Editorial Typography (Thin + Bold Combinations) */
 .mega-hero-title {
     display: flex;
     flex-direction: column;
@@ -167,14 +167,25 @@ html, body {
     margin-bottom: 22px;
 }
 
-.title-row {
+.title-row-top, .title-row-bottom {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
-    font-weight: 900;
-    line-height: 1.02;
+    font-size: clamp(2.4rem, 5.2vw, 4.3rem);
+    line-height: 1.05;
     letter-spacing: -0.5px;
+}
+
+.font-thin {
+    font-weight: 300 !important; /* Elegant thin */
+}
+
+.font-bold {
+    font-weight: 800 !important;
+}
+
+.font-heavy {
+    font-weight: 900 !important;
 }
 
 .text-white {
@@ -238,7 +249,7 @@ html, body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Model 1 Layout */
+/* Model 1 with Smoky Volumetric Magenta Aura */
 .hero-avatar-side {
     flex: 0.85;
     display: flex;
@@ -247,13 +258,13 @@ html, body {
     position: relative;
 }
 
-.avatar-glow-disc {
+.smoky-magenta-aura {
     position: absolute;
-    width: 340px;
-    height: 340px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.65) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(12, 16, 26, 0) 70%);
+    width: 440px;
+    height: 440px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.7) 0%, rgba(233, 30, 99, 0.25) 45%, rgba(7, 13, 26, 0) 75%);
     border-radius: 50%;
-    filter: blur(30px);
+    filter: blur(45px); /* Real misty smoky glow */
     pointer-events: none;
 }
 
@@ -268,39 +279,12 @@ html, body {
 }
 
 /* ==========================================================
-   3. ABOUT SECTION (Deep Navy Base + Rain Backdrop)
+   3. ABOUT SECTION (Seamless Flow with Diagonal Grey Rain on Model 2)
    ========================================================== */
-.about-stage-section {
-    background-color: #0c101a;
-    color: #ffffff;
-    width: 100%;
-    padding: 70px 0 95px;
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* Rain Effect Canvas Overlay */
-.rain-canvas-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-image: 
-        radial-gradient(1.5px 18px at 20% 30%, rgba(233, 30, 99, 0.45) 50%, transparent),
-        radial-gradient(1px 22px at 45% 60%, rgba(255, 255, 255, 0.3) 50%, transparent),
-        radial-gradient(1.5px 20px at 75% 25%, rgba(233, 30, 99, 0.4) 50%, transparent),
-        radial-gradient(1.2px 24px at 85% 70%, rgba(255, 255, 255, 0.35) 50%, transparent);
-    background-size: 180px 180px;
-    animation: rainAnimation 0.8s linear infinite;
-    opacity: 0.75;
-}
-
-@keyframes rainAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 15px 180px; }
+.about-continuous-section {
+    padding: 40px 0 20px;
+    /* Absolutely NO border-top line! */
+    border: none;
 }
 
 .about-inner-flex {
@@ -312,20 +296,46 @@ html, body {
     width: 100%;
 }
 
+/* Model 2 Container with Localized Slanted Grey Rain */
 .about-avatar-side {
     flex: 0.85;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
+    overflow: visible;
 }
 
-.about-glow-disc {
+/* Diagonal Slanted Grey Rain ONLY Behind Model 2 */
+.localized-diagonal-rain {
+    position: absolute;
+    width: 380px;
+    height: 450px;
+    top: -20px;
+    pointer-events: none;
+    background-image: 
+        linear-gradient(125deg, rgba(200, 210, 225, 0.4) 1.5px, transparent 2px),
+        linear-gradient(125deg, rgba(160, 175, 195, 0.3) 1px, transparent 2px);
+    background-size: 35px 35px;
+    animation: slantingRain 0.65s linear infinite;
+    z-index: 1;
+    opacity: 0.85;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, transparent 85%);
+}
+
+@keyframes slantingRain {
+    0% { background-position: 0 0; }
+    100% { background-position: 35px 70px; }
+}
+
+.about-soft-aura {
     position: absolute;
     width: 320px;
     height: 320px;
     background: radial-gradient(circle, rgba(233, 30, 99, 0.45) 0%, rgba(233, 30, 99, 0) 70%);
     border-radius: 50%;
-    filter: blur(32px);
+    filter: blur(35px);
     pointer-events: none;
 }
 
@@ -336,7 +346,7 @@ html, body {
     display: block;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.75));
 }
 
 .about-details-side {
@@ -448,7 +458,7 @@ html, body {
 }
 
 /* ==========================================================
-   5. SECTION 2: 4 SERVICES CARDS (Deep Navy on White Canvas)
+   5. SECTION 1: 4 SERVICES CARDS (Deep Navy on White Canvas)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
@@ -465,12 +475,12 @@ html, body {
 }
 
 .service-original-card {
-    background: #0c101a;
+    background: #070d1a; /* True Deep Navy Base */
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 32px 28px;
     text-align: left;
-    box-shadow: 0 12px 28px rgba(12, 16, 26, 0.12);
+    box-shadow: 0 12px 28px rgba(7, 13, 26, 0.14);
     transition: transform 0.25s ease;
 }
 
@@ -517,7 +527,7 @@ html, body {
 }
 
 /* ==========================================================
-   6. SECTION 3: CREATIVE PROJECTS (Behance 4:3 Grid)
+   6. SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -659,7 +669,7 @@ html, body {
 .arrow-right { right: 25px; }
 
 /* ==========================================================
-   7. SECTION 4: GET IN TOUCH
+   7. SECTION 3: GET IN TOUCH
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -673,7 +683,7 @@ html, body {
     background: #ffffff;
     border-radius: 16px;
     padding: 38px 30px;
-    box-shadow: 0 10px 35px rgba(12, 16, 26, 0.08);
+    box-shadow: 0 10px 35px rgba(7, 13, 26, 0.08);
     border: 1px solid #e2e8f0;
 }
 
@@ -721,10 +731,10 @@ html, body {
 }
 
 /* ==========================================================
-   8. FOOTER: ALL-WHITE + MAGENTA (ON DEEP NAVY #0c101a)
+   8. FOOTER: DEEP NAVY BASE (#070d1a) WITH ALL-WHITE & MAGENTA
    ========================================================== */
 .site-footer {
-    background-color: #0c101a;
+    background-color: #070d1a;
     padding: 45px 20px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -747,7 +757,7 @@ html, body {
 }
 
 .social-direct-link {
-    color: #ffffff; /* All-White Icons */
+    color: #ffffff;
     font-size: 1.95rem;
     text-decoration: none;
     transition: all 0.25s ease;
@@ -755,14 +765,14 @@ html, body {
 }
 
 .social-direct-link:hover {
-    color: #e91e63; /* Turns Magenta on Hover */
+    color: #e91e63;
     transform: translateY(-4px) scale(1.15);
     filter: drop-shadow(0 4px 14px rgba(233, 30, 99, 0.7));
 }
 
 .copyright-tag {
     font-size: 0.82rem;
-    color: #cbd5e1; /* Clean White-Grey */
+    color: #cbd5e1;
 }
 
 /* ==========================================================
@@ -776,7 +786,7 @@ html, body {
         top: 75px;
         left: 0;
         width: 100%;
-        background: rgba(12, 16, 26, 0.98);
+        background: rgba(7, 13, 26, 0.98);
         padding: 20px;
         gap: 16px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -795,7 +805,7 @@ html, body {
     .hero-text-side {
         text-align: center;
     }
-    .title-row {
+    .title-row-top, .title-row-bottom {
         justify-content: center;
         font-size: clamp(2rem, 6vw, 2.6rem);
     }
@@ -818,6 +828,10 @@ html, body {
     }
     .about-3d-model {
         max-width: 280px;
+    }
+    .localized-diagonal-rain {
+        width: 300px;
+        height: 340px;
     }
     .services-original-four-grid {
         grid-template-columns: 1fr;

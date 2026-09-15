@@ -1,9 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & STUDIO THEME
-   Base Dark Charcoal: #141b27
-   Accent: #e91e63 (Vivid Electric Magenta)
-   Body Canvas: #ffffff (Pure White)
-   Font: Plus Jakarta Sans (Balanced, Tall & Elegant Sans-Serif)
+   GLOBAL RESET & THEME TOKENS
+   Deep Navy Blue: #0c101a
+   Accent Magenta: #e91e63
+   Canvas White: #ffffff
+   Fonts: Space Grotesk (Titles) & Plus Jakarta Sans (Body)
    ========================================================== */
 * {
     margin: 0;
@@ -12,18 +12,18 @@
     outline: none;
 }
 
-html {
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important; /* Prevents website shifting horizontally */
     scroll-behavior: smooth;
-}
-
-body {
     background-color: #ffffff;
     color: #111111;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 .site-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
@@ -34,13 +34,13 @@ body {
 }
 
 /* ==========================================================
-   HERO ZONE (Clean, Dynamic, Balanced Viewport)
+   HERO ZONE (Locked Centered Stage)
    ========================================================== */
 .master-hero-zone {
-    background-color: #0b0c10;
+    background-color: #0c101a;
     color: #ffffff;
     width: 100%;
-    padding: 24px 24px 70px;
+    padding: 24px 24px 65px;
     position: relative;
     overflow: hidden;
 }
@@ -51,10 +51,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .brand-monogram {
-    font-size: 1.35rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-decoration: none;
@@ -110,7 +112,7 @@ body {
     cursor: pointer;
 }
 
-/* Side-by-Side Hero Stage */
+/* Side-by-Side Hero Presentation */
 .hero-stage-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,35 +129,37 @@ body {
     text-align: left;
 }
 
-.hero-main-title {
+/* Mega Alternating Hero Title */
+.mega-hero-title {
+    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
+    gap: 4px;
+    margin-bottom: 18px;
 }
 
-.title-row-one, .title-row-two {
+.title-row {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+    font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 900;
     line-height: 1.05;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
 }
 
-.color-white {
+.text-white {
     color: #ffffff;
 }
 
-.color-magenta {
+.text-magenta {
     color: #e91e63;
 }
 
 .hero-subline-grey {
-    font-size: 0.96rem;
+    font-size: 0.98rem;
     line-height: 1.65;
-    color: #94a3b8; /* Pure balanced grey */
+    color: #94a3b8;
     max-width: 520px;
     margin-bottom: 26px;
 }
@@ -169,17 +173,17 @@ body {
 .btn-pill-magenta {
     background: #e91e63;
     color: #ffffff;
-    padding: 12px 30px;
+    padding: 13px 32px;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 18px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.45);
     transition: transform 0.2s ease;
 }
 
@@ -191,10 +195,10 @@ body {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 11px 28px;
+    padding: 12px 30px;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -205,7 +209,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 3D Model with Realistic Levitation Effect */
+/* Model 1 Stage */
 .hero-avatar-side {
     flex: 0.85;
     display: flex;
@@ -216,113 +220,215 @@ body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 290px;
-    height: 290px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.55) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(20, 27, 39, 0) 70%);
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(12, 16, 26, 0) 70%);
     border-radius: 50%;
-    filter: blur(26px);
+    filter: blur(28px);
     pointer-events: none;
 }
 
 .hero-3d-model {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: auto;
     display: block !important;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));
-    /* Smooth 3D Levitation Animation */
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
     animation: modelLevitate 5s ease-in-out infinite alternate;
 }
 
 @keyframes modelLevitate {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-16px) rotate(1deg);
-    }
-    100% {
-        transform: translateY(-6px) rotate(-1deg);
-    }
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(0.8deg); }
+    100% { transform: translateY(-5px) rotate(-0.8deg); }
 }
 
 /* ==========================================================
-   SECTION 1: CREATIVE SERVICES (Compact Original Proportions)
+   SECTION BADGE HEADERS (Dark Navy Container)
+   ========================================================== */
+.section-badge-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.section-title-badge {
+    background-color: #0c101a;
+    color: #ffffff;
+    padding: 12px 36px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 8px 24px rgba(12, 16, 26, 0.15);
+}
+
+.section-title-badge h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* ==========================================================
+   SECTION 1: ABOUT ME (Deep Navy Blue Integration)
+   ========================================================== */
+.about-editorial-section {
+    background-color: #ffffff;
+    padding: 60px 0 75px;
+}
+
+.about-grid-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.about-avatar-col {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about-model-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.25) 0%, rgba(233, 30, 99, 0) 70%);
+    border-radius: 50%;
+    filter: blur(30px);
+}
+
+.about-3d-model {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.15));
+}
+
+.about-content-col {
+    text-align: left;
+}
+
+.about-intro-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 4.2vw, 3rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #111111;
+    margin-bottom: 6px;
+}
+
+.about-role-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.about-bio-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 30px;
+}
+
+.skills-heading-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #111111;
+    margin-bottom: 14px;
+}
+
+.software-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-badge {
+    background: #0c101a;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(12, 16, 26, 0.1);
+}
+
+.tool-badge.highlight-tool {
+    background: #e91e63;
+}
+
+/* ==========================================================
+   SECTION 2: 4 SERVICES CARDS (Unstretched 2x2 Grid)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
-    padding: 60px 0 75px;
+    padding: 40px 0 80px;
     text-align: center;
 }
 
-.section-title-wrap {
-    margin-bottom: 35px;
-}
-
-.section-heading {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    color: #111111;
-}
-
-.magenta-bar {
-    width: 50px;
-    height: 4px;
-    background: #e91e63;
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-/* 2-Column Balanced Block Grid (Exactly like f55b512e..._3.jpg) */
-.services-original-grid {
+.services-original-four-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.service-orig-box {
-    background: #0b0c10;
+.service-original-card {
+    background: #0c101a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 26px 24px;
+    padding: 32px 28px;
     text-align: left;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 28px rgba(12, 16, 26, 0.14);
     transition: transform 0.25s ease;
 }
 
-.service-orig-box:hover {
-    transform: translateY(-4px);
+.service-original-card:hover {
+    transform: translateY(-5px);
 }
 
 .service-icon-box {
     background: rgba(233, 30, 99, 0.14);
     color: #e91e63;
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 14px;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
 }
 
 .service-name {
-    font-size: 1.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 8px;
-    line-height: 1.25;
 }
 
 .service-summary {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     line-height: 1.55;
     color: #94a3b8;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .service-tag {
@@ -332,12 +438,12 @@ body {
     border: 1px solid rgba(233, 30, 99, 0.3);
     padding: 5px 14px;
     border-radius: 50px;
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     font-weight: 700;
 }
 
 /* ==========================================================
-   SECTION 2: CREATIVE PROJECTS (Rounded Square Tabs & 4:3 Grid)
+   SECTION 3: CREATIVE PROJECTS (Behance 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -353,13 +459,12 @@ body {
     margin-bottom: 35px;
 }
 
-/* Rounded Square Buttons (NOT Circles) */
 .filter-tab-btn {
-    background: #141b27;
+    background: #0c101a;
     color: #ffffff;
     border: none;
-    padding: 10px 22px;
-    border-radius: 8px; /* Rounded Square */
+    padding: 11px 24px;
+    border-radius: 8px;
     font-weight: 700;
     font-size: 0.88rem;
     cursor: pointer;
@@ -371,15 +476,14 @@ body {
     box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);
 }
 
-/* 2-Column Behance 4:3 Grid */
 .projects-display-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
 .project-box {
-    background: #141b27;
+    background: #0c101a;
     border-radius: 12px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
@@ -414,7 +518,7 @@ body {
 }
 
 .empty-holder {
-    background: #141b27 !important;
+    background: #0c101a !important;
     border: none;
 }
 
@@ -486,21 +590,12 @@ body {
 }
 
 /* ==========================================================
-   SECTION 3: GET IN TOUCH (Black & Magenta Form)
+   SECTION 4: GET IN TOUCH
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
-    padding: 30px 0 90px;
+    padding: 20px 0 90px;
     text-align: center;
-}
-
-.contact-title-two-tone {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
-}
-
-.text-black {
-    color: #111111;
 }
 
 .contact-card-box {
@@ -509,7 +604,7 @@ body {
     background: #ffffff;
     border-radius: 16px;
     padding: 38px 30px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 35px rgba(12, 16, 26, 0.08);
     border: 1px solid #e2e8f0;
 }
 
@@ -525,7 +620,7 @@ body {
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 6px;
-    color: #111111; /* Solid high-contrast black label */
+    color: #111111;
 }
 
 .form-input-group input, .form-input-group textarea {
@@ -557,15 +652,16 @@ body {
 }
 
 /* ==========================================================
-   FOOTER (#141b27 Base)
+   FOOTER (#0c101a Base)
    ========================================================== */
 .site-footer {
-    background-color: #141b27;
+    background-color: #0c101a;
     padding: 40px 20px;
     text-align: center;
 }
 
 .footer-title {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -604,7 +700,7 @@ body {
 }
 
 /* ==========================================================
-   MOBILE SCREEN RESPONSIVENESS
+   MOBILE RESPONSIVENESS (Fixes Side Shift completely)
    ========================================================== */
 @media (max-width: 850px) {
     .nav-links-menu {
@@ -614,7 +710,7 @@ body {
         display: block;
     }
     .master-hero-zone {
-        padding-bottom: 50px;
+        padding-bottom: 45px;
     }
     .hero-stage-wrapper {
         flex-direction: column-reverse;
@@ -624,205 +720,31 @@ body {
     .hero-text-side {
         text-align: center;
     }
-    .title-row-one, .title-row-two {
+    .title-row {
         justify-content: center;
+        font-size: clamp(2rem, 6vw, 2.6rem);
     }
     .hero-cta-buttons {
         justify-content: center;
     }
     .hero-3d-model {
-        max-width: 270px;
+        max-width: 290px;
     }
-    .services-original-grid {
+    .services-original-four-grid {
         grid-template-columns: 1fr;
+    }
+    .about-grid-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-content-col {
+        text-align: center;
+    }
+    .software-badges-row {
+        justify-content: center;
     }
     .projects-display-grid {
         grid-template-columns: 1fr;
     }
 }
-/* ================= ABOUT ME SECTION FIX ================= */
-#about,
-.about-section {
-  width: 100% !important;
-  box-sizing: border-box !important;
-  padding: 60px 20px !important;
-  background-color: #0b0c10 !important;
-  color: #ffffff !important;
-  display: block !important;
-}
 
-.about-container {
-  max-width: 1150px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 40px !important;
-}
-
-/* Left Side: 3D Model Image */
-.about-image-col {
-  flex: 1 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.model-frame {
-  width: 100% !important;
-  max-width: 380px !important;
-  text-align: center !important;
-}
-
-.about-model-img {
-  width: 100% !important;
-  max-width: 360px !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto !important;
-  object-fit: contain !important;
-}
-
-/* Right Side: Details */
-.about-content-col {
-  flex: 1.2 !important;
-  text-align: left !important;
-}
-
-.about-badge {
-  display: inline-block !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 2px !important;
-  color: #e91e63 !important;
-  margin-bottom: 8px !important;
-}
-
-.about-heading {
-  font-size: 32px !important;
-  font-weight: 800 !important;
-  color: #ffffff !important;
-  margin: 0 0 6px 0 !important;
-}
-
-.highlight-text {
-  color: #e91e63 !important;
-}
-
-.about-subheading {
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  color: #a0a5b5 !important;
-  margin: 0 0 16px 0 !important;
-}
-
-.about-bio {
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  color: #cfd4dc !important;
-  margin-bottom: 22px !important;
-}
-
-/* Icons Size Fix (Screen par phailne se rokne ke liye) */
-.software-tools {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-  margin-bottom: 24px !important;
-}
-
-.tool-icon {
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  max-width: 44px !important;
-  background: #16181f !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-radius: 10px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 8px !important;
-  box-sizing: border-box !important;
-}
-
-.tool-icon img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 28px !important;
-  max-height: 28px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-/* Skills & Education Grid */
-.about-cards-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 16px !important;
-}
-
-.about-card {
-  background: #16181f !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-left: 3px solid #e91e63 !important;
-  border-radius: 8px !important;
-  padding: 14px 16px !important;
-}
-
-.card-title {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  margin: 0 0 10px 0 !important;
-}
-
-.about-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.about-list li {
-  font-size: 13px !important;
-  color: #9ea3ae !important;
-  margin-bottom: 6px !important;
-  padding-left: 14px !important;
-  position: relative !important;
-  line-height: 1.4 !important;
-}
-
-.about-list li::before {
-  content: "•" !important;
-  color: #e91e63 !important;
-  font-weight: bold !important;
-  position: absolute !important;
-  left: 0 !important;
-}
-
-/* Mobile Screen Layout */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 30px !important;
-  }
-
-  .about-content-col {
-    text-align: center !important;
-  }
-
-  .software-tools {
-    justify-content: center !important;
-  }
-
-  .about-cards-grid {
-    grid-template-columns: 1fr !important;
-    text-align: left !important;
-  }
-
-  .model-frame {
-    max-width: 240px !important;
-  }
-}

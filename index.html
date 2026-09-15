@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muskan Kumari | Graphic Designer</title>
 
-    <!-- Editorial Sans Fonts: Space Grotesk & Plus Jakarta Sans -->
+    <!-- Bold Sans-Serif Fonts: Space Grotesk & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
@@ -19,36 +19,38 @@
 <body>
 
     <!-- ==========================================================
-         SEAMLESS MASTER DARK ZONE (Hero + About Combined)
-         Very Deep Dark Navy Blue Base: #080c16
+         STICKY GLOBAL NAVIGATION (Always Visible on Scroll)
          ========================================================== -->
-    <div class="unified-dark-zone">
+    <header class="sticky-master-nav">
+        <div class="nav-inner-container">
+            <a href="#home" class="brand-monogram">
+                <span class="brand-white">MUSKAN</span> 
+                <span class="brand-magenta">KUMARI</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links-menu" id="nav-menu">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item nav-contact-btn">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================================
+         UNIFIED MASTER DARK STAGE (Hero + About Combined)
+         Deep Navy Blue Base: #080c16
+         ========================================================== -->
+    <div class="unified-dark-stage">
         
-        <!-- Navigation Bar -->
-        <header class="hero-navbar">
-            <div class="nav-container">
-                <a href="#home" class="brand-monogram">
-                    <span class="brand-white">MUSKAN</span> 
-                    <span class="brand-magenta">KUMARI</span>
-                </a>
-
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-                <nav class="nav-links-menu" id="nav-menu">
-                    <a href="#home" class="nav-item">Home</a>
-                    <a href="#about" class="nav-item">About</a>
-                    <a href="#services" class="nav-item">Services</a>
-                    <a href="#projects" class="nav-item">Projects</a>
-                    <a href="#contact" class="nav-item nav-contact-btn">Contact</a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Hero Stage -->
+        <!-- Main Hero Section -->
         <section class="hero-stage-section" id="home">
-            <div class="site-container hero-flex-layout">
+            <div class="site-container hero-flex-wrapper">
                 
                 <div class="hero-text-side">
                     <h1 class="mega-hero-title">
@@ -72,51 +74,70 @@
 
                 <div class="hero-avatar-side">
                     <div class="avatar-glow-disc"></div>
-                    <!-- Model 1: Computer Setup -->
-                    <img src="model1.png" alt="Muskan Kumari Working Designer" class="hero-3d-model" onerror="this.onerror=null; this.src='model%201.png';">
+                    <!-- Model 1 (Working on Computer) with Floating Magic -->
+                    <img src="model1.png" alt="Muskan Kumari Working 3D Designer" class="hero-3d-model float-anim-1" id="hero-avatar" onerror="this.onerror=null; this.src='model%201.png';">
                 </div>
 
             </div>
         </section>
 
-        <!-- Seamless Integrated About Me (Dark Navy Base) -->
+        <!-- Integrated About Me Section -->
         <section class="about-integrated-section" id="about">
             <div class="site-container">
                 
-                <div class="section-title-clean">
+                <div class="clean-section-header light-text-header">
                     <h2>ABOUT <span class="highlight-magenta">ME</span></h2>
                     <div class="accent-bar-magenta"></div>
                 </div>
 
-                <div class="about-flex-layout">
+                <div class="about-flex-wrapper">
                     
-                    <!-- Model 2: Umbrella & Sketchbook Persona -->
+                    <!-- Model 2 (Creative Persona with Umbrella) with Floating Magic -->
                     <div class="about-avatar-side">
                         <div class="about-glow-disc"></div>
-                        <img src="model2.png" alt="Muskan Kumari Creative Persona" class="about-3d-model" onerror="this.onerror=null; this.src='model%202.png';">
+                        <img src="model2.png" alt="Muskan Kumari Creative Persona" class="about-3d-model float-anim-2" onerror="this.onerror=null; this.src='model%202.png';">
                     </div>
 
-                    <!-- Profile Summary & Resume Tools -->
+                    <!-- Profile Summary & Genuine Software Skill Badges -->
                     <div class="about-details-side">
-                        <h3 class="about-intro-name">Hi, I'm <span class="highlight-magenta">Muskan Kumari</span></h3>
+                        <h3 class="about-intro-title">Hi, I'm <span class="highlight-magenta">Muskan Kumari</span></h3>
                         <p class="about-role-sub">Graphic Designer &amp; Visual Artist</p>
                         
-                        <p class="about-bio-text">
+                        <p class="about-bio-paragraph">
                             Professionally, I am a Graphic Designer. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw, and Canva. I also generate surreal AI visuals and AI animation videos using Generative AI tools.
                         </p>
 
-                        <!-- Software Badges -->
-                        <div class="software-tools-block">
-                            <p class="tools-header-label">CREATIVE SOFTWARE &amp; SKILLS</p>
-                            <div class="tools-badges-grid">
-                                <span class="app-chip"><i class="fa-solid fa-paintbrush"></i> Photoshop</span>
-                                <span class="app-chip"><i class="fa-solid fa-vector-square"></i> Illustrator</span>
-                                <span class="app-chip"><i class="fa-solid fa-book-open"></i> InDesign</span>
-                                <span class="app-chip"><i class="fa-solid fa-bezier-curve"></i> CorelDraw</span>
-                                <span class="app-chip"><i class="fa-solid fa-layer-group"></i> Canva</span>
-                                <span class="app-chip chip-magenta"><i class="fa-solid fa-wand-magic-sparkles"></i> Generative AI</span>
+                        <!-- Software Badges (Authentic Icons like Kartik Gulati) -->
+                        <div class="software-tools-container">
+                            <p class="tools-heading-label">CREATIVE SOFTWARE &amp; TOOLS</p>
+                            <div class="software-icon-row">
+                                <!-- Photoshop -->
+                                <div class="app-brand-icon ps-box" title="Adobe Photoshop">
+                                    <span class="app-abbr">Ps</span>
+                                </div>
+                                <!-- Illustrator -->
+                                <div class="app-brand-icon ai-box" title="Adobe Illustrator">
+                                    <span class="app-abbr">Ai</span>
+                                </div>
+                                <!-- InDesign -->
+                                <div class="app-brand-icon id-box" title="Adobe InDesign">
+                                    <span class="app-abbr">Id</span>
+                                </div>
+                                <!-- CorelDraw -->
+                                <div class="app-brand-icon cd-box" title="CorelDraw">
+                                    <span class="app-abbr">Cd</span>
+                                </div>
+                                <!-- Canva -->
+                                <div class="app-brand-icon canva-box" title="Canva">
+                                    <span class="app-abbr">Cv</span>
+                                </div>
+                                <!-- Generative AI -->
+                                <div class="app-brand-icon genai-box" title="Generative AI">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -127,12 +148,13 @@
     </div>
 
     <!-- ==========================================================
-         SECTION 1: CREATIVE SERVICES (Exact 4 Original Cards)
+         SECTION 1: CREATIVE SERVICES (Exact 4 Centered Cards)
+         Theme: Black to Magenta (#111111 + #e91e63)
          ========================================================== -->
     <section class="services-standalone-section" id="services">
         <div class="site-container">
             
-            <div class="section-title-clean">
+            <div class="clean-section-header dark-text-header">
                 <h2>CREATIVE <span class="highlight-magenta">SERVICES</span></h2>
                 <div class="accent-bar-magenta"></div>
             </div>
@@ -178,12 +200,13 @@
     </section>
 
     <!-- ==========================================================
-         SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
+         SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid Unchanged)
+         Theme: Black to Magenta (#111111 + #e91e63)
          ========================================================== -->
     <section class="projects-showcase-section" id="projects">
         <div class="site-container">
             
-            <div class="section-title-clean">
+            <div class="clean-section-header dark-text-header">
                 <h2>CREATIVE <span class="highlight-magenta">PROJECTS</span></h2>
                 <div class="accent-bar-magenta"></div>
             </div>
@@ -195,10 +218,10 @@
                 <button class="filter-tab-btn" data-filter="ai-animation">AI Animation Videos</button>
             </div>
 
-            <!-- Projects Grid: 20 Containers Per Tab -->
+            <!-- Projects Grid: Exactly 20 Containers Per Tab -->
             <div class="projects-display-grid">
                 
-                <!-- Graphic Design Items (g1 to g13 + Solid Holders = 20) -->
+                <!-- Graphic Design Items (All g1 to g13 + Solid Holders = 20) -->
                 <div class="project-box" data-category="graphic"><img src="g1.png" alt="G1"></div>
                 <div class="project-box" data-category="graphic"><img src="g2.jpg" alt="G2"></div>
                 <div class="project-box" data-category="graphic"><img src="g3.jpg" alt="G3"></div>
@@ -272,12 +295,12 @@
     </div>
 
     <!-- ==========================================================
-         SECTION 3: GET IN TOUCH
+         SECTION 3: GET IN TOUCH (Contact Form Kept Safe)
          ========================================================== -->
     <section class="contact-section-zone" id="contact">
         <div class="site-container">
             
-            <div class="section-title-clean">
+            <div class="clean-section-header dark-text-header">
                 <h2>GET IN <span class="highlight-magenta">TOUCH</span></h2>
                 <div class="accent-bar-magenta"></div>
             </div>
@@ -303,16 +326,29 @@
         </div>
     </section>
 
-    <!-- Footer (#080c16 Base) -->
+    <!-- ==========================================================
+         FOOTER: DIRECT BIG SOCIAL ICONS (NO CIRCLE, DIRECT LINKS)
+         ========================================================== -->
     <footer class="site-footer">
         <div class="site-container footer-content">
-            <p class="footer-title">FOLLOW US</p>
-            <div class="footer-social-links">
-                <a href="#" class="social-circle"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-circle"><i class="fa-brands fa-behance"></i></a>
-                <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+            <p class="footer-title">FOLLOW ME</p>
+            
+            <!-- Direct Clean Social Icons: Paste your URLs in href -->
+            <div class="footer-direct-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-direct-link" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-direct-link" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-direct-link" title="Behance">
+                    <i class="fa-brands fa-behance"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-direct-link" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
             </div>
+            
             <p class="copyright-tag">© 2026 Muskan Kumari. All rights reserved.</p>
         </div>
     </footer>

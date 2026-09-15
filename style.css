@@ -1,8 +1,9 @@
 /* ==========================================================
-   GLOBAL RESET & THEME
-   Deep Dark Navy Blue: #080c16
+   GLOBAL RESET & THEME TOKENS
+   Deep Navy Blue Base: #080c16
    Accent Electric Magenta: #e91e63
    Canvas White: #ffffff
+   Outer Dark: #111111
    Typography: Space Grotesk (Titles) & Plus Jakarta Sans (Body)
    ========================================================== */
 * {
@@ -34,23 +35,22 @@ html, body {
 }
 
 /* ==========================================================
-   UNIFIED MASTER DARK ZONE (Hero + About Combined into One)
+   1. STICKY TOP NAVIGATION BAR (Always Visible Everywhere)
    ========================================================== */
-.unified-dark-zone {
-    background-color: #080c16;
-    color: #ffffff;
+.sticky-master-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 24px 0 90px;
-    position: relative;
-    overflow: hidden;
+    z-index: 1000;
+    background-color: rgba(8, 12, 22, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px 0;
 }
 
-.hero-navbar {
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-.nav-container {
+.nav-inner-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
@@ -62,7 +62,7 @@ html, body {
 
 .brand-monogram {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-decoration: none;
@@ -118,12 +118,24 @@ html, body {
     cursor: pointer;
 }
 
-/* Main Hero Stage */
-.hero-stage-section {
-    padding: 20px 0 80px;
+/* ==========================================================
+   2. UNIFIED MASTER DARK STAGE (Hero + About Combined)
+   ========================================================== */
+.unified-dark-stage {
+    background-color: #080c16;
+    color: #ffffff;
+    width: 100%;
+    padding: 40px 0 95px;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-flex-layout {
+/* Hero Presentation */
+.hero-stage-section {
+    padding: 20px 0 85px;
+}
+
+.hero-flex-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -137,7 +149,6 @@ html, body {
     text-align: left;
 }
 
-/* Mega Editorial Alternating Title */
 .mega-hero-title {
     font-family: 'Space Grotesk', sans-serif;
     display: flex;
@@ -217,7 +228,7 @@ html, body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Model 1 Stage */
+/* 3D Model 1 Layout */
 .hero-avatar-side {
     flex: 0.85;
     display: flex;
@@ -228,11 +239,11 @@ html, body {
 
 .avatar-glow-disc {
     position: absolute;
-    width: 330px;
-    height: 330px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(8, 12, 22, 0) 70%);
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.65) 0%, rgba(233, 30, 99, 0.12) 50%, rgba(8, 12, 22, 0) 70%);
     border-radius: 50%;
-    filter: blur(28px);
+    filter: blur(30px);
     pointer-events: none;
 }
 
@@ -244,24 +255,40 @@ html, body {
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
-    animation: modelLevitate 5s ease-in-out infinite alternate;
-}
-
-@keyframes modelLevitate {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-14px) rotate(0.8deg); }
-    100% { transform: translateY(-5px) rotate(-0.8deg); }
 }
 
 /* ==========================================================
-   INTEGRATED ABOUT SECTION (Deep Dark Navy Base)
+   3. DUAL 3D MODEL MAGIC ANIMATIONS (Both Models Animate)
+   ========================================================== */
+.float-anim-1 {
+    animation: magicFloating1 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes magicFloating1 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(1deg); }
+    100% { transform: translateY(-6px) rotate(-1deg); }
+}
+
+.float-anim-2 {
+    animation: magicFloating2 6s ease-in-out infinite alternate;
+}
+
+@keyframes magicFloating2 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(-1.2deg); }
+    100% { transform: translateY(-8px) rotate(0.8deg); }
+}
+
+/* ==========================================================
+   4. INTEGRATED ABOUT SECTION (Deep Navy Base)
    ========================================================== */
 .about-integrated-section {
     padding: 40px 0 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.about-flex-layout {
+.about-flex-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -279,11 +306,12 @@ html, body {
 
 .about-glow-disc {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.4) 0%, rgba(233, 30, 99, 0) 70%);
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.45) 0%, rgba(233, 30, 99, 0) 70%);
     border-radius: 50%;
-    filter: blur(30px);
+    filter: blur(32px);
+    pointer-events: none;
 }
 
 .about-3d-model {
@@ -301,7 +329,7 @@ html, body {
     text-align: left;
 }
 
-.about-intro-name {
+.about-intro-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 900;
@@ -317,14 +345,19 @@ html, body {
     margin-bottom: 18px;
 }
 
-.about-bio-text {
+.about-bio-paragraph {
     font-size: 1rem;
     line-height: 1.7;
     color: #cbd5e1;
     margin-bottom: 28px;
 }
 
-.tools-header-label {
+/* Genuine Creative App Badges (Kartik Gulati Style) */
+.software-tools-container {
+    margin-top: 10px;
+}
+
+.tools-heading-label {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.88rem;
     font-weight: 800;
@@ -333,48 +366,91 @@ html, body {
     margin-bottom: 14px;
 }
 
-.tools-badges-grid {
+.software-icon-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
 }
 
-.app-chip {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.88rem;
-    font-weight: 700;
+.app-brand-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 1.15rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
 
-.app-chip.chip-magenta {
+.app-brand-icon:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.ps-box {
+    background: #001e36;
+    color: #31a8ff;
+    border: 1px solid #31a8ff;
+}
+
+.ai-box {
+    background: #330000;
+    color: #ff9a00;
+    border: 1px solid #ff9a00;
+}
+
+.id-box {
+    background: #49021f;
+    color: #ff3366;
+    border: 1px solid #ff3366;
+}
+
+.cd-box {
+    background: #0d2f14;
+    color: #2ed573;
+    border: 1px solid #2ed573;
+}
+
+.canva-box {
+    background: linear-gradient(135deg, #00c4cc, #7d2ae8);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.genai-box {
     background: #e91e63;
-    border-color: #e91e63;
+    color: #ffffff;
+    font-size: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 18px rgba(233, 30, 99, 0.5);
 }
 
 /* ==========================================================
-   CLEAN HEADINGS (No Dark Boxes!)
+   5. CLEAN SECTION HEADINGS (NO UGLY BLACK STRIPS)
    ========================================================== */
-.section-title-clean {
+.clean-section-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.section-title-clean h2 {
+.clean-section-header h2 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 900;
     letter-spacing: 0.5px;
-    color: #111111;
 }
 
-.about-integrated-section .section-title-clean h2 {
+.light-text-header h2 {
     color: #ffffff;
+}
+
+.dark-text-header h2 {
+    color: #111111;
 }
 
 .accent-bar-magenta {
@@ -386,7 +462,7 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION 1: 4 SERVICES CARDS (Unstretched 2x2 Grid)
+   6. SECTION 1: 4 SERVICES CARDS (Exact Match to f55b512e_5)
    ========================================================== */
 .services-standalone-section {
     background-color: #ffffff;
@@ -456,7 +532,7 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
+   7. SECTION 2: CREATIVE PROJECTS (Behance 4:3 Grid)
    ========================================================== */
 .projects-showcase-section {
     background-color: #ffffff;
@@ -473,7 +549,7 @@ html, body {
 }
 
 .filter-tab-btn {
-    background: #080c16;
+    background: #111111;
     color: #ffffff;
     border: none;
     padding: 11px 24px;
@@ -496,7 +572,7 @@ html, body {
 }
 
 .project-box {
-    background: #080c16;
+    background: #111111;
     border-radius: 12px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
@@ -531,7 +607,7 @@ html, body {
 }
 
 .empty-holder {
-    background: #080c16 !important;
+    background: #111111 !important;
     border: none;
 }
 
@@ -603,7 +679,7 @@ html, body {
 }
 
 /* ==========================================================
-   SECTION 3: GET IN TOUCH
+   8. SECTION 3: GET IN TOUCH
    ========================================================== */
 .contact-section-zone {
     background-color: #ffffff;
@@ -617,7 +693,7 @@ html, body {
     background: #ffffff;
     border-radius: 16px;
     padding: 38px 30px;
-    box-shadow: 0 10px 35px rgba(8, 12, 22, 0.08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
 }
 
@@ -665,64 +741,73 @@ html, body {
 }
 
 /* ==========================================================
-   FOOTER (#080c16 Base)
+   9. FOOTER: DIRECT BIG SOCIAL ICONS (NO CIRCLES!)
    ========================================================== */
 .site-footer {
     background-color: #080c16;
-    padding: 40px 20px;
+    padding: 45px 20px;
     text-align: center;
 }
 
 .footer-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: #94a3b8;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.footer-social-links {
+.footer-direct-socials {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-bottom: 18px;
-}
-
-.social-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #e91e63;
-    color: #ffffff;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: transform 0.2s ease;
+    gap: 28px;
+    margin-bottom: 22px;
 }
 
-.social-circle:hover {
-    transform: scale(1.1);
+.social-direct-link {
+    color: #cbd5e1;
+    font-size: 1.85rem; /* Big, direct icon */
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+.social-direct-link:hover {
+    color: #e91e63;
+    transform: translateY(-4px) scale(1.15);
+    filter: drop-shadow(0 4px 12px rgba(233, 30, 99, 0.6));
 }
 
 .copyright-tag {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: #64748b;
 }
 
 /* ==========================================================
-   MOBILE SCREEN RESPONSIVENESS
+   10. MOBILE SCREEN RESPONSIVENESS
    ========================================================== */
 @media (max-width: 850px) {
     .nav-links-menu {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(8, 12, 22, 0.98);
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-links-menu.active {
+        display: flex;
     }
     .mobile-toggle {
         display: block;
     }
-    .hero-flex-layout {
+    .hero-flex-wrapper {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
@@ -740,7 +825,7 @@ html, body {
     .hero-3d-model {
         max-width: 290px;
     }
-    .about-flex-layout {
+    .about-flex-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 30px;
@@ -748,7 +833,7 @@ html, body {
     .about-details-side {
         text-align: center;
     }
-    .tools-badges-grid {
+    .software-icon-row {
         justify-content: center;
     }
     .about-3d-model {

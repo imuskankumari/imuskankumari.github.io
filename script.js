@@ -13,7 +13,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Tab Switching Functionality (Rounded Squares)
+    // 2. Dual Side-by-Side Hero Slider (Auto Switch Every 5 Seconds)
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    const slideIntervalTime = 5000; // 5 Seconds
+
+    function goToSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active-slide'));
+        dots.forEach(dot => dot.classList.remove('active-dot'));
+
+        slides[index].classList.add('active-slide');
+        dots[index].classList.add('active-dot');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+
+    let slideTimer = setInterval(nextSlide, slideIntervalTime);
+
+    // Clickable Pagination Dots
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideTimer);
+            goToSlide(idx);
+            slideTimer = setInterval(nextSlide, slideIntervalTime);
+        });
+    });
+
+    // 3. Tab Switching Functionality (Rounded Squares)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -40,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeTab.click();
     }
 
-    // 3. Fullscreen Lightbox with Image Slide Support
+    // 4. Fullscreen Lightbox with Image Slide Support
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -102,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Contact Form Submission
+    // 5. Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {

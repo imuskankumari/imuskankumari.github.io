@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle & Navigation Auto-Close
+    // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-
         document.querySelectorAll('.nav-item').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -14,7 +13,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Tab Switching Functionality (Rounded Squares)
+    // 2. Dual Hero Slider (Auto Cross-Fade Every 5 Seconds)
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    const slideIntervalTime = 5000; // 5 Seconds
+
+    function goToSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active-slide'));
+        dots.forEach(dot => dot.classList.remove('active-dot'));
+
+        slides[index].classList.add('active-slide');
+        dots[index].classList.add('active-dot');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+
+    let slideTimer = setInterval(nextSlide, slideIntervalTime);
+
+    // Clickable Pagination Dots
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideTimer);
+            goToSlide(idx);
+            slideTimer = setInterval(nextSlide, slideIntervalTime);
+        });
+    });
+
+    // 3. Tab Switching Functionality (Rounded Squares)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -36,13 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Default trigger Graphic Design tab on initial load
     const activeTab = document.querySelector('.filter-tab-btn.active');
     if (activeTab) {
         activeTab.click();
     }
 
-    // 3. Fullscreen Lightbox with Image Slide Support
+    // 4. Fullscreen Lightbox with Image Slide Support
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -87,29 +116,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevArrow) prevArrow.addEventListener('click', (e) => { e.stopPropagation(); showPrevImage(); });
 
     if (closeModal) {
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+        closeModal.addEventListener('click', () => { modal.style.display = 'none'; });
     }
 
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
+            if (e.target === modal) modal.style.display = 'none';
         });
     }
 
-    // Keyboard support for Lightbox
     document.addEventListener('keydown', (e) => {
-        if (modal.style.display === 'flex') {
+        if (modal && modal.style.display === 'flex') {
             if (e.key === 'ArrowRight') showNextImage();
             if (e.key === 'ArrowLeft') showPrevImage();
             if (e.key === 'Escape') modal.style.display = 'none';
         }
     });
 
-    // 4. Contact Form Submission
+    // 5. Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {

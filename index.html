@@ -8,7 +8,7 @@
     <!-- Google Fonts: Plus Jakarta Sans & Syne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,7 +23,6 @@
          ========================================================== -->
     <header class="master-fixed-navbar" id="global-nav">
         <div class="nav-inner-container">
-            <!-- W-style Spread 'MK' Monogram Logo -->
             <a href="#home" class="brand-monogram-badge">
                 <span class="logo-m">M</span><span class="logo-k">K</span>
             </a>
@@ -42,70 +41,80 @@
     </header>
 
     <!-- ==========================================================
-         HERO SECTION: SINGLE CLEAN LAYOUT (Deep Navy #070d1a)
-         Left: Bold Typography | Right: Model 2 (Umbrella Persona)
+         HERO SECTION: DUAL SIDE-BY-SIDE SLIDER (Deep Navy #070d1a)
          ========================================================== -->
-    <section class="hero-stage-section" id="home">
-        <div class="site-container hero-inner-flex">
-            
-            <div class="hero-text-side">
-                <h1 class="mega-hero-title">
-                    <div class="title-row-top">
-                        <span class="font-thin text-white">MUSKAN</span> 
-                        <span class="font-bold text-magenta">KUMARI</span>
+    <section class="hero-slider-stage" id="home">
+        
+        <!-- SLIDE 1: Left Text (GRAPHIC DESIGNER Only) | Right Model 2 -->
+        <div class="hero-slide active-slide" data-slide="1">
+            <div class="site-container hero-inner-flex">
+                <div class="hero-text-side">
+                    <h1 class="mega-hero-title-bold">
+                        <span class="text-magenta">GRAPHIC</span><br>
+                        <span class="text-white">DESIGNER</span>
+                    </h1>
+                    <p class="hero-subline-grey">Crafting distinctive visual identities, scalable vector art, surreal AI visuals, and cinematic 3D motion reels.</p>
+                    <div class="hero-cta-buttons">
+                        <a href="#projects" class="btn-pill-magenta">Explore Projects ✨</a>
+                        <a href="#contact" class="btn-pill-outline">Contact Me</a>
                     </div>
-                    <div class="title-row-bottom">
-                        <span class="font-bold text-magenta">GRAPHIC</span> 
-                        <span class="font-heavy text-white">DESIGNER</span>
-                    </div>
-                </h1>
-                
-                <p class="hero-subline-grey">Crafting distinctive visual identities, scalable vector art, surreal AI visuals, and cinematic 3D motion reels.</p>
-                
-                <div class="hero-cta-buttons">
-                    <a href="#projects" class="btn-pill-magenta">Explore Projects ✨</a>
-                    <a href="#contact" class="btn-pill-outline">Contact Me</a>
+                </div>
+                <div class="hero-avatar-side">
+                    <div class="about-soft-aura"></div>
+                    <img src="model2.png" alt="Muskan Kumari Creative Persona" class="hero-3d-model float-anim-2" onerror="this.onerror=null; this.src='model%202.png';">
                 </div>
             </div>
+        </div>
 
-            <div class="hero-avatar-side">
-                <div class="about-soft-aura"></div>
-                <!-- Model 2 (Umbrella Persona) -->
-                <img src="model2.png" alt="Muskan Kumari Creative Persona" class="hero-3d-model float-anim-2" onerror="this.onerror=null; this.src='model%202.png';">
+        <!-- SLIDE 2: Left Model 1 | Right Text (Muskan Kumari & Title) -->
+        <div class="hero-slide" data-slide="2">
+            <div class="site-container hero-inner-flex reverse-flex">
+                <div class="hero-avatar-side">
+                    <div class="smoky-magenta-aura"></div>
+                    <img src="model1.png" alt="Muskan Kumari Working Designer" class="hero-3d-model float-anim-1" onerror="this.onerror=null; this.src='model%201.png';">
+                </div>
+                <div class="hero-text-side text-right-aligned">
+                    <h1 class="mega-hero-title-bold">
+                        <span class="text-white">MUSKAN</span><br>
+                        <span class="text-magenta">KUMARI</span>
+                    </h1>
+                    <p class="hero-subline-grey">Professional Graphic Designer &amp; Visual Artist specializing in next-gen digital design and creative branding.</p>
+                    <div class="hero-cta-buttons justify-end">
+                        <a href="#about" class="btn-pill-magenta">About My Skills ✨</a>
+                        <a href="#contact" class="btn-pill-outline">Get in Touch</a>
+                    </div>
+                </div>
             </div>
+        </div>
 
+        <!-- Slider Navigation Dots -->
+        <div class="slider-dots-box">
+            <span class="dot active-dot" data-slideTo="0"></span>
+            <span class="dot" data-slideTo="1"></span>
         </div>
     </section>
 
     <!-- ==========================================================
-         ABOUT ME SECTION (Deep Navy #070d1a)
-         Model 1 (Computer Studio Setup) + Software Badges
+         ABOUT ME SECTION (Deep Navy #070d1a) + Software Icons
          ========================================================== -->
     <section class="about-continuous-section" id="about">
         <div class="site-container">
-            
             <div class="clean-section-header light-text-header">
                 <h2>ABOUT <span class="highlight-magenta">ME</span></h2>
                 <div class="accent-bar-magenta"></div>
             </div>
 
             <div class="about-inner-flex">
-                
-                <!-- Model 1 (Computer Workspace) -->
                 <div class="about-avatar-side">
                     <div class="smoky-magenta-aura"></div>
                     <img src="model1.png" alt="Muskan Kumari Workspace" class="about-3d-model float-anim-1" onerror="this.onerror=null; this.src='model%201.png';">
                 </div>
-
-                <!-- Bio & Genuine Software Badges -->
                 <div class="about-details-side">
                     <h3 class="about-intro-title">Hi, I'm <span class="highlight-magenta">Muskan Kumari</span></h3>
                     <p class="about-role-sub">Graphic Designer &amp; Visual Artist</p>
-                    
                     <p class="about-bio-paragraph">
                         Professionally, I am a Graphic Designer. I craft creative designs using Adobe Photoshop, Illustrator, InDesign, CorelDraw, and Canva. I also generate surreal AI visuals and AI animation videos using Generative AI tools.
                     </p>
-
                     <div class="software-tools-container">
                         <p class="tools-heading-label">CREATIVE SOFTWARE &amp; SKILLS</p>
                         <div class="software-icon-row">
@@ -117,11 +126,8 @@
                             <div class="app-brand-icon genai-box" title="Generative AI"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -130,7 +136,6 @@
          ========================================================== -->
     <section class="services-standalone-section" id="services">
         <div class="site-container">
-            
             <div class="clean-section-header dark-text-header">
                 <h2>CREATIVE <span class="highlight-magenta">SERVICES</span></h2>
                 <div class="accent-bar-magenta"></div>
@@ -162,7 +167,6 @@
                     <span class="service-tag">Dynamic Motion</span>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -171,7 +175,6 @@
          ========================================================== -->
     <section class="projects-showcase-section" id="projects">
         <div class="site-container">
-            
             <div class="clean-section-header dark-text-header">
                 <h2>CREATIVE <span class="highlight-magenta">PROJECTS</span></h2>
                 <div class="accent-bar-magenta"></div>
@@ -242,7 +245,6 @@
                 <div class="project-box video-box" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
                 <div class="project-box video-box" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
             </div>
-
         </div>
     </section>
 
@@ -261,7 +263,6 @@
          ========================================================== -->
     <section class="contact-section-zone" id="contact">
         <div class="site-container">
-            
             <div class="clean-section-header dark-text-header">
                 <h2>GET IN <span class="highlight-magenta">TOUCH</span></h2>
                 <div class="accent-bar-magenta"></div>
@@ -284,13 +285,11 @@
                     <button type="submit" class="btn-pill-magenta btn-full">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
-
         </div>
     </section>
 
     <!-- ==========================================================
          FOOTER: WIDE CONTAINER & EXACT BRAND COLOR SOCIAL ICONS
-         Order: Behance -> YouTube -> Instagram -> LinkedIn
          ========================================================== -->
     <footer class="site-footer">
         <div class="site-container footer-content-wide">
@@ -316,4 +315,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

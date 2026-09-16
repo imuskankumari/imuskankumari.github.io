@@ -124,39 +124,16 @@ html, body {
 }
 
 /* ==========================================================
-   2. HERO STAGE: DUAL SLIDER WITH FADE-IN ANIMATION
+   2. SINGLE CLEAN HERO STAGE (Deep Navy #070d1a)
    ========================================================== */
-.hero-slider-stage {
+.hero-stage-section {
     background-color: #070d1a;
     color: #ffffff;
     width: 100%;
     margin-top: 75px;
-    padding: 50px 0 70px;
+    padding: 60px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-}
-
-.hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
-    display: flex;
-    align-items: center;
-    padding: 50px 0;
-}
-
-.hero-slide.active-slide {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
 }
 
 .hero-inner-flex {
@@ -253,34 +230,6 @@ html, body {
     position: relative;
 }
 
-/* Realistic Neon Rain Effect (CSS Animated Droplets) */
-.rain-environment-box {
-    position: relative;
-}
-
-.realistic-rain-layer {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 110%;
-    pointer-events: none;
-    background-image: 
-        linear-gradient(130deg, rgba(255, 255, 255, 0.85) 1.5px, transparent 2px),
-        linear-gradient(130deg, rgba(233, 30, 99, 0.5) 1px, transparent 2px);
-    background-size: 25px 25px;
-    animation: realRainFall 0.55s linear infinite;
-    z-index: 3;
-    opacity: 0.9;
-    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, transparent 90%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, transparent 90%);
-}
-
-@keyframes realRainFall {
-    0% { background-position: 0 0; }
-    100% { background-position: -20px 100px; }
-}
-
 .smoky-magenta-aura {
     position: absolute;
     width: 420px;
@@ -293,13 +242,12 @@ html, body {
 
 .about-soft-aura {
     position: absolute;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(233, 30, 99, 0.5) 0%, rgba(233, 30, 99, 0) 70%);
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(233, 30, 99, 0.45) 0%, rgba(233, 30, 99, 0) 70%);
     border-radius: 50%;
     filter: blur(35px);
     pointer-events: none;
-    z-index: 1;
 }
 
 .hero-3d-model {
@@ -308,33 +256,8 @@ html, body {
     height: auto;
     display: block !important;
     position: relative;
-    z-index: 4;
+    z-index: 2;
     filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
-}
-
-/* Slider Pagination Dots */
-.slider-dots-box {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.dot.active-dot {
-    background: #e91e63;
-    transform: scale(1.25);
 }
 
 /* ==========================================================
@@ -735,7 +658,7 @@ html, body {
 }
 
 /* ==========================================================
-   8. FOOTER: WIDE CONTAINER & EXACT SOCIAL BRAND COLORS
+   8. FOOTER: WIDE CONTAINER & EXACT BRAND COLOR SOCIAL ICONS
    Order: Behance -> YouTube -> Instagram -> LinkedIn
    ========================================================== */
 .site-footer {

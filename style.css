@@ -8,10 +8,11 @@ html, body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .site-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.text-white { color: #ffffff !important; }
 .text-magenta { color: #e91e63 !important; }
 
 /* ==========================================================
-   HEADER STYLES START
+   HEADER STYLES START (Standard 75px Height)
    ========================================================== */
 .master-fixed-navbar {
     position: fixed !important; top: 0; left: 0; width: 100%; height: 75px;
@@ -36,22 +37,20 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START
+   HERO SECTION STYLES START (Standard 100vh Viewport Height)
    ========================================================== */
 .hero-single-stage {
     background: linear-gradient(135deg, #030712 0%, #0d061f 50%, #1c0212 100%);
     color: #ffffff; width: 100%;
-    margin-top: 75px; padding: 60px 0; position: relative;
-    overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center;
+    margin-top: 75px; position: relative;
+    overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center; padding: 40px 0;
 }
 .hero-inner-flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; width: 100%; }
 .hero-text-side { flex: 1.15; text-align: left; }
 
-.hero-iam-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: 0.5px; color: #ffffff; line-height: 1.1; margin-bottom: 2px; }
-.hero-name-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: 0.5px; color: #ffffff; line-height: 1.1; margin-bottom: 2px; }
-.mega-hero-title-bold { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 18px; color: #ffffff; }
+.hero-title-line { font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 4.6vw, 3.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 4px; }
 
-.software-tools-container { margin-bottom: 14px; }
+.software-tools-container { margin-top: 14px; margin-bottom: 14px; }
 .software-icon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .app-brand-icon { width: 38px; height: 38px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); }
 .ps-box { background: #001e36; color: #31a8ff; border: 1.5px solid #31a8ff; }
@@ -141,7 +140,7 @@ html, body {
 /* CONTACT SECTION END */
 
 /* ==========================================================
-   FOOTER STYLES START
+   FOOTER STYLES START (Standard Footer Padding)
    ========================================================== */
 .site-footer { background-color: #030712; padding: 50px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .footer-content-wide { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
@@ -162,10 +161,9 @@ html, body {
     .mobile-toggle { display: block; }
     .hero-inner-flex { flex-direction: column-reverse; text-align: center; gap: 20px; }
     .hero-text-side { text-align: center; }
-    .hero-iam-title, .hero-name-title, .mega-hero-title-bold { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+    .hero-title-line { font-size: clamp(2.2rem, 5vw, 3.2rem); }
     .hero-cta-buttons { justify-content: center; }
     .hero-3d-model { max-width: 360px; }
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
 }
-

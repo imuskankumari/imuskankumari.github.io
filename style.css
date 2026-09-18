@@ -18,7 +18,7 @@ html, body {
 .brand-monogram-badge { font-family: 'Syne', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 2px; text-decoration: none; display: inline-flex; align-items: center; line-height: 1; }
 .logo-m { color: #ffffff; transform: scaleX(1.35); display: inline-block; margin-right: 3px; }
 .logo-k { color: #e91e63; display: inline-block; }
-.nav-links-menu { display: flex; align-items: center; gap: 28px; }
+.nav-links-menu { display: flex; align-items: center; justify-content: center; gap: 32px; flex: 1; }
 .nav-item { color: #e2e8f0; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: color 0.2s ease; }
 .nav-item:hover { color: #e91e63; }
 .nav-contact-btn { background: #e91e63; color: #ffffff !important; padding: 8px 24px; border-radius: 50px; font-weight: 700; transition: transform 0.2s ease; }
@@ -27,7 +27,7 @@ html, body {
 /* HEADER END */
 
 /* SINGLE HERO SECTION START */
-.hero-stage-section {
+.hero-single-stage {
     background-color: #070d1a; color: #ffffff; width: 100%;
     margin-top: 75px; padding: 60px 0 85px; position: relative;
     overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center;
@@ -35,6 +35,7 @@ html, body {
 .hero-inner-flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 50px; width: 100%; }
 .hero-text-side { flex: 1.15; text-align: left; }
 
+.hero-top-intro { font-size: 1.1rem; font-weight: 700; color: #cbd5e1; margin-bottom: 8px; }
 .mega-hero-title-bold { font-size: clamp(3rem, 6.2vw, 5rem); font-weight: 900; line-height: 1.05; letter-spacing: -1px; margin-bottom: 18px; }
 .text-white { color: #ffffff; }
 .text-magenta { color: #e91e63; }
@@ -56,8 +57,10 @@ html, body {
 .btn-pill-outline:hover { background: rgba(255, 255, 255, 0.1); }
 
 .hero-avatar-side { flex: 0.85; display: flex; justify-content: center; align-items: center; position: relative; }
-.smoky-magenta-aura { position: absolute; width: 480px; height: 480px; background: radial-gradient(circle, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.25) 45%, rgba(7, 13, 26, 0) 75%); border-radius: 50%; filter: blur(45px); pointer-events: none; }
-.hero-3d-model { width: 100%; max-width: 480px; height: auto; display: block !important; position: relative; z-index: 2; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85)); }
+.smoky-magenta-aura { position: absolute; width: 520px; height: 520px; background: radial-gradient(circle, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.25) 45%, rgba(7, 13, 26, 0) 75%); border-radius: 50%; filter: blur(45px); pointer-events: none; }
+.hero-image-flipper { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
+.hero-3d-model { width: 100%; max-width: 520px; height: auto; display: block !important; position: relative; z-index: 2; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85)); opacity: 0; transition: opacity 1s ease-in-out; }
+.hero-3d-model.active-model { opacity: 1; }
 
 .float-anim-1 { animation: magicFloating1 5.5s ease-in-out infinite alternate; }
 @keyframes magicFloating1 { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-16px) rotate(1deg); } 100% { transform: translateY(-6px) rotate(-1deg); } }
@@ -67,7 +70,6 @@ html, body {
 .clean-section-header { text-align: center; margin-bottom: 45px; }
 .clean-section-header h2 { font-size: clamp(2.2rem, 4.2vw, 3rem); font-weight: 900; letter-spacing: 0.5px; }
 .dark-text-header h2 { color: #111111; }
-.accent-bar-magenta { width: 50px; height: 4px; background: #e91e63; margin: 8px auto 0; border-radius: 2px; }
 
 .services-standalone-section { background-color: #ffffff; padding: 90px 0 80px; text-align: center; }
 .services-original-four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
@@ -132,8 +134,7 @@ html, body {
     .hero-text-side { text-align: center; }
     .mega-hero-title-bold { font-size: clamp(2.3rem, 6vw, 3rem); }
     .hero-cta-buttons { justify-content: center; }
-    .hero-3d-model { max-width: 360px; }
+    .hero-3d-model { max-width: 380px; }
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
 }
-

@@ -8,33 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
-    const slideIntervalTime = 6000;
-
-    function goToSlide(index) {
-        slides.forEach(s => s.classList.remove('active-slide'));
-        dots.forEach(d => d.classList.remove('active-dot'));
-        slides[index].classList.add('active-slide');
-        dots[index].classList.add('active-dot');
-        currentSlide = index;
-    }
-
-    function nextSlide() {
-        goToSlide((currentSlide + 1) % slides.length);
-    }
-
-    let slideTimer = setInterval(nextSlide, slideIntervalTime);
-
-    dots.forEach((dot, idx) => {
-        dot.addEventListener('click', () => {
-            clearInterval(slideTimer);
-            goToSlide(idx);
-            slideTimer = setInterval(nextSlide, slideIntervalTime);
-        });
-    });
-
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -109,4 +82,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-

@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Single Hero Section Model Auto-Switching every 6 seconds without slides
+    const modelImg = document.getElementById('changing-model');
+    if (modelImg) {
+        const models = ['model1.png', 'model2.png'];
+        let currentModelIdx = 0;
+        setInterval(() => {
+            modelImg.classList.remove('active-model');
+            setTimeout(() => {
+                currentModelIdx = (currentModelIdx + 1) % models.length;
+                modelImg.src = models[currentModelIdx];
+                modelImg.classList.add('active-model');
+            }, 500);
+        }, 6000);
+    }
+
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 

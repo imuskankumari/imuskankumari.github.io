@@ -8,10 +8,10 @@ html, body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .site-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.highlight-magenta { color: #e91e63 !important; }
+.text-magenta { color: #e91e63 !important; }
 
 /* ==========================================================
-   HEADER STYLES START (Logo Left, Center Nav, Right Contact)
+   HEADER STYLES START
    ========================================================== */
 .master-fixed-navbar {
     position: fixed !important; top: 0; left: 0; width: 100%; height: 75px;
@@ -41,29 +41,28 @@ html, body {
 .hero-single-stage {
     background: linear-gradient(135deg, #030712 0%, #0d061f 50%, #1c0212 100%);
     color: #ffffff; width: 100%;
-    margin-top: 75px; padding: 50px 0 75px; position: relative;
+    margin-top: 75px; padding: 40px 0; position: relative;
     overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center;
 }
 .hero-inner-flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; width: 100%; }
 .hero-text-side { flex: 1.15; text-align: left; }
 
-.hero-iam-title { font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; letter-spacing: 1px; color: #ffffff; line-height: 1.1; margin-bottom: 2px; }
-.hero-name-title { font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; letter-spacing: 0.5px; color: #e91e63; line-height: 1.1; margin-bottom: 8px; }
-.mega-hero-title-bold { font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 18px; }
+.hero-iam-title { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; letter-spacing: 0.5px; color: #ffffff; line-height: 1.1; margin-bottom: 2px; }
+.hero-name-title { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; letter-spacing: 0.5px; color: #ffffff; line-height: 1.1; margin-bottom: 2px; }
+.mega-hero-title-bold { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4.8vw, 3.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 16px; color: #ffffff; }
 .text-white { color: #ffffff; }
-.text-magenta { color: #e91e63; }
 
-.software-tools-container { margin-bottom: 16px; }
+.software-tools-container { margin-bottom: 14px; }
 .software-icon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-.app-brand-icon { width: 40px; height: 40px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); }
+.app-brand-icon { width: 38px; height: 38px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); }
 .ps-box { background: #001e36; color: #31a8ff; border: 1.5px solid #31a8ff; }
 .ai-box { background: #330000; color: #ff9a00; border: 1.5px solid #ff9a00; }
 .id-box { background: #49021f; color: #ff3366; border: 1.5px solid #ff3366; }
 .cd-box { background: #0d2f14; color: #2ed573; border: 1.5px solid #2ed573; }
 .canva-box { background: linear-gradient(135deg, #00c4cc, #7d2ae8); color: #ffffff; border: 1.5px solid rgba(255, 255, 255, 0.4); }
-.genai-box { background: #e91e63; color: #ffffff; font-size: 1.1rem; border: 1.5px solid rgba(255, 255, 255, 0.5); }
+.genai-box { background: #e91e63; color: #ffffff; font-size: 1.05rem; border: 1.5px solid rgba(255, 255, 255, 0.5); }
 
-.hero-subline-grey { font-size: 0.95rem; line-height: 1.6; color: #94a3b8; max-width: 520px; margin-bottom: 24px; font-weight: 600; }
+.hero-subline-grey { font-size: 0.92rem; line-height: 1.55; color: #94a3b8; max-width: 500px; margin-bottom: 20px; font-weight: 600; }
 
 .hero-cta-buttons { display: flex; align-items: center; gap: 14px; }
 .btn-pill-magenta {
@@ -94,7 +93,7 @@ html, body {
    SERVICES SECTION STYLES START
    ========================================================== */
 .clean-section-header { text-align: center; margin-bottom: 45px; }
-.clean-section-header h2 { font-size: clamp(2.2rem, 4.2vw, 3rem); font-weight: 900; letter-spacing: 0.5px; color: #111111; }
+.clean-section-header h2 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 4.2vw, 3rem); font-weight: 900; letter-spacing: 0.5px; color: #111111; }
 
 .services-standalone-section { background-color: #ffffff; padding: 80px 0; text-align: center; }
 .services-original-four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
@@ -164,9 +163,9 @@ html, body {
     .mobile-toggle { display: block; }
     .hero-inner-flex { flex-direction: column-reverse; text-align: center; gap: 20px; }
     .hero-text-side { text-align: center; }
-    .mega-hero-title-bold { font-size: clamp(2.3rem, 6vw, 3rem); }
+    .hero-iam-title, .hero-name-title, .mega-hero-title-bold { font-size: clamp(2.2rem, 5vw, 3.2rem); }
     .hero-cta-buttons { justify-content: center; }
-    .hero-3d-model { max-width: 380px; }
+    .hero-3d-model { max-width: 360px; }
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
 }

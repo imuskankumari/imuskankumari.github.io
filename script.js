@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
-    const slideIntervalTime = 5000;
+    const slideIntervalTime = 6000; // 6 Seconds
 
     function goToSlide(index) {
         slides.forEach(s => s.classList.remove('active-slide'));

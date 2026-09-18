@@ -26,10 +26,10 @@ html, body {
 .mobile-toggle { display: none; background: transparent; border: none; color: #ffffff; font-size: 1.4rem; cursor: pointer; }
 /* HEADER END */
 
-/* HERO SECTION START */
+/* SINGLE HERO SECTION START */
 .hero-slider-stage {
     background-color: #070d1a; color: #ffffff; width: 100%;
-    margin-top: 75px; padding: 60px 0 85px; position: relative;
+    margin-top: 75px; position: relative;
     overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center;
 }
 .hero-slide {
@@ -76,7 +76,7 @@ html, body {
 .slider-dots-box { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
 .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: background 0.3s ease, transform 0.3s ease; }
 .dot.active-dot { background: #e91e63; transform: scale(1.25); }
-/* HERO SECTION END */
+/* SINGLE HERO SECTION END */
 
 /* SOFTWARE BADGES */
 .software-tools-container { margin-top: 5px; }
@@ -169,3 +169,4 @@ html, body {
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
 }
+

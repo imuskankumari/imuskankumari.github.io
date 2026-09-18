@@ -12,7 +12,7 @@ html, body {
 .text-magenta { color: #e91e63 !important; }
 
 /* ==========================================================
-   HEADER STYLES START
+   HEADER STYLES START (Pure White Nav Items)
    ========================================================== */
 .master-fixed-navbar {
     position: fixed !important; top: 0; left: 0; width: 100%; height: 75px;
@@ -26,8 +26,8 @@ html, body {
 .logo-k { color: #e91e63; display: inline-block; }
 
 .nav-links-menu { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 32px; }
-.nav-item { color: #e2e8f0; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: color 0.2s ease; }
-.nav-item:hover { color: #e91e63; }
+.nav-item { color: #ffffff !important; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: color 0.2s ease; }
+.nav-item:hover { color: #e91e63 !important; }
 
 .nav-right-box { display: flex; align-items: center; }
 .nav-contact-btn { background: #e91e63; color: #ffffff !important; padding: 9px 26px; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; transition: transform 0.2s ease; }
@@ -37,18 +37,19 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START
+   HERO SECTION STYLES START (Fixed Top/Bottom Void & Perfect Size)
    ========================================================== */
 .hero-single-stage {
     background: linear-gradient(135deg, #030712 0%, #0d061f 50%, #1c0212 100%);
     color: #ffffff; width: 100%;
     margin-top: 75px; position: relative;
-    overflow: hidden; height: calc(100vh - 75px); min-height: 650px; display: flex; align-items: center; padding: 0;
+    overflow: hidden; min-height: calc(100vh - 75px); display: flex; align-items: center; 
+    padding: 30px 0; /* Removed excessive void space */
 }
 .hero-inner-flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; width: 100%; }
 .hero-text-side { flex: 1.15; text-align: left; }
 
-.hero-title-line { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4.2vw, 3.6rem); font-weight: 900; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 6px; }
+.hero-title-line { font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 4.6vw, 3.8rem); font-weight: 900; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 6px; }
 
 .software-tools-container { margin-top: 12px; margin-bottom: 12px; }
 .software-icon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -80,7 +81,7 @@ html, body {
 .hero-avatar-side { flex: 0.85; display: flex; justify-content: center; align-items: center; position: relative; }
 .smoky-magenta-aura { position: absolute; width: 480px; height: 480px; background: radial-gradient(circle, rgba(233, 30, 99, 0.65) 0%, rgba(233, 30, 99, 0.15) 45%, rgba(3, 7, 18, 0) 75%); border-radius: 50%; filter: blur(45px); pointer-events: none; }
 .hero-image-flipper { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
-.hero-3d-model { width: 100%; max-width: 460px; height: auto; display: block !important; position: relative; z-index: 2; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85)); opacity: 0; transition: opacity 1s ease-in-out; }
+.hero-3d-model { width: 100%; max-width: 440px; height: auto; display: block !important; position: relative; z-index: 2; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85)); opacity: 0; transition: opacity 1s ease-in-out; }
 .hero-3d-model.active-model { opacity: 1; }
 
 .float-anim-1 { animation: magicFloating1 5.5s ease-in-out infinite alternate; }
@@ -93,7 +94,7 @@ html, body {
 .clean-section-header { text-align: center; margin-bottom: 45px; }
 .clean-section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4.2vw, 3rem); font-weight: 900; letter-spacing: 0.5px; color: #111111; }
 
-.services-standalone-section { background-color: #ffffff; padding: 80px 0; text-align: center; }
+.services-standalone-section { background-color: #ffffff; padding: 70px 0; text-align: center; }
 .services-original-four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
 .service-original-card { background: #030712; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 32px 28px; text-align: left; box-shadow: 0 12px 28px rgba(3, 7, 18, 0.14); transition: transform 0.25s ease; }
 .service-original-card:hover { transform: translateY(-5px); }
@@ -106,7 +107,7 @@ html, body {
 /* ==========================================================
    PROJECTS SECTION STYLES START
    ========================================================== */
-.projects-showcase-section { background-color: #ffffff; padding: 40px 0 80px; text-align: center; }
+.projects-showcase-section { background-color: #ffffff; padding: 30px 0 70px; text-align: center; }
 .tabs-filter-bar { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 35px; }
 .filter-tab-btn { background: #111111; color: #ffffff; border: none; padding: 11px 24px; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer; transition: all 0.2s ease; }
 .filter-tab-btn.active { background: #e91e63; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4); }
@@ -130,7 +131,7 @@ html, body {
 /* ==========================================================
    CONTACT SECTION STYLES START
    ========================================================== */
-.contact-section-zone { background-color: #ffffff; padding: 40px 0 80px; text-align: center; }
+.contact-section-zone { background-color: #ffffff; padding: 30px 0 70px; text-align: center; }
 .contact-card-box { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; padding: 38px 30px; box-shadow: 0 10px 35px rgba(3, 7, 18, 0.08); border: 1px solid #e2e8f0; }
 .contact-form-inner { display: flex; flex-direction: column; gap: 18px; text-align: left; }
 .form-input-group label { display: block; font-size: 0.9rem; font-weight: 800; margin-bottom: 6px; color: #111111; }
@@ -140,18 +141,18 @@ html, body {
 /* CONTACT SECTION END */
 
 /* ==========================================================
-   FOOTER STYLES START
+   FOOTER STYLES START (Pure White Footer Text)
    ========================================================== */
-.site-footer { background-color: #030712; padding: 50px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); }
-.footer-content-wide { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.footer-direct-socials { display: flex; justify-content: center; align-items: center; gap: 35px; }
-.social-direct-link { font-size: 2.1rem; text-decoration: none; transition: transform 0.25s ease, filter 0.25s ease; display: inline-block; }
+.site-footer { background-color: #030712; padding: 35px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.footer-content-wide { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.footer-direct-socials { display: flex; justify-content: center; align-items: center; gap: 30px; }
+.social-direct-link { font-size: 1.8rem; text-decoration: none; transition: transform 0.25s ease, filter 0.25s ease; display: inline-block; }
 .social-direct-link:hover { transform: translateY(-5px) scale(1.12); }
 .behance-icon { color: #1769ff; } .behance-icon:hover { filter: drop-shadow(0 0 12px rgba(23, 105, 255, 0.8)); }
 .youtube-icon { color: #ff0000; } .youtube-icon:hover { filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.8)); }
 .instagram-icon { color: #e1306c; } .instagram-icon:hover { filter: drop-shadow(0 0 12px rgba(225, 48, 108, 0.8)); }
 .linkedin-icon { color: #0a66c2; } .linkedin-icon:hover { filter: drop-shadow(0 0 12px rgba(10, 102, 194, 0.8)); }
-.copyright-tag-wide { font-size: 0.85rem; color: #94a3b8; letter-spacing: 0.5px; font-weight: 600; }
+.copyright-tag-wide { font-size: 0.85rem; color: #ffffff !important; letter-spacing: 0.5px; font-weight: 600; }
 /* FOOTER STYLES END */
 
 @media (max-width: 850px) {
@@ -163,7 +164,7 @@ html, body {
     .hero-text-side { text-align: center; }
     .hero-title-line { font-size: clamp(2rem, 4.5vw, 2.8rem); }
     .hero-cta-buttons { justify-content: center; }
-    .hero-3d-model { max-width: 340px; }
+    .hero-3d-model { max-width: 320px; }
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
 }

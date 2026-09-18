@@ -8,21 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const heroSlides = document.querySelectorAll('.hero-slide-item');
+    const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
-    const slideIntervalTime = 6000;
+    const slideIntervalTime = 6000; // 6 Seconds
 
     function goToSlide(index) {
-        heroSlides.forEach(s => s.classList.remove('active-slide'));
+        slides.forEach(s => s.classList.remove('active-slide'));
         dots.forEach(d => d.classList.remove('active-dot'));
-        heroSlides[index].classList.add('active-slide');
+        slides[index].classList.add('active-slide');
         dots[index].classList.add('active-dot');
         currentSlide = index;
     }
 
     function nextSlide() {
-        goToSlide((currentSlide + 1) % heroSlides.length);
+        goToSlide((currentSlide + 1) % slides.length);
     }
 
     let slideTimer = setInterval(nextSlide, slideIntervalTime);

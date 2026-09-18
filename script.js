@@ -1,4 +1,8 @@
+/* ==========================================================
+   JAVASCRIPT CODE START
+   ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
@@ -8,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Single Hero Section Model Auto-Switching every 6 seconds without slides
+    // 2. Single Hero Section Model Auto-Switching every 6 seconds
     const modelImg = document.getElementById('changing-model');
     if (modelImg) {
         const models = ['model1.png', 'model2.png'];
@@ -23,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
     }
 
+    // 3. Project Filter Tabs Functionality
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -40,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeTab = document.querySelector('.filter-tab-btn.active');
     if (activeTab) activeTab.click();
 
+    // 4. Fullscreen Lightbox Modal
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -88,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 5. Contact Form Submission Alert
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -97,3 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+/* ==========================================================
+   JAVASCRIPT CODE END
+   ========================================================== */

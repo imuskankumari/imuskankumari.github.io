@@ -12,7 +12,7 @@ html, body {
 .text-magenta { color: #e91e63 !important; }
 
 /* ==========================================================
-   HEADER STYLES START (Standard 75px Height)
+   HEADER STYLES START
    ========================================================== */
 .master-fixed-navbar {
     position: fixed !important; top: 0; left: 0; width: 100%; height: 75px;
@@ -37,7 +37,7 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START (Standard 100vh Viewport Height)
+   HERO SECTION STYLES START
    ========================================================== */
 .hero-single-stage {
     background: linear-gradient(135deg, #030712 0%, #0d061f 50%, #1c0212 100%);
@@ -140,7 +140,7 @@ html, body {
 /* CONTACT SECTION END */
 
 /* ==========================================================
-   FOOTER STYLES START (Standard Footer Padding)
+   FOOTER STYLES START
    ========================================================== */
 .site-footer { background-color: #030712; padding: 50px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .footer-content-wide { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }

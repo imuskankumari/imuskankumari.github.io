@@ -1,5 +1,5 @@
 /* ==========================================================
-   GLOBAL RESET & TOKENS (Luxury Gold & Dark Charcoal Theme)
+   GLOBAL RESET & TOKENS (Cinematic Gold & Rich Dark Tone)
    ========================================================== */
 * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
 html, body {
@@ -10,9 +10,9 @@ html, body {
 .site-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .text-white { color: #ffffff !important; }
 
-/* Metallic Gold Accent */
+/* Cinematic Metallic Gold Gradient (Arijit Singh Style) */
 .text-gold {
-    background: linear-gradient(135deg, #f3e5ab 0%, #dfbd71 50%, #c59b27 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f3e5ab 35%, #dfbd71 70%, #c59b27 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -30,11 +30,11 @@ html, body {
 .nav-inner-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; position: relative; }
 .brand-monogram-badge { font-family: 'Syne', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 2px; text-decoration: none; display: inline-flex; align-items: center; line-height: 1; }
 .logo-m { color: #ffffff; transform: scaleX(1.35); display: inline-block; margin-right: 3px; }
-.logo-k { background: linear-gradient(135deg, #f3e5ab 0%, #dfbd71 50%, #c59b27 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+.logo-k { background: linear-gradient(180deg, #ffffff 0%, #f3e5ab 35%, #dfbd71 70%, #c59b27 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
 
 .nav-links-menu { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 32px; }
 .nav-item { color: #ffffff !important; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: color 0.2s ease; }
-.nav-item:hover { background: linear-gradient(135deg, #f3e5ab 0%, #dfbd71 50%, #c59b27 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav-item:hover { background: linear-gradient(180deg, #ffffff 0%, #f3e5ab 35%, #dfbd71 70%, #c59b27 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
 .nav-right-box { display: flex; align-items: center; }
 .nav-contact-btn { background: linear-gradient(135deg, #dfbd71 0%, #c59b27 100%); color: #050505 !important; padding: 9px 26px; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; transition: transform 0.2s ease; box-shadow: 0 4px 15px rgba(223, 189, 113, 0.3); }
@@ -44,19 +44,40 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START (Charcoal & Luxury Gold Tone)
+   HERO SECTION STYLES START (Cinematic Font & Proper Sizing)
    ========================================================== */
 .hero-single-stage {
     background: linear-gradient(135deg, #050505 0%, #0d0c0b 50%, #15120d 100%);
     color: #ffffff; width: 100%;
     margin-top: 75px; position: relative;
-    overflow: hidden; height: auto; min-height: 520px; display: flex; align-items: center; 
-    padding: 35px 0;
+    overflow: hidden; height: auto; min-height: 500px; display: flex; align-items: center; 
+    padding: 30px 0;
 }
 .hero-inner-flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; width: 100%; }
 .hero-text-side { flex: 1.15; text-align: left; }
 
-.hero-title-line { font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 4.4vw, 3.5rem); font-weight: 900; line-height: 1.12; letter-spacing: -0.5px; margin-bottom: 4px; }
+.hero-small-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #dfbd71;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.hero-main-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    background: linear-gradient(180deg, #ffffff 0%, #f3e5ab 35%, #dfbd71 70%, #c59b27 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
 
 .software-tools-container { margin-top: 10px; margin-bottom: 10px; }
 .software-icon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -93,10 +114,10 @@ html, body {
 /* HERO SECTION STYLES END */
 
 /* ==========================================================
-   SERVICES SECTION STYLES START (Kartik Gulati / Luxury Spacing)
+   SERVICES SECTION STYLES START (Cinematic Large Headings)
    ========================================================== */
 .clean-section-header { text-align: left; margin-bottom: 50px; padding-left: 5px; }
-.clean-section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 900; letter-spacing: 1px; color: #111111; line-height: 1.1; }
+.clean-section-header h2 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight: 800; letter-spacing: 2px; color: #111111; line-height: 1.1; }
 
 .services-standalone-section { background-color: #ffffff; padding: 90px 0 70px; }
 .services-original-four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
@@ -133,7 +154,7 @@ html, body {
 /* PROJECTS SECTION END */
 
 /* ==========================================================
-   CONTACT SECTION STYLES START
+   CONTACT SECTION STYLES START (Sharp Rectangular Golden Button)
    ========================================================== */
 .contact-section-zone { background-color: #ffffff; padding: 40px 0 80px; }
 .contact-card-box { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; padding: 38px 30px; box-shadow: 0 10px 35px rgba(5, 5, 5, 0.08); border: 1px solid #e2e8f0; }
@@ -149,7 +170,8 @@ html, body {
     opacity: 0.8 !important;
 }
 
-.btn-full { width: 100%; justify-content: center; padding: 14px; font-size: 0.96rem; background: linear-gradient(135deg, #dfbd71 0%, #c59b27 100%); color: #050505 !important; }
+/* Sharp rectangular button with subtle rounded corners as requested */
+.btn-full { width: 100%; justify-content: center; padding: 14px; font-size: 0.96rem; background: linear-gradient(135deg, #dfbd71 0%, #c59b27 100%); color: #050505 !important; border-radius: 8px !important; }
 /* CONTACT SECTION END */
 
 /* ==========================================================
@@ -175,7 +197,7 @@ html, body {
     .hero-inner-flex { flex-direction: column-reverse; text-align: center; gap: 20px; }
     .hero-text-side { text-align: center; }
     .clean-section-header, .tabs-filter-bar { text-align: center; padding-left: 0; justify-content: center; }
-    .hero-title-line { font-size: clamp(2rem, 4.5vw, 2.8rem); }
+    .hero-main-title { font-size: clamp(2.2rem, 5vw, 3.2rem); }
     .hero-cta-buttons { justify-content: center; }
     .hero-3d-model { max-width: 320px; }
     .services-original-four-grid { grid-template-columns: 1fr; }

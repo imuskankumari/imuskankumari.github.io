@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
     }
 
-    // 3. Project Filter Tabs Functionality
+    // 3. Project Filter Tabs Functionality (2 Tabs: Graphic Design & AI Animation Videos)
     const tabButtons = document.querySelectorAll('.filter-tab-btn');
     const projectBoxes = document.querySelectorAll('.project-box');
 
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ==========================================================
    JAVASCRIPT CODE END
    ========================================================== */
+

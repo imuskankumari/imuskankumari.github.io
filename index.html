@@ -22,6 +22,8 @@
                 <a href="#home" class="nav-item">Home</a>
                 <a href="#services" class="nav-item">Services</a>
                 <a href="#projects" class="nav-item">Designs</a>
+                <a href="#animations" class="nav-item">Animations</a>
+                <a href="#contact" class="nav-item">Contact Us</a>
             </nav>
             <div class="nav-right-box">
                 <a href="#contact" class="nav-contact-btn">Contact</a>
@@ -111,55 +113,71 @@
     <section class="projects-showcase-section" id="projects">
         <div class="site-container">
             <div class="clean-section-header center-header">
-                <h2>DESIGN <span class="text-magenta">PROJECTS</span></h2>
+                <h2>CREATIVE <span class="text-magenta">DESIGN</span></h2>
             </div>
 
-            <div class="tabs-filter-bar">
-                <button class="filter-tab-btn active" data-filter="graphic">Graphic Design</button>
-                <button class="filter-tab-btn" data-filter="ai-animation">AI Animation Videos</button>
+            <div class="projects-display-grid" id="design-grid">
+                <!-- 25 Containers (g1 to g25) with PNG/JPG Fallback -->
+                <div class="project-box visible-item" data-category="graphic"><img src="g1.png" alt="G1" onerror="this.src='g1.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g2.png" alt="G2" onerror="this.src='g2.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g3.png" alt="G3" onerror="this.src='g3.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g4.png" alt="G4" onerror="this.src='g4.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g5.png" alt="G5" onerror="this.src='g5.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g6.png" alt="G6" onerror="this.src='g6.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g7.png" alt="G7" onerror="this.src='g7.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g8.png" alt="G8" onerror="this.src='g8.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g9.png" alt="G9" onerror="this.src='g9.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g10.png" alt="G10" onerror="this.src='g10.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g11.png" alt="G11" onerror="this.src='g11.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g12.png" alt="G12" onerror="this.src='g12.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g13.png" alt="G13" onerror="this.src='g13.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g14.png" alt="G14" onerror="this.src='g14.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g15.png" alt="G15" onerror="this.src='g15.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g16.png" alt="G16" onerror="this.src='g16.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g17.png" alt="G17" onerror="this.src='g17.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g18.png" alt="G18" onerror="this.src='g18.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g19.png" alt="G19" onerror="this.src='g19.jpg'"></div>
+                <div class="project-box visible-item" data-category="graphic"><img src="g20.png" alt="G20" onerror="this.src='g20.jpg'"></div>
+                
+                <!-- Hidden items revealed by View More button -->
+                <div class="project-box hidden-item" data-category="graphic"><img src="g21.png" alt="G21" onerror="this.src='g21.jpg'"></div>
+                <div class="project-box hidden-item" data-category="graphic"><img src="g22.png" alt="G22" onerror="this.src='g22.jpg'"></div>
+                <div class="project-box hidden-item" data-category="graphic"><img src="g23.png" alt="G23" onerror="this.src='g23.jpg'"></div>
+                <div class="project-box hidden-item" data-category="graphic"><img src="g24.png" alt="G24" onerror="this.src='g24.jpg'"></div>
+                <div class="project-box hidden-item" data-category="graphic"><img src="g25.png" alt="G25" onerror="this.src='g25.jpg'"></div>
             </div>
 
-            <div class="projects-display-grid">
-                <!-- Graphic Design Items (G1 to G21 with robust fallback) -->
-                <div class="project-box" data-category="graphic"><img src="g1.png" alt="G1" onerror="this.src='g1.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g2.png" alt="G2" onerror="this.src='g2.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g3.png" alt="G3" onerror="this.src='g3.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g4.png" alt="G4" onerror="this.src='g4.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g5.png" alt="G5" onerror="this.src='g5.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g6.png" alt="G6" onerror="this.src='g6.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g7.png" alt="G7" onerror="this.src='g7.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g8.png" alt="G8" onerror="this.src='g8.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g9.png" alt="G9" onerror="this.src='g9.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g10.png" alt="G10" onerror="this.src='g10.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g11.png" alt="G11" onerror="this.src='g11.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g12.png" alt="G12" onerror="this.src='g12.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g13.png" alt="G13" onerror="this.src='g13.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g14.png" alt="G14" onerror="this.src='g14.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g15.png" alt="G15" onerror="this.src='g15.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g16.png" alt="G16" onerror="this.src='g16.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g17.png" alt="G17" onerror="this.src='g17.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g18.png" alt="G18" onerror="this.src='g18.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g19.png" alt="G19" onerror="this.src='g19.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g20.png" alt="G20" onerror="this.src='g20.jpg'"></div>
-                <div class="project-box" data-category="graphic"><img src="g21.png" alt="G21" onerror="this.src='g21.jpg'"></div>
-
-                <!-- AI Animation Videos -->
-                <div class="project-box video-box" data-category="ai-animation"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
-                <div class="project-box video-box" data-category="ai-animation"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+            <div class="view-more-container">
+                <button id="view-more-btn" class="btn-pill-magenta">View More</button>
             </div>
         </div>
     </section>
     <!-- PROJECTS SECTION END -->
+
+    <!-- AI ANIMATION VIDEOS SECTION START -->
+    <section class="animations-showcase-section" id="animations">
+        <div class="site-container">
+            <div class="clean-section-header center-header">
+                <h2>AI ANIMATION VIDEOS & <span class="text-magenta">CREATIVE MOTION GRAPHICS</span></h2>
+            </div>
+
+            <div class="projects-display-grid">
+                <div class="project-box video-box"><video src="r1.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r2.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r3.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r4.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r5.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r6.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r7.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r8.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r9.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r10.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r11.mp4" controls preload="metadata" playsinline></video></div>
+                <div class="project-box video-box"><video src="r12.mp4" controls preload="metadata" playsinline></video></div>
+            </div>
+        </div>
+    </section>
+    <!-- AI ANIMATION VIDEOS SECTION END -->
 
     <div id="image-modal" class="fullscreen-lightbox-modal">
         <span class="lightbox-close-btn">&times;</span>

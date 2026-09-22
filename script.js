@@ -27,23 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
     }
 
-    // 3. Project Filter Tabs Functionality
-    const tabButtons = document.querySelectorAll('.filter-tab-btn');
-    const projectBoxes = document.querySelectorAll('.project-box');
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            const filterValue = button.getAttribute('data-filter');
-            projectBoxes.forEach(card => {
-                card.style.display = (card.getAttribute('data-category') === filterValue) ? 'block' : 'none';
+    // 3. View More Button Logic for Creative Design Section
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', () => {
+            document.querySelectorAll('.hidden-item').forEach(item => {
+                item.style.display = 'block';
             });
+            viewMoreBtn.style.display = 'none';
         });
-    });
-
-    const activeTab = document.querySelector('.filter-tab-btn.active');
-    if (activeTab) activeTab.click();
+    }
 
     // 4. Fullscreen Lightbox Modal
     const modal = document.getElementById('image-modal');
@@ -55,8 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function refreshActiveImageList() {
         activeImageList = [];
-        const currentCategory = document.querySelector('.filter-tab-btn.active').getAttribute('data-filter');
-        document.querySelectorAll(`.project-box[data-category="${currentCategory}"] img`).forEach(img => activeImageList.push(img.src));
+        document.querySelectorAll('#design-grid .project-box img, .animations-showcase-section .project-box img').forEach(img => {
+            if (img.closest('.project-box').style.display !== 'none') {
+                activeImageList.push(img.src);
+            }
+        });
     }
 
     document.querySelectorAll('.project-box img').forEach(img => {

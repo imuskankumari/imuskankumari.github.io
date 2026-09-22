@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-        document.querySelectorAll('.nav-item').forEach(link => {
+        document.querySelectorAll('.nav-item, .footer-nav-links a').forEach(link => {
             link.addEventListener('click', () => navMenu.classList.remove('active'));
         });
     }
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function refreshActiveImageList() {
         activeImageList = [];
-        document.querySelectorAll('#design-grid .project-box img, .animations-showcase-section .project-box img').forEach(img => {
+        document.querySelectorAll('#design-grid .project-box img').forEach(img => {
             if (img.closest('.project-box').style.display !== 'none') {
                 activeImageList.push(img.src);
             }

@@ -53,7 +53,7 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START (Rich Ambient Dark Blue & Glowing Model)
+   HERO SECTION STYLES START (Rich Ambient Dark Blue & Balanced Glow)
    ========================================================== */
 .hero-single-stage {
     background: radial-gradient(circle at 20% 30%, #0d1b33 0%, #060e1c 50%, #02050b 100%);
@@ -124,14 +124,15 @@ html, body {
 .hero-image-flipper { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
 .hero-3d-model { 
     width: 100%; max-width: 420px; height: auto; display: block !important; position: relative; z-index: 2; 
-    filter: drop-shadow(0 0 35px rgba(233, 30, 99, 0.85)) drop-shadow(0 25px 45px rgba(0, 0, 0, 0.75)); 
-    opacity: 1; 
+    filter: drop-shadow(0 0 18px rgba(233, 30, 99, 0.45)) drop-shadow(0 20px 35px rgba(0, 0, 0, 0.6)); 
+    opacity: 0; transition: opacity 1s ease-in-out; 
     animation: fastFloat 2.2s ease-in-out infinite;
 }
+.hero-3d-model.active-model { opacity: 1; }
 
 @keyframes fastFloat {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-14px); }
+    50% { transform: translateY(-12px); }
 }
 /* HERO SECTION STYLES END */
 
@@ -195,10 +196,13 @@ html, body {
 /* PROJECTS SECTION END */
 
 /* ==========================================================
-   CONTACT SECTION STYLES START (Clean White Card, No Gray Outlines)
+   CONTACT SECTION STYLES START (Elevated Clean White Card)
    ========================================================== */
 .contact-section-zone { background-color: #ffffff; padding: 50px 0 80px; }
-.contact-card-box { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; padding: 40px 32px; box-shadow: 0 15px 40px rgba(233, 30, 99, 0.08); border: 1.5px solid rgba(233, 30, 99, 0.25); }
+.contact-card-box { 
+    max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 20px; padding: 42px 36px; 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(233, 30, 99, 0.12); 
+}
 .contact-form-inner { display: flex; flex-direction: column; gap: 18px; text-align: left; }
 .form-input-group label { font-family: 'Plus Jakarta Sans', sans-serif; display: block; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 6px; color: #111111; }
 .form-input-group input, .form-input-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-family: inherit; font-size: 0.95rem; background: #ffffff; color: #111111; font-weight: 500; transition: border-color 0.2s ease; }
@@ -254,3 +258,4 @@ html, body {
     .projects-display-grid { grid-template-columns: 1fr; }
     .animations-grid-container { grid-template-columns: 1fr; }
 }
+

@@ -12,19 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Single Hero Section Model Auto-Switching every 6 seconds
+    // 2. Single Hero Section Model (Model 1 with Neon Glow)
     const modelImg = document.getElementById('changing-model');
     if (modelImg) {
-        const models = ['model1.png', 'model2.png'];
-        let currentModelIdx = 0;
-        setInterval(() => {
-            modelImg.classList.remove('active-model');
-            setTimeout(() => {
-                currentModelIdx = (currentModelIdx + 1) % models.length;
-                modelImg.src = models[currentModelIdx];
-                modelImg.classList.add('active-model');
-            }, 500);
-        }, 6000);
+        modelImg.src = 'model1.png';
+        modelImg.classList.add('active-model');
     }
 
     // 3. View More Button Logic for Creative Design Section

@@ -1,5 +1,5 @@
 /* ==========================================================
-   JAVASCRIPT CODE START (Optimized for Speed)
+   JAVASCRIPT CODE START
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
@@ -12,10 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Hero Section Model 1 Fixed
+    // 2. Hero Section Model fixed
     const modelImg = document.getElementById('changing-model');
     if (modelImg) {
-        modelImg.src = 'model1.png';
+        modelImg.src = 'model.png';
+        modelImg.onerror = function() { this.src = 'model1.png'; };
         modelImg.classList.add('active-model');
     }
 

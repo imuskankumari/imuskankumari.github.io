@@ -1,5 +1,5 @@
 /* ==========================================================
-   GLOBAL RESET & THEME STYLES
+   GLOBAL RESET & PERFORMANCE OPTIMIZED
    ========================================================== */
 * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
 html, body {
@@ -9,20 +9,9 @@ html, body {
 }
 .site-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Sparkling Golden Only For Hero Name */
-.text-gold {
-    font-family: 'Cinzel Decorative', serif !important;
-    font-weight: 700 !important;
-    background: linear-gradient(135deg, #fff9e6 0%, #ffdf73 35%, #f5b041 70%, #d4ac0d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    letter-spacing: 2px;
-}
-
-/* Vibrant Magenta for Section Titles */
+/* Clean Serif Font for Name and Headings */
 .text-magenta {
-    font-family: 'Cinzel Decorative', serif !important;
+    font-family: 'Cinzel', serif !important;
     font-weight: 700 !important;
     color: #e91e63 !important;
     letter-spacing: 2px;
@@ -53,7 +42,7 @@ html, body {
 /* HEADER STYLES END */
 
 /* ==========================================================
-   HERO SECTION STYLES START (Rich Ambient Dark Blue & Balanced Glow)
+   HERO SECTION STYLES START (Rich Dark Blue Ambient Gradient & Clean Serif Title)
    ========================================================== */
 .hero-single-stage {
     background: radial-gradient(circle at 20% 30%, #0d1b33 0%, #060e1c 50%, #02050b 100%);
@@ -77,14 +66,12 @@ html, body {
 }
 
 .hero-main-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 4.2vw, 3.6rem);
     font-weight: 700;
-    line-height: 1.12;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #fff9e6 0%, #ffdf73 35%, #f5b041 70%, #d4ac0d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    line-height: 1.15;
+    letter-spacing: 3px;
+    color: #ffffff;
     margin-bottom: 18px;
     text-transform: uppercase;
     text-align: left;
@@ -125,10 +112,8 @@ html, body {
 .hero-3d-model { 
     width: 100%; max-width: 420px; height: auto; display: block !important; position: relative; z-index: 2; 
     filter: drop-shadow(0 0 18px rgba(233, 30, 99, 0.45)) drop-shadow(0 20px 35px rgba(0, 0, 0, 0.6)); 
-    opacity: 0; transition: opacity 1s ease-in-out; 
     animation: fastFloat 2.2s ease-in-out infinite;
 }
-.hero-3d-model.active-model { opacity: 1; }
 
 @keyframes fastFloat {
     0%, 100% { transform: translateY(0); }
@@ -140,7 +125,7 @@ html, body {
    SERVICES SECTION STYLES START
    ========================================================== */
 .clean-section-header { text-align: center; margin-bottom: 50px; width: 100%; }
-.clean-section-header h2 { font-family: 'Cinzel Decorative', serif; font-size: clamp(2.2rem, 4.8vw, 3.4rem); font-weight: 700; letter-spacing: 2px; color: #111111; line-height: 1.1; }
+.clean-section-header h2 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 4.2vw, 3.2rem); font-weight: 700; letter-spacing: 2px; color: #111111; line-height: 1.1; }
 
 .services-standalone-section { background-color: #ffffff; padding: 90px 0 70px; }
 .services-original-four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
@@ -196,7 +181,7 @@ html, body {
 /* PROJECTS SECTION END */
 
 /* ==========================================================
-   CONTACT SECTION STYLES START (Elevated Clean White Card)
+   CONTACT SECTION STYLES START
    ========================================================== */
 .contact-section-zone { background-color: #ffffff; padding: 50px 0 80px; }
 .contact-card-box { 
@@ -219,23 +204,37 @@ html, body {
 /* CONTACT SECTION END */
 
 /* ==========================================================
-   FOOTER STYLES START
+   FOOTER STYLES START (Professional Multi-Column Footer like 10693.png)
    ========================================================== */
-.site-footer { background: #07101f; padding: 50px 20px; text-align: center; border-top: 1px solid rgba(233, 30, 99, 0.3); }
-.footer-content-wide { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-
-.footer-nav-links { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; }
-.footer-nav-links a { font-family: 'Plus Jakarta Sans', sans-serif; color: #ffffff; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s ease; }
-.footer-nav-links a:hover { color: #e91e63; }
-
-.footer-direct-socials { display: flex; justify-content: center; align-items: center; gap: 30px; }
-.social-direct-link { font-size: 1.8rem; text-decoration: none; transition: transform 0.25s ease, filter 0.25s ease; display: inline-block; }
-.social-direct-link:hover { transform: translateY(-5px) scale(1.12); }
+.site-footer { 
+    background: radial-gradient(circle at 20% 30%, #0d1b33 0%, #060e1c 50%, #02050b 100%); 
+    color: #ffffff; 
+    padding: 60px 20px 30px; 
+    border-top: 1px solid rgba(233, 30, 99, 0.3); 
+}
+.footer-grid-layout { 
+    width: 100%; max-width: 1200px; margin: 0 auto; 
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; 
+    text-align: left; padding-bottom: 40px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+.footer-col-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-brand-logo { height: 44px; width: 44px; border-radius: 50%; object-fit: cover; border: 1.5px solid #e91e63; }
+.footer-brand-desc { font-size: 0.9rem; color: #b0c4de; line-height: 1.6; max-width: 300px; }
+.footer-direct-socials { display: flex; align-items: center; gap: 18px; margin-top: 6px; }
+.social-direct-link { font-size: 1.4rem; text-decoration: none; transition: transform 0.25s ease; display: inline-block; }
+.social-direct-link:hover { transform: translateY(-4px) scale(1.1); }
 .behance-icon { color: #1769ff; }
 .youtube-icon { color: #ff0000; }
 .instagram-icon { color: #e1306c; }
 .linkedin-icon { color: #0a66c2; }
-.copyright-tag-wide { font-size: 0.85rem; color: #b0c4de !important; letter-spacing: 0.5px; font-weight: 400; }
+
+.footer-col-links { display: flex; flex-direction: column; gap: 12px; }
+.footer-heading { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; color: #ffffff; letter-spacing: 1px; margin-bottom: 6px; }
+.footer-col-links a { font-family: 'Plus Jakarta Sans', sans-serif; color: #b0c4de; text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+.footer-col-links a:hover { color: #e91e63; }
+
+.footer-bottom-bar { max-width: 1200px; margin: 30px auto 0; text-align: center; font-size: 0.85rem; color: #94a3b8; }
 /* FOOTER STYLES END */
 
 @media (min-width: 851px) {
@@ -257,5 +256,8 @@ html, body {
     .services-original-four-grid { grid-template-columns: 1fr; }
     .projects-display-grid { grid-template-columns: 1fr; }
     .animations-grid-container { grid-template-columns: 1fr; }
+    .footer-grid-layout { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .footer-col-brand { align-items: center; }
+    .footer-brand-desc { max-width: 100%; text-align: center; }
+    .footer-direct-socials { justify-content: center; }
 }
-

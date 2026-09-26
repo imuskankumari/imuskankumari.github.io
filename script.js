@@ -1,5 +1,5 @@
 /* ==========================================================
-   JAVASCRIPT CODE START
+   JAVASCRIPT CODE START (Optimized for Speed)
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
@@ -7,24 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-        document.querySelectorAll('.nav-item, .footer-nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-item, .footer-col-links a').forEach(link => {
             link.addEventListener('click', () => navMenu.classList.remove('active'));
         });
     }
 
-    // 2. Hero Section Model Auto-Switching (Model 1 & Model 2) every 6 seconds
+    // 2. Hero Section Model 1 Fixed
     const modelImg = document.getElementById('changing-model');
     if (modelImg) {
-        const models = ['model1.png', 'model2.png'];
-        let currentModelIdx = 0;
-        setInterval(() => {
-            modelImg.classList.remove('active-model');
-            setTimeout(() => {
-                currentModelIdx = (currentModelIdx + 1) % models.length;
-                modelImg.src = models[currentModelIdx];
-                modelImg.classList.add('active-model');
-            }, 400);
-        }, 6000);
+        modelImg.src = 'model1.png';
+        modelImg.classList.add('active-model');
     }
 
     // 3. View More Button Logic for Creative Design Section

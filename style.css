@@ -78,6 +78,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 28px;
+    white-space: nowrap;
 }
 
 .nav-item {
@@ -160,40 +161,43 @@ html, body {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: 1px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-/* Graphic Designer Title with Side Lines like Resume */
+/* Graphic Designer Title with Thicker Balance Lines like Resume */
 .hero-sub-designer-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     width: 100%;
+    max-width: 480px;
 }
 
 .line-left {
-    flex: 0;
-    width: 35px;
-    height: 2px;
+    flex: 1;
+    height: 3px;
     background-color: #e91e63;
+    border-radius: 2px;
 }
 
 .line-right {
     flex: 1;
-    height: 2px;
+    height: 3px;
     background-color: #ffffff;
-    opacity: 0.8;
+    border-radius: 2px;
+    opacity: 0.9;
 }
 
 .hero-sub-designer {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     white-space: nowrap;
 }

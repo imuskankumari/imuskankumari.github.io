@@ -346,6 +346,7 @@ html, body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: floatCard 3s ease-in-out infinite;
+    border: none !important;
 }
 
 .service-original-card:nth-child(even) {
@@ -400,7 +401,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design Section (1:1 Square, object-fit: contain) */
+/* Graphic Design Section (1:1 Square, object-fit: contain, ZERO OUTLINE) */
 .projects-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -422,6 +423,7 @@ html, body {
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease;
+    border: none !important;
 }
 
 .project-box:hover {
@@ -432,9 +434,9 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: contain !important;
-    padding: 6px !important;
+    padding: 0 !important;
     display: block;
-    border: none;
+    border: none !important;
 }
 
 .hidden-item {
@@ -446,7 +448,7 @@ html, body {
     margin-top: 40px;
 }
 
-/* AI Animation Videos (9:16 Vertical Reels) */
+/* AI Animation Videos (9:16 Vertical Reels, ZERO OUTLINE) */
 .animations-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -469,6 +471,7 @@ html, body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: none !important;
 }
 
 .project-box video {
@@ -478,6 +481,7 @@ html, body {
     display: block;
     background: #000000;
     border-radius: 16px;
+    border: none !important;
 }
 
 .fullscreen-lightbox-modal {
@@ -539,7 +543,7 @@ html, body {
 .arrow-left { left: 25px; }
 .arrow-right { right: 25px; }
 
-/* Contact Form (Standard Clean White Floating Card with Black Labels & Standard Inputs) */
+/* Contact Form (Pure White Floating Card, Standard Inputs, ZERO Outlines) */
 .contact-section-zone {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -552,6 +556,7 @@ html, body {
     border-radius: 20px;
     padding: 42px 36px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border: none !important;
 }
 
 .contact-form-inner {

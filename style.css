@@ -102,7 +102,7 @@ html, body {
     background: #e91e63;
     color: #ffffff !important;
     padding: 9px 24px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.82rem;
     letter-spacing: 0.5px;
@@ -156,30 +156,33 @@ html, body {
 }
 
 .hero-main-title {
+    font-family: "Times New Roman", Times, serif !important;
     font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     font-weight: 700;
     line-height: 1.15;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-.hero-small-tag {
-    font-size: 0.88rem;
-    font-weight: 600;
+.hero-sub-designer {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1rem;
+    font-weight: 700;
     letter-spacing: 4px;
-    color: #e91e63;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     text-align: left;
 }
+.des-magenta { color: #e91e63; }
+.des-white { color: #ffffff; }
 
 .software-tools-container {
     margin-top: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -196,7 +199,7 @@ html, body {
 .app-brand-icon {
     width: 48px;
     height: 48px;
-    border-radius: 12px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -217,7 +220,7 @@ html, body {
     line-height: 1.6;
     color: #e2e8f0 !important;
     max-width: 490px;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     font-weight: 400;
     text-align: left;
 }
@@ -230,11 +233,11 @@ html, body {
     margin-top: 6px;
 }
 
-.btn-pill-magenta {
+.btn-square-magenta {
     background: #e91e63;
     color: #ffffff;
     padding: 12px 30px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.88rem;
     letter-spacing: 0.5px;
@@ -248,14 +251,14 @@ html, body {
     transition: transform 0.2s ease;
 }
 
-.btn-pill-magenta:hover { transform: translateY(-2px); }
+.btn-square-magenta:hover { transform: translateY(-2px); }
 
-.btn-pill-outline {
+.btn-square-outline {
     background: transparent;
     color: #ffffff;
     border: 1.5px solid rgba(255, 255, 255, 0.6);
     padding: 11px 28px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.88rem;
     letter-spacing: 0.5px;
@@ -265,7 +268,7 @@ html, body {
     transition: background 0.2s ease;
 }
 
-.btn-pill-outline:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-square-outline:hover { background: rgba(255, 255, 255, 0.1); }
 
 .hero-avatar-side {
     flex: 0.85;
@@ -426,7 +429,7 @@ html, body {
     border: none !important;
 }
 
-/* AI Generated Images Section (4:3 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
+/* AI Generated Images Section (4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
 .ai-images-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -443,7 +446,7 @@ html, body {
 .project-box.ai-img-box {
     background: #0B0F19;
     border-radius: 16px;
-    aspect-ratio: 3 / 4 !important;
+    aspect-ratio: 4 / 5 !important;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -556,7 +559,7 @@ html, body {
 .lightbox-nav-arrow:hover { background: #e91e63; }
 .arrow-left { left: 25px; } .arrow-right { right: 25px; }
 
-/* Contact Form (Standard Clean White Floating Card, No Outlines) */
+/* Contact Form */
 .contact-section-zone {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -615,7 +618,7 @@ html, body {
     opacity: 0.8 !important;
 }
 
-.btn-magenta-full {
+.btn-square-magenta-full {
     width: 100%;
     justify-content: center;
     padding: 14px;
@@ -623,7 +626,7 @@ html, body {
     letter-spacing: 1px;
     background: #e91e63 !important;
     color: #ffffff !important;
-    border-radius: 8px !important;
+    border-radius: 4px !important;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
     border: none;

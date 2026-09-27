@@ -156,33 +156,54 @@ html, body {
 }
 
 .hero-main-title {
-    font-family: "Times New Roman", Times, serif !important;
     font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     font-weight: 700;
     line-height: 1.15;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
     text-transform: uppercase;
 }
 
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
+/* Graphic Designer Title with Side Lines like Resume */
+.hero-sub-designer-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.line-left {
+    flex: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #e91e63;
+}
+
+.line-right {
+    flex: 1;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+
 .hero-sub-designer {
-    font-family: 'Poppins', sans-serif !important;
     font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    text-align: left;
+    white-space: nowrap;
 }
+
 .des-magenta { color: #e91e63; }
 .des-white { color: #ffffff; }
 
 .software-tools-container {
-    margin-top: 4px;
-    margin-bottom: 18px;
+    margin-top: 2px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -220,7 +241,7 @@ html, body {
     line-height: 1.6;
     color: #e2e8f0 !important;
     max-width: 490px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     font-weight: 400;
     text-align: left;
 }
@@ -233,11 +254,11 @@ html, body {
     margin-top: 6px;
 }
 
-.btn-square-magenta {
+.btn-pill-magenta {
     background: #e91e63;
     color: #ffffff;
     padding: 12px 30px;
-    border-radius: 4px;
+    border-radius: 50px;
     font-weight: 600;
     font-size: 0.88rem;
     letter-spacing: 0.5px;
@@ -251,14 +272,14 @@ html, body {
     transition: transform 0.2s ease;
 }
 
-.btn-square-magenta:hover { transform: translateY(-2px); }
+.btn-pill-magenta:hover { transform: translateY(-2px); }
 
-.btn-square-outline {
+.btn-pill-outline {
     background: transparent;
     color: #ffffff;
     border: 1.5px solid rgba(255, 255, 255, 0.6);
     padding: 11px 28px;
-    border-radius: 4px;
+    border-radius: 50px;
     font-weight: 600;
     font-size: 0.88rem;
     letter-spacing: 0.5px;
@@ -268,7 +289,7 @@ html, body {
     transition: background 0.2s ease;
 }
 
-.btn-square-outline:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-pill-outline:hover { background: rgba(255, 255, 255, 0.1); }
 
 .hero-avatar-side {
     flex: 0.85;
@@ -631,6 +652,9 @@ html, body {
     box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
     border: none;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* Footer */

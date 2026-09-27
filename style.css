@@ -311,22 +311,22 @@ html, body {
 /* Services */
 .clean-section-header {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .clean-section-header h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 1.5px;
     color: #111111;
     line-height: 1.2;
 }
 
 .services-standalone-section {
     background-color: #ffffff;
-    padding: 70px 0;
+    padding: 80px 0;
 }
 
 .services-original-four-grid {
@@ -339,7 +339,6 @@ html, body {
 
 .service-original-card {
     background: #0B0F19;
-    border: 1px solid rgba(233, 30, 99, 0.3);
     border-radius: 16px;
     padding: 32px 28px;
     text-align: left;
@@ -394,17 +393,16 @@ html, body {
     display: inline-block;
     background: rgba(233, 30, 99, 0.15);
     color: #e91e63;
-    border: 1px solid rgba(233, 30, 99, 0.4);
     padding: 5px 14px;
     border-radius: 50px;
     font-size: 0.74rem;
     font-weight: 700;
 }
 
-/* Graphic Design Section (1:1 Square Containers) */
+/* Graphic Design Section (1:1 Square Cards, No Outline) */
 .projects-showcase-section {
     background-color: #ffffff;
-    padding: 40px 0 80px;
+    padding: 50px 0 90px;
 }
 
 .projects-display-grid {
@@ -417,13 +415,12 @@ html, body {
 
 .project-box {
     background: #0B0F19;
-    border-radius: 12px;
+    border-radius: 16px;
     aspect-ratio: 1 / 1 !important;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease;
-    border: 1px solid rgba(233, 30, 99, 0.15);
 }
 
 .project-box:hover {
@@ -433,8 +430,8 @@ html, body {
 .project-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain !important;
-    padding: 10px !important;
+    object-fit: cover !important;
+    padding: 0 !important;
     display: block;
     border: none;
 }
@@ -451,7 +448,7 @@ html, body {
 /* AI Animation Videos (9:16 Vertical Reels) */
 .animations-showcase-section {
     background-color: #ffffff;
-    padding: 40px 0 80px;
+    padding: 50px 0 90px;
 }
 
 .animations-grid-container {
@@ -468,9 +465,9 @@ html, body {
     width: 100%;
     margin: 0 auto;
     background: #000000;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(233, 30, 99, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .project-box video {
@@ -479,7 +476,7 @@ html, body {
     object-fit: cover !important;
     display: block;
     background: #000000;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .fullscreen-lightbox-modal {
@@ -544,7 +541,7 @@ html, body {
 /* Contact */
 .contact-section-zone {
     background-color: #ffffff;
-    padding: 40px 0 80px;
+    padding: 50px 0 90px;
 }
 
 .contact-card-box {
@@ -553,7 +550,7 @@ html, body {
     background: #ffffff;
     border-radius: 20px;
     padding: 42px 36px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(233, 30, 99, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form-inner {
@@ -619,7 +616,6 @@ html, body {
     background: #0B0F19;
     color: #ffffff;
     padding: 60px 20px 30px;
-    border-top: 1px solid rgba(233, 30, 99, 0.3);
 }
 
 .footer-grid-layout {
@@ -749,8 +745,8 @@ html, body {
         text-align: left;
         align-items: flex-start;
     }
-    .clean-section-header {
-        text-align: center;
+    .clean-section-header h2 {
+        font-size: 2rem;
     }
     .hero-main-title {
         font-size: clamp(1.8rem, 3.8vw, 2.6rem);

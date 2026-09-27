@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelImg.classList.add('active-model');
     }
 
-    // View More Button Logic
+    // View More Button Logic for Graphic Design Section
     const viewMoreBtn = document.getElementById('view-more-btn');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {
@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.style.display = 'block';
             });
             viewMoreBtn.style.display = 'none';
+        });
+    }
+
+    // View More Button Logic for AI Generated Images Section
+    const aiImagesViewMore = document.getElementById('ai-images-view-more');
+    if (aiImagesViewMore) {
+        aiImagesViewMore.addEventListener('click', () => {
+            document.querySelectorAll('.hidden-ai-item').forEach(item => {
+                item.style.display = 'block';
+            });
+            aiImagesViewMore.style.display = 'none';
         });
     }
 
@@ -38,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function refreshActiveImageList() {
         activeImageList = [];
-        document.querySelectorAll('#design-grid .project-box img').forEach(img => {
+        document.querySelectorAll('.project-box.visible-item img, .project-box.ai-img-box img').forEach(img => {
             if (img.closest('.project-box').style.display !== 'none') {
                 activeImageList.push(img.src);
             }

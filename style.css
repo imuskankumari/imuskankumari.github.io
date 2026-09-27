@@ -168,19 +168,19 @@ html, body {
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-/* Graphic Designer Title with Thicker Balance Lines like Resume */
+/* Graphic Designer Title with Centered Balance Lines (Left Magenta, Right White) */
 .hero-sub-designer-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
+    justify-content: flex-start;
+    gap: 14px;
     margin-bottom: 22px;
     width: 100%;
     max-width: 480px;
 }
 
 .line-left {
-    flex: 1;
+    width: 30px;
     height: 3px;
     background-color: #e91e63;
     border-radius: 2px;
@@ -188,6 +188,7 @@ html, body {
 
 .line-right {
     flex: 1;
+    max-width: 90px;
     height: 3px;
     background-color: #ffffff;
     border-radius: 2px;
@@ -491,7 +492,25 @@ html, body {
 }
 
 .hidden-item, .hidden-ai-item { display: none; }
-.view-more-container { text-align: center; margin-top: 40px; }
+
+/* Large Solid Square View More Buttons matching Navbar Contact Button */
+.view-more-container { text-align: center; margin-top: 45px; }
+.btn-large-magenta {
+    background: #e91e63;
+    color: #ffffff !important;
+    padding: 14px 45px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.35);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.btn-large-magenta:hover { transform: translateY(-2px); background: #d81b60; }
 
 /* AI Animation Videos (9:16 Vertical Reels, ZERO OUTLINE) */
 .animations-showcase-section {

@@ -305,7 +305,7 @@ html, body {
 
 @keyframes hifiMagical3Dolphin {
     0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-    33% { transform: translateY(-14px) rotate(1.5deg) scale(1.02); }
+    33% { transform: translateY(-12px) rotate(1.5deg) scale(1.02); }
     66% { transform: translateY(-7px) rotate(-1.5deg) scale(1.02); }
 }
 
@@ -400,7 +400,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design Section (1:1 Square, object-fit cover, No Outer Card Outline) */
+/* Graphic Design Section (1:1 Square, object-fit: contain) */
 .projects-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -431,8 +431,8 @@ html, body {
 .project-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover !important;
-    padding: 0 !important;
+    object-fit: contain !important;
+    padding: 6px !important;
     display: block;
     border: none;
 }
@@ -539,7 +539,7 @@ html, body {
 .arrow-left { left: 25px; }
 .arrow-right { right: 25px; }
 
-/* Contact Form (Pure White Floating Card with Magenta Inner Input Borders & Labels) */
+/* Contact Form (Standard Clean White Floating Card with Black Labels & Standard Inputs) */
 .contact-section-zone {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -567,13 +567,13 @@ html, body {
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 6px;
-    color: #e91e63;
+    color: #111111;
 }
 
 .form-input-group input, .form-input-group textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 1.5px solid #e91e63;
+    border: 1.5px solid #cbd5e1;
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.95rem;

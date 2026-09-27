@@ -1,8 +1,5 @@
-/* ==========================================================
-   JAVASCRIPT CODE START
-   ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
+    // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (mobileToggle && navMenu) {
@@ -12,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Hero Section Model fixed
+    // Hero Model Fix
     const modelImg = document.getElementById('changing-model');
     if (modelImg) {
         modelImg.src = 'model.png';
@@ -20,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelImg.classList.add('active-model');
     }
 
-    // 3. View More Button Logic for Creative Design Section
+    // View More Button Logic
     const viewMoreBtn = document.getElementById('view-more-btn');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {
@@ -31,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Fullscreen Lightbox Modal
+    // Lightbox Modal
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 5. Contact Form Submission Alert
+    // Contact Form Alert
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -93,6 +90,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-/* ==========================================================
-   JAVASCRIPT CODE END
-   ========================================================== */

@@ -401,7 +401,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Projects / Graphic Design */
+/* Graphic Design Section (1:1 Square Containers) */
 .projects-showcase-section {
     background-color: #ffffff;
     padding: 40px 0 80px;
@@ -448,7 +448,7 @@ html, body {
     margin-top: 40px;
 }
 
-/* AI Animation Videos */
+/* AI Animation Videos (9:16 Vertical Reels) */
 .animations-showcase-section {
     background-color: #ffffff;
     padding: 40px 0 80px;
@@ -463,8 +463,8 @@ html, body {
 }
 
 .project-box.video-box {
-    aspect-ratio: 9 / 16;
-    max-height: 480px;
+    aspect-ratio: 9 / 16 !important;
+    max-height: 520px;
     width: 100%;
     margin: 0 auto;
     background: #000000;
@@ -476,7 +476,7 @@ html, body {
 .project-box video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover !important;
     display: block;
     background: #000000;
     border-radius: 12px;

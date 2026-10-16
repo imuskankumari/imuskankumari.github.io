@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelImg.classList.add('active-model');
     }
 
-    // View More Button Logic for Graphic Design Section
+    // View More Button Logic for Graphic Design Section (30 items)
     const viewMoreBtn = document.getElementById('view-more-btn');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {

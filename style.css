@@ -125,7 +125,7 @@ html, body {
     cursor: pointer;
 }
 
-/* Hero */
+/* Hero Section */
 .hero-single-stage {
     background: #0B0F19;
     color: #ffffff;
@@ -329,7 +329,7 @@ html, body {
     66% { transform: translateY(-7px) rotate(-1.5deg) scale(1.02); }
 }
 
-/* Services */
+/* Services Section */
 .clean-section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -419,7 +419,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design Section (1:1 Square, object-fit: contain, ZERO OUTLINE) */
+/* Graphic Design Section (30 Containers, 1:1 Square, object-fit: contain, ZERO OUTLINE) */
 .projects-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -603,7 +603,7 @@ html, body {
 .lightbox-nav-arrow:hover { background: #e91e63; }
 .arrow-left { left: 25px; } .arrow-right { right: 25px; }
 
-/* Contact Form */
+/* Contact Form Section */
 .contact-section-zone {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -680,7 +680,7 @@ html, body {
     gap: 8px;
 }
 
-/* Footer */
+/* Footer Section */
 .site-footer {
     background: #0B0F19;
     color: #ffffff;
@@ -773,7 +773,7 @@ html, body {
 }
 
 @media (min-width: 851px) {
-    .animations-grid-container, .ai-images-grid {
+    .animations-grid-container, .ai-images-grid, .projects-display-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }

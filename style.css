@@ -168,7 +168,7 @@ html, body {
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-/* Graphic Designer Title with Centered Balance Lines (Left Magenta, Right White) */
+/* Graphic Designer Title with Left Magenta Line & Right White Line */
 .hero-sub-designer-wrapper {
     display: flex;
     align-items: center;
@@ -419,7 +419,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design Section (30 Containers, 1:1 Square, object-fit: contain, ZERO OUTLINE) */
+/* Graphic Design Section (40 Containers, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
 .projects-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -436,7 +436,7 @@ html, body {
 .project-box {
     background: #0B0F19;
     border-radius: 16px;
-    aspect-ratio: 1 / 1 !important;
+    aspect-ratio: 4 / 5 !important;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -455,7 +455,7 @@ html, body {
     border: none !important;
 }
 
-/* AI Generated Images Section (4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
+/* AI Visuals Section (20 Containers, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
 .ai-images-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -493,7 +493,7 @@ html, body {
 
 .hidden-item, .hidden-ai-item { display: none; }
 
-/* Large Solid Square View More Buttons matching Navbar Contact Button */
+/* Large Solid Square View More Buttons */
 .view-more-container { text-align: center; margin-top: 45px; }
 .btn-large-magenta {
     background: #e91e63;
@@ -512,7 +512,7 @@ html, body {
 }
 .btn-large-magenta:hover { transform: translateY(-2px); background: #d81b60; }
 
-/* AI Animation Videos (9:16 Vertical Reels, ZERO OUTLINE) */
+/* AI Animation Videos Section (9:16 Vertical Reels, ZERO OUTLINE) */
 .animations-showcase-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -603,7 +603,7 @@ html, body {
 .lightbox-nav-arrow:hover { background: #e91e63; }
 .arrow-left { left: 25px; } .arrow-right { right: 25px; }
 
-/* Contact Form Section */
+/* Contact Section */
 .contact-section-zone {
     background-color: #ffffff;
     padding: 50px 0 90px;

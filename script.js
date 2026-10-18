@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelImg.classList.add('active-model');
     }
 
-    // View More Button Logic for Graphic Design Section (30 items)
+    // View More Button Logic for Graphic Design Section (40 items, 30 visible)
     const viewMoreBtn = document.getElementById('view-more-btn');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // View More Button Logic for AI Generated Images Section
+    // View More Button Logic for AI Visuals Section (20 items, 10 visible)
     const aiImagesViewMore = document.getElementById('ai-images-view-more');
     if (aiImagesViewMore) {
         aiImagesViewMore.addEventListener('click', () => {

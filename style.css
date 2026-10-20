@@ -419,21 +419,21 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design Section (40 Containers, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
-.projects-showcase-section {
+/* Graphic Design & AI Visuals (2-Column Grid, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
+.projects-showcase-section, .ai-images-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
 }
 
-.projects-display-grid {
+.graphic-two-col {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.project-box {
+.project-box, .project-box.ai-img-box {
     background: #0B0F19;
     border-radius: 16px;
     aspect-ratio: 4 / 5 !important;
@@ -444,45 +444,9 @@ html, body {
     border: none !important;
 }
 
-.project-box:hover { transform: translateY(-4px); }
+.project-box:hover, .project-box.ai-img-box:hover { transform: translateY(-4px); }
 
-.project-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain !important;
-    padding: 0 !important;
-    display: block;
-    border: none !important;
-}
-
-/* AI Visuals Section (20 Containers, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
-.ai-images-section {
-    background-color: #ffffff;
-    padding: 50px 0 90px;
-}
-
-.ai-images-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-box.ai-img-box {
-    background: #0B0F19;
-    border-radius: 16px;
-    aspect-ratio: 4 / 5 !important;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    transition: transform 0.25s ease;
-    border: none !important;
-}
-
-.project-box.ai-img-box:hover { transform: translateY(-4px); }
-
-.project-box.ai-img-box img {
+.project-box img, .project-box.ai-img-box img {
     width: 100%;
     height: 100%;
     object-fit: contain !important;
@@ -773,7 +737,7 @@ html, body {
 }
 
 @media (min-width: 851px) {
-    .animations-grid-container, .ai-images-grid, .projects-display-grid {
+    .animations-grid-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -800,7 +764,7 @@ html, body {
     .hero-main-title { font-size: clamp(1.8rem, 3.8vw, 2.6rem); }
     .hero-cta-buttons { justify-content: flex-start; }
     .hero-3d-model { max-width: 300px; }
-    .services-original-four-grid, .projects-display-grid, .ai-images-grid, .animations-grid-container {
+    .services-original-four-grid, .graphic-two-col, .ai-images-grid, .animations-grid-container {
         grid-template-columns: 1fr;
     }
     .footer-grid-layout {

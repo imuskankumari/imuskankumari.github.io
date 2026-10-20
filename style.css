@@ -168,19 +168,19 @@ html, body {
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-/* Graphic Designer Title with Left Magenta Line & Right White Line */
+/* Graphic Designer Title with Left Magenta Line & Right White Line (Strictly Balanced & Within Width) */
 .hero-sub-designer-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 22px;
     width: 100%;
-    max-width: 480px;
+    max-width: 440px;
 }
 
 .line-left {
-    width: 30px;
+    width: 25px;
     height: 3px;
     background-color: #e91e63;
     border-radius: 2px;
@@ -188,7 +188,7 @@ html, body {
 
 .line-right {
     flex: 1;
-    max-width: 90px;
+    max-width: 70px;
     height: 3px;
     background-color: #ffffff;
     border-radius: 2px;
@@ -196,9 +196,9 @@ html, body {
 }
 
 .hero-sub-designer {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 3.5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -419,7 +419,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Graphic Design & AI Visuals (2-Column Grid, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
+/* Graphic Design & AI Visuals (2-Column Behance Style Grid, 4:5 Portrait Ratio, object-fit: contain, ZERO OUTLINE) */
 .projects-showcase-section, .ai-images-section {
     background-color: #ffffff;
     padding: 50px 0 90px;
@@ -512,6 +512,7 @@ html, body {
     border: none !important;
 }
 
+/* Fullscreen Lightbox Modal */
 .fullscreen-lightbox-modal {
     display: none;
     position: fixed;

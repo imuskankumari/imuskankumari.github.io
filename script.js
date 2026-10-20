@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Lightbox Modal
+    // Dynamic Lightbox Modal (Auto-detects any uploaded image like g31, g32, a11 etc.)
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
@@ -49,22 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function refreshActiveImageList() {
         activeImageList = [];
-        document.querySelectorAll('.project-box.visible-item img, .project-box.ai-img-box img').forEach(img => {
+        document.querySelectorAll('.project-box img, .ai-img-box img').forEach(img => {
             if (img.closest('.project-box').style.display !== 'none') {
                 activeImageList.push(img.src);
             }
         });
     }
 
-    document.querySelectorAll('.project-box img').forEach(img => {
-        img.addEventListener('click', () => {
+    document.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG' && e.target.closest('.project-box')) {
             refreshActiveImageList();
-            currentActiveIndex = activeImageList.indexOf(img.src);
+            currentActiveIndex = activeImageList.indexOf(e.target.src);
             if (currentActiveIndex !== -1) {
                 modalImg.src = activeImageList[currentActiveIndex];
                 modal.style.display = 'flex';
             }
-        });
+        }
     });
 
     function showNextImage() {

@@ -168,7 +168,7 @@ html, body {
 .title-white { color: #ffffff; }
 .title-magenta { color: #e91e63; }
 
-/* Graphic Designer Title with Left Magenta Line & Right White Line (Strictly Balanced & Within Width) */
+/* Graphic Designer Title with Left Magenta Line & Right White Line */
 .hero-sub-designer-wrapper {
     display: flex;
     align-items: center;
@@ -455,9 +455,9 @@ html, body {
     border: none !important;
 }
 
-.hidden-item, .hidden-ai-item { display: none; }
+.hidden-item { display: none; }
 
-/* Large Solid Square View More Buttons */
+/* Large Solid Square View More Button */
 .view-more-container { text-align: center; margin-top: 45px; }
 .btn-large-magenta {
     background: #e91e63;

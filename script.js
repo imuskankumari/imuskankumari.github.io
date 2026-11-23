@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelImg.classList.add('active-model');
     }
 
-    // View More Button Logic for Graphic Design Section (40 items, 30 visible)
+    // View More Button Logic for Graphic Design Section (20 items: 15 visible, 5 hidden)
     const viewMoreBtn = document.getElementById('view-more-btn');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {
@@ -28,18 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // View More Button Logic for AI Visuals Section (20 items, 10 visible)
-    const aiImagesViewMore = document.getElementById('ai-images-view-more');
-    if (aiImagesViewMore) {
-        aiImagesViewMore.addEventListener('click', () => {
-            document.querySelectorAll('.hidden-ai-item').forEach(item => {
-                item.style.display = 'block';
-            });
-            aiImagesViewMore.style.display = 'none';
-        });
-    }
-
-    // Robust Dynamic Lightbox Modal (Auto-triggers for all images including newly uploaded g31-g40, a11-a20)
+    // Dynamic Lightbox Modal
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const closeModal = document.querySelector('.lightbox-close-btn');
